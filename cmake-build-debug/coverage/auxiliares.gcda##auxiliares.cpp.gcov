@@ -1,0 +1,5780 @@
+        -:    0:Source:C:/Users/Usuario/Desktop/por_favor_funciona/template-alumnos/auxiliares.cpp
+        -:    0:Graph:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\auxiliares.gcno
+        -:    0:Data:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\auxiliares.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "definiciones.h"
+        -:    2:#include "auxiliares.h"
+        -:    3:
+        -:    4:using namespace std;
+        -:    5:// aqui se pueden ubicar todas las funciones auxiliares de soporte para la resolucion de los ejercicios
+        -:    6://pair<int,int> mp(int a, int b) {
+        -:    7://    return make_pair(a, b);
+        -:    8://}
+        -:    9:
+        -:   10:// TEST
+function _Z18ordenarVectorParesRSt6vectorISt4pairIiiESaIS1_EE called 8 returned 100% blocks executed 100%
+        8:   11:vector<pair<int,int>> ordenarVectorPares(vector<pair<int,int>> &v) {
+        8:   11-block  0
+        8:   12:    sort(v.begin(), v.end());
+        8:   12-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+        -:   13://    v.erase(unique(v.begin(), v.end()), v.end());
+        8:   14:    return v;
+call    0 returned 8
+        -:   15:}
+        -:   16:
+function _Z8setCoordii called 530081 returned 100% blocks executed 100%
+   530081:   17:coordenada setCoord(int i, int j) {
+   530081:   17-block  0
+   530081:   18:    return make_pair(i,j);
+   530081:   18-block  0
+call    0 returned 530081
+        -:   19:}
+        -:   20:
+function _Z13tableroActualRKSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 2 returned 100% blocks executed 100%
+        2:   21:tablero tableroActual ( posicion const &p ) {
+        2:   21-block  0
+        2:   22:    return p.first;
+        2:   22-block  0
+call    0 returned 2
+        -:   23:}
+        -:   24:
+        -:   25://tablero inicializarTablero(){
+        -:   26://    vector<casilla> fila(ANCHO_TABLERO, cVACIA);
+        -:   27://    tablero out(ANCHO_TABLERO, fila);
+        -:   28://    return out;
+        -:   29://}
+        -:   30:
+        -:   31:// AUXs
+function _Z20aparicionesEnTableroSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_ called 11333 returned 100% blocks executed 100%
+    11333:   32:int aparicionesEnTablero(tablero t, casilla p) {
+    11333:   32-block  0
+    11333:   33:    int result = 0;
+   101997:   34:    for(int i = 0; i < t.size(); i++) {
+    11333:   34-block  0
+   101997:   34-block  1
+call    0 returned 101997
+branch  1 taken 90664 (fallthrough)
+branch  2 taken 11333
+    90664:   34-block  2
+   815976:   35:        for(int j = 0; j < t[i].size();j++) {
+    90664:   35-block  0
+   815976:   35-block  1
+call    0 returned 815976
+call    1 returned 815976
+branch  2 taken 725312 (fallthrough)
+branch  3 taken 90664
+   725312:   35-block  2
+   725312:   36:            if (t[i][j] == p) {
+   725312:   36-block  0
+call    0 returned 725312
+call    1 returned 725312
+call    2 returned 725312
+branch  3 taken 37178 (fallthrough)
+branch  4 taken 688134
+    37178:   37:                result++;
+    37178:   37-block  0
+        -:   38:            }
+        -:   39:        }
+        -:   40:    }
+    11333:   41:    return result;
+    11333:   41-block  0
+        -:   42:}
+        -:   43:
+function _Z5piezaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_ called 351874 returned 100% blocks executed 100%
+   351874:   44:int pieza(tablero t, coordenada c){
+   351874:   44-block  0
+   351874:   45:    return (t[c.first][c.second]).first;
+   351874:   45-block  0
+call    0 returned 351874
+call    1 returned 351874
+        -:   46:}
+        -:   47:
+function _Z5colorSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_ called 288364 returned 100% blocks executed 100%
+   288364:   48:int color(tablero t, coordenada c){
+   288364:   48-block  0
+   288364:   49:    return t[c.first][c.second].second;
+   288364:   49-block  0
+call    0 returned 288364
+call    1 returned 288364
+        -:   50:}
+        -:   51:
+function _Z10setCasillaii called 9 returned 100% blocks executed 100%
+        9:   52:casilla setCasilla(int i, int j) {
+        9:   52-block  0
+        9:   53:    return make_pair(i,j);
+        9:   53-block  0
+call    0 returned 9
+        -:   54:}
+        -:   55:
+function _Z7jugadorSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 86043 returned 100% blocks executed 100%
+    86043:   56:int jugador(posicion p) {
+    86043:   56-block  0
+    86043:   57:    return p.second;
+    86043:   57-block  0
+        -:   58:}
+        -:   59:
+function _Z7enRangoiii called 1606 returned 100% blocks executed 100%
+     1606:   60:bool enRango(int x, int m1, int m2){
+     1606:   60-block  0
+     1606:   61:    return (m1 < x && x < m2) || (m2 < x && x < m1);
+     1606:   61-block  0
+branch  0 taken 870 (fallthrough)
+branch  1 taken 736
+      870:   61-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 870
+      736:   61-block  2
+branch  4 taken 533 (fallthrough)
+branch  5 taken 203
+      533:   61-block  3
+branch  6 taken 533 (fallthrough)
+branch  7 taken 0
+     1403:   61-block  4
+      203:   61-block  5
+     1606:   61-block  6
+        -:   62:}
+        -:   63:
+function _Z12contrincantei called 3958 returned 100% blocks executed 100%
+     3958:   64:int contrincante(int j){
+     3958:   64-block  0
+     3958:   65:    return j==BLANCO ? NEGRO : BLANCO;
+     3958:   65-block  0
+branch  0 taken 525 (fallthrough)
+branch  1 taken 3433
+      525:   65-block  1
+     3433:   65-block  2
+     3958:   65-block  3
+        -:   66:}
+        -:   67:// PREDs
+        -:   68://EJERCICIO 1
+        -:   69:
+function _Z19piezasTorresValidasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1132 returned 100% blocks executed 55%
+     1132:   70:bool piezasTorresValidas(tablero t){
+     1132:   70-block  0
+     1132:   71:    bool res=true;
+     1132:   72:    if((aparicionesEnTablero(t,cTORRE_B)<=2 + DIM - aparicionesEnTablero(t,cPEON_B))==false){
+     1132:   72-block  0
+call    0 returned 1132
+branch  1 taken 1132 (fallthrough)
+branch  2 taken 0 (throw)
+     1132:   72-block  1
+call    3 returned 1132
+branch  4 taken 1132 (fallthrough)
+branch  5 taken 0 (throw)
+     1132:   72-block  2
+call    6 returned 1132
+branch  7 taken 1132 (fallthrough)
+branch  8 taken 0 (throw)
+     1132:   72-block  3
+call    9 returned 1132
+branch 10 taken 1132 (fallthrough)
+branch 11 taken 0 (throw)
+     1132:   72-block  4
+call   12 returned 1132
+branch 13 taken 1132 (fallthrough)
+branch 14 taken 0 (throw)
+     1132:   72-block  5
+call   15 returned 1132
+branch 16 taken 1132 (fallthrough)
+branch 17 taken 0 (throw)
+     1132:   72-block  6
+call   18 returned 1132
+call   19 returned 1132
+branch 20 taken 1 (fallthrough)
+branch 21 taken 1131
+    %%%%%:   72-block  7
+call   22 never executed
+    %%%%%:   72-block  8
+    %%%%%:   72-block  9
+    %%%%%:   72-block 10
+    %%%%%:   72-block 11
+call   23 never executed
+    %%%%%:   72-block 12
+    %%%%%:   72-block 13
+    %%%%%:   72-block 14
+call   24 never executed
+        1:   73:        res=false;
+        1:   73-block  0
+        -:   74:    }
+     1132:   75:    if((aparicionesEnTablero(t,cTORRE_N)<=2 + DIM - aparicionesEnTablero(t,cPEON_N))==false){
+     1132:   75-block  0
+call    0 returned 1132
+branch  1 taken 1132 (fallthrough)
+branch  2 taken 0 (throw)
+     1132:   75-block  1
+call    3 returned 1132
+branch  4 taken 1132 (fallthrough)
+branch  5 taken 0 (throw)
+     1132:   75-block  2
+call    6 returned 1132
+branch  7 taken 1132 (fallthrough)
+branch  8 taken 0 (throw)
+     1132:   75-block  3
+call    9 returned 1132
+branch 10 taken 1132 (fallthrough)
+branch 11 taken 0 (throw)
+     1132:   75-block  4
+call   12 returned 1132
+branch 13 taken 1132 (fallthrough)
+branch 14 taken 0 (throw)
+     1132:   75-block  5
+call   15 returned 1132
+branch 16 taken 1132 (fallthrough)
+branch 17 taken 0 (throw)
+     1132:   75-block  6
+call   18 returned 1132
+call   19 returned 1132
+branch 20 taken 1 (fallthrough)
+branch 21 taken 1131
+    %%%%%:   75-block  7
+call   22 never executed
+    %%%%%:   75-block  8
+    %%%%%:   75-block  9
+    %%%%%:   75-block 10
+    %%%%%:   75-block 11
+call   23 never executed
+    %%%%%:   75-block 12
+    %%%%%:   75-block 13
+        1:   76:        res=false;
+        1:   76-block  0
+        -:   77:    }
+     1132:   78:    return res;
+     1132:   78-block  0
+     1132:   78-block  1
+        -:   79:}
+        -:   80:
+function _Z20piezasAlfilesValidasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1130 returned 100% blocks executed 61%
+     1130:   81:bool piezasAlfilesValidas(tablero t) {
+     1130:   81-block  0
+     1130:   82:    return aparicionesEnTablero(t,cALFIL_B) <= 2 && aparicionesEnTablero(t,cALFIL_N) <= 2;
+     1130:   82-block  0
+call    0 returned 1130
+branch  1 taken 1130 (fallthrough)
+branch  2 taken 0 (throw)
+     1130:   82-block  1
+call    3 returned 1130
+branch  4 taken 1130 (fallthrough)
+branch  5 taken 0 (throw)
+     1130:   82-block  2
+call    6 returned 1130
+branch  7 taken 1130 (fallthrough)
+branch  8 taken 0 (throw)
+     1130:   82-block  3
+branch  9 taken 1129 (fallthrough)
+branch 10 taken 1
+     1129:   82-block  4
+call   11 returned 1129
+branch 12 taken 1129 (fallthrough)
+branch 13 taken 0 (throw)
+     1129:   82-block  5
+call   14 returned 1129
+branch 15 taken 1129 (fallthrough)
+branch 16 taken 0 (throw)
+     1129:   82-block  6
+call   17 returned 1129
+branch 18 taken 1129 (fallthrough)
+branch 19 taken 0 (throw)
+     1129:   82-block  7
+branch 20 taken 1128 (fallthrough)
+branch 21 taken 1
+     1128:   82-block  8
+        2:   82-block  9
+     1130:   82-block 10
+branch 22 taken 1129 (fallthrough)
+branch 23 taken 1
+     1129:   82-block 11
+call   24 returned 1129
+     1130:   82-block 12
+branch 25 taken 1130 (fallthrough)
+branch 26 taken 0
+     1130:   82-block 13
+call   27 returned 1130
+     1130:   82-block 14
+     1130:   82-block 15
+    %%%%%:   82-block 16
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   82-block 17
+call   30 never executed
+    %%%%%:   82-block 18
+    %%%%%:   82-block 19
+    %%%%%:   82-block 20
+    %%%%%:   82-block 21
+    %%%%%:   82-block 22
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   82-block 23
+call   33 never executed
+    %%%%%:   82-block 24
+    %%%%%:   82-block 25
+    %%%%%:   82-block 26
+        -:   83:}
+        -:   84:
+function _Z18piezasReyesValidasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1135 returned 100% blocks executed 55%
+     1135:   85:bool piezasReyesValidas(tablero t){
+     1135:   85-block  0
+     1135:   86:    return (aparicionesEnTablero(t,cREY_B) + aparicionesEnTablero(t,cREY_N)) == 2 ;
+     1135:   86-block  0
+call    0 returned 1135
+branch  1 taken 1135 (fallthrough)
+branch  2 taken 0 (throw)
+     1135:   86-block  1
+call    3 returned 1135
+branch  4 taken 1135 (fallthrough)
+branch  5 taken 0 (throw)
+     1135:   86-block  2
+call    6 returned 1135
+branch  7 taken 1135 (fallthrough)
+branch  8 taken 0 (throw)
+     1135:   86-block  3
+call    9 returned 1135
+branch 10 taken 1135 (fallthrough)
+branch 11 taken 0 (throw)
+     1135:   86-block  4
+call   12 returned 1135
+branch 13 taken 1135 (fallthrough)
+branch 14 taken 0 (throw)
+     1135:   86-block  5
+call   15 returned 1135
+branch 16 taken 1135 (fallthrough)
+branch 17 taken 0 (throw)
+     1135:   86-block  6
+call   18 returned 1135
+call   19 returned 1135
+     1135:   86-block  7
+    %%%%%:   86-block  8
+call   20 never executed
+    %%%%%:   86-block  9
+    %%%%%:   86-block 10
+    %%%%%:   86-block 11
+    %%%%%:   86-block 12
+call   21 never executed
+    %%%%%:   86-block 13
+    %%%%%:   86-block 14
+        -:   87:}
+        -:   88:
+function _Z19piezasPeonesValidasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1135 returned 100% blocks executed 57%
+     1135:   89:bool piezasPeonesValidas(tablero t){
+     1135:   89-block  0
+     1135:   90:    return aparicionesEnTablero(t,cPEON_B) <= DIM && aparicionesEnTablero(t,cPEON_N) <= DIM;
+     1135:   90-block  0
+call    0 returned 1135
+branch  1 taken 1135 (fallthrough)
+branch  2 taken 0 (throw)
+     1135:   90-block  1
+call    3 returned 1135
+branch  4 taken 1135 (fallthrough)
+branch  5 taken 0 (throw)
+     1135:   90-block  2
+call    6 returned 1135
+branch  7 taken 1135 (fallthrough)
+branch  8 taken 0 (throw)
+     1135:   90-block  3
+branch  9 taken 1135 (fallthrough)
+branch 10 taken 0
+     1135:   90-block  4
+call   11 returned 1135
+branch 12 taken 1135 (fallthrough)
+branch 13 taken 0 (throw)
+     1135:   90-block  5
+call   14 returned 1135
+branch 15 taken 1135 (fallthrough)
+branch 16 taken 0 (throw)
+     1135:   90-block  6
+call   17 returned 1135
+branch 18 taken 1135 (fallthrough)
+branch 19 taken 0 (throw)
+     1135:   90-block  7
+branch 20 taken 1135 (fallthrough)
+branch 21 taken 0
+     1135:   90-block  8
+    $$$$$:   90-block  9
+     1135:   90-block 10
+branch 22 taken 1135 (fallthrough)
+branch 23 taken 0
+     1135:   90-block 11
+call   24 returned 1135
+     1135:   90-block 12
+branch 25 taken 1135 (fallthrough)
+branch 26 taken 0
+     1135:   90-block 13
+call   27 returned 1135
+     1135:   90-block 14
+     1135:   90-block 15
+    %%%%%:   90-block 16
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   90-block 17
+call   30 never executed
+    %%%%%:   90-block 18
+    %%%%%:   90-block 19
+    %%%%%:   90-block 20
+    %%%%%:   90-block 21
+    %%%%%:   90-block 22
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   90-block 23
+call   33 never executed
+    %%%%%:   90-block 24
+    %%%%%:   90-block 25
+    %%%%%:   90-block 26
+        -:   91:}
+        -:   92:
+function _Z22cantidadValidaDePiezasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1135 returned 100% blocks executed 63%
+     1135:   93:bool cantidadValidaDePiezas(tablero t){
+     1135:   93-block  0
+     1135:   94:    return piezasPeonesValidas(t) && piezasReyesValidas(t) && piezasTorresValidas(t) && piezasAlfilesValidas(t);
+     1135:   94-block  0
+call    0 returned 1135
+branch  1 taken 1135 (fallthrough)
+branch  2 taken 0 (throw)
+     1135:   94-block  1
+call    3 returned 1135
+branch  4 taken 1135 (fallthrough)
+branch  5 taken 0 (throw)
+     1135:   94-block  2
+branch  6 taken 1135 (fallthrough)
+branch  7 taken 0
+     1135:   94-block  3
+call    8 returned 1135
+branch  9 taken 1135 (fallthrough)
+branch 10 taken 0 (throw)
+     1135:   94-block  4
+call   11 returned 1135
+branch 12 taken 1135 (fallthrough)
+branch 13 taken 0 (throw)
+     1135:   94-block  5
+branch 14 taken 1132 (fallthrough)
+branch 15 taken 3
+     1132:   94-block  6
+call   16 returned 1132
+branch 17 taken 1132 (fallthrough)
+branch 18 taken 0 (throw)
+     1132:   94-block  7
+call   19 returned 1132
+branch 20 taken 1132 (fallthrough)
+branch 21 taken 0 (throw)
+     1132:   94-block  8
+branch 22 taken 1130 (fallthrough)
+branch 23 taken 2
+     1130:   94-block  9
+call   24 returned 1130
+branch 25 taken 1130 (fallthrough)
+branch 26 taken 0 (throw)
+     1130:   94-block 10
+call   27 returned 1130
+branch 28 taken 1130 (fallthrough)
+branch 29 taken 0 (throw)
+     1130:   94-block 11
+branch 30 taken 1128 (fallthrough)
+branch 31 taken 2
+     1128:   94-block 12
+        7:   94-block 13
+     1135:   94-block 14
+branch 32 taken 1130 (fallthrough)
+branch 33 taken 5
+     1130:   94-block 15
+call   34 returned 1130
+     1135:   94-block 16
+branch 35 taken 1132 (fallthrough)
+branch 36 taken 3
+     1132:   94-block 17
+call   37 returned 1132
+     1135:   94-block 18
+branch 38 taken 1135 (fallthrough)
+branch 39 taken 0
+     1135:   94-block 19
+call   40 returned 1135
+     1135:   94-block 20
+branch 41 taken 1135 (fallthrough)
+branch 42 taken 0
+     1135:   94-block 21
+call   43 returned 1135
+     1135:   94-block 22
+     1135:   94-block 23
+    %%%%%:   94-block 24
+branch 44 never executed
+branch 45 never executed
+    %%%%%:   94-block 25
+call   46 never executed
+    %%%%%:   94-block 26
+    %%%%%:   94-block 27
+    %%%%%:   94-block 28
+branch 47 never executed
+branch 48 never executed
+    %%%%%:   94-block 29
+call   49 never executed
+    %%%%%:   94-block 30
+    %%%%%:   94-block 31
+    %%%%%:   94-block 32
+branch 50 never executed
+branch 51 never executed
+    %%%%%:   94-block 33
+call   52 never executed
+    %%%%%:   94-block 34
+    %%%%%:   94-block 35
+    %%%%%:   94-block 36
+branch 53 never executed
+branch 54 never executed
+    %%%%%:   94-block 37
+call   55 never executed
+    %%%%%:   94-block 38
+        -:   95:}
+        -:   96:
+        -:   97:
+function _Z12casillaVaciaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_ called 163540 returned 100% blocks executed 83%
+   163540:   98:bool casillaVacia(tablero t, coordenada c) {
+   163540:   98-block  0
+   163540:   99:    casilla c1 = make_pair(t[c.first][c.second].first,t[c.first][c.second].second);
+   163540:   99-block  0
+call    0 returned 163540
+call    1 returned 163540
+call    2 returned 163540
+call    3 returned 163540
+call    4 returned 163540
+branch  5 taken 163540 (fallthrough)
+branch  6 taken 0 (throw)
+   163540:  100:    return c1 == cVACIA;
+   163540:  100-block  0
+call    0 returned 163540
+branch  1 taken 163540 (fallthrough)
+branch  2 taken 0 (throw)
+   163540:  100-block  1
+call    3 returned 163540
+   163540:  100-block  2
+    %%%%%:  100-block  3
+    %%%%%:  100-block  4
+        -:  101:}
+        -:  102:
+function _Z17coordenadaEnRangoSt4pairIiiE called 186624 returned 100% blocks executed 88%
+   186624:  103:bool coordenadaEnRango(coordenada c) {
+   186624:  103-block  0
+   186624:  104:    return 0 <= c.first && c.first < DIM && 0 <= c.second && c.second < DIM;
+   186624:  104-block  0
+branch  0 taken 186624 (fallthrough)
+branch  1 taken 0
+   186624:  104-block  1
+branch  2 taken 186624 (fallthrough)
+branch  3 taken 0
+   186624:  104-block  2
+branch  4 taken 186624 (fallthrough)
+branch  5 taken 0
+   186624:  104-block  3
+branch  6 taken 186624 (fallthrough)
+branch  7 taken 0
+   186624:  104-block  4
+    $$$$$:  104-block  5
+   186624:  104-block  6
+        -:  105:}
+        -:  106:
+function _Z13piezaCorrectai called 23281 returned 100% blocks executed 100%
+    23281:  107:bool piezaCorrecta(int p) {
+    23281:  107-block  0
+    23281:  108:    return (p >= PEON && p <= REY);
+    23281:  108-block  0
+branch  0 taken 23243 (fallthrough)
+branch  1 taken 38
+    23243:  108-block  1
+branch  2 taken 23243 (fallthrough)
+branch  3 taken 0
+    23243:  108-block  2
+       38:  108-block  3
+    23281:  108-block  4
+        -:  109:}
+        -:  110:
+function _Z13colorCorrectoi called 23217 returned 100% blocks executed 83%
+    23217:  111:bool colorCorrecto(int c) {
+    23217:  111-block  0
+    23217:  112:    return (BLANCO == c || c == NEGRO);
+    23217:  112-block  0
+branch  0 taken 11276 (fallthrough)
+branch  1 taken 11941
+    11276:  112-block  1
+branch  2 taken 11276 (fallthrough)
+branch  3 taken 0
+    23217:  112-block  2
+    $$$$$:  112-block  3
+    23217:  112-block  4
+        -:  113:}
+        -:  114:
+        -:  115:
+function _Z15casillasValidasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1138 returned 100% blocks executed 71%
+     1138:  116:bool casillasValidas(tablero t){
+     1138:  116-block  0
+     1138:  117:    bool result = false;
+    10242:  118:    for (int i= 0 ; i<DIM; i++){
+     1138:  118-block  0
+    10242:  118-block  1
+branch  0 taken 9104 (fallthrough)
+branch  1 taken 1138
+     9104:  118-block  2
+    81936:  119:        for(int j = 0; j<DIM; j++){
+     9104:  119-block  0
+    81936:  119-block  1
+branch  0 taken 72832 (fallthrough)
+branch  1 taken 9104
+    72832:  119-block  2
+    72832:  120:            coordenada c = setCoord(i,j);
+    72832:  120-block  0
+call    0 returned 72832
+branch  1 taken 72832 (fallthrough)
+branch  2 taken 0 (throw)
+    72832:  121:            if (coordenadaEnRango(c)){
+    72832:  121-block  0
+call    0 returned 72832
+branch  1 taken 72832 (fallthrough)
+branch  2 taken 0
+    72832:  122:                if (casillaVacia(t,c) || (piezaCorrecta(pieza(t,c)) && colorCorrecto(color(t,c)))){
+    72832:  122-block  0
+call    0 returned 72832
+branch  1 taken 72832 (fallthrough)
+branch  2 taken 0 (throw)
+    72832:  122-block  1
+call    3 returned 72832
+branch  4 taken 72832 (fallthrough)
+branch  5 taken 0 (throw)
+    72832:  122-block  2
+branch  6 taken 23217 (fallthrough)
+branch  7 taken 49615
+    23217:  122-block  3
+call    8 returned 23217
+branch  9 taken 23217 (fallthrough)
+branch 10 taken 0 (throw)
+    23217:  122-block  4
+call   11 returned 23217
+call   12 returned 23217
+branch 13 taken 23217 (fallthrough)
+branch 14 taken 0
+    23217:  122-block  5
+call   15 returned 23217
+branch 16 taken 23217 (fallthrough)
+branch 17 taken 0 (throw)
+    23217:  122-block  6
+call   18 returned 23217
+call   19 returned 23217
+branch 20 taken 23217 (fallthrough)
+branch 21 taken 0
+    72832:  122-block  7
+    $$$$$:  122-block  8
+    72832:  122-block  9
+branch 22 taken 23217 (fallthrough)
+branch 23 taken 49615
+    23217:  122-block 10
+call   24 returned 23217
+    72832:  122-block 11
+branch 25 taken 23217 (fallthrough)
+branch 26 taken 49615
+    23217:  122-block 12
+call   27 returned 23217
+    72832:  122-block 13
+branch 28 taken 72832 (fallthrough)
+branch 29 taken 0
+    72832:  122-block 14
+call   30 returned 72832
+    72832:  122-block 15
+branch 31 taken 72832 (fallthrough)
+branch 32 taken 0
+    %%%%%:  122-block 16
+branch 33 never executed
+branch 34 never executed
+    %%%%%:  122-block 17
+call   35 never executed
+    %%%%%:  122-block 18
+    %%%%%:  122-block 19
+    %%%%%:  122-block 20
+branch 36 never executed
+branch 37 never executed
+    %%%%%:  122-block 21
+call   38 never executed
+    %%%%%:  122-block 22
+    %%%%%:  122-block 23
+    %%%%%:  122-block 24
+branch 39 never executed
+branch 40 never executed
+    %%%%%:  122-block 25
+call   41 never executed
+    %%%%%:  122-block 26
+    %%%%%:  122-block 27
+    72832:  123:                    result = true;
+    72832:  123-block  0
+        -:  124:                }
+        -:  125:            }
+        -:  126:        }
+        -:  127:    }
+     1138:  128:    return result;
+     1138:  128-block  0
+     1138:  128-block  1
+        -:  129:}
+        -:  130:
+        -:  131:
+function _Z20sinPeonesNoCoronadosSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1138 returned 100% blocks executed 79%
+     1138:  132:bool sinPeonesNoCoronados(tablero t){
+     1138:  132-block  0
+     1138:  133:    bool res=true;
+    10242:  134:    for(int i=0;i<t.size();i++){
+     1138:  134-block  0
+    10242:  134-block  1
+call    0 returned 10242
+branch  1 taken 9104 (fallthrough)
+branch  2 taken 1138
+     9104:  134-block  2
+    81936:  135:        for(int j=0;j<t.size();j++){
+     9104:  135-block  0
+    81936:  135-block  1
+call    0 returned 81936
+branch  1 taken 72832 (fallthrough)
+branch  2 taken 9104
+    72832:  135-block  2
+    72832:  136:            if(pieza(t,setCoord(0,i)) == PEON || pieza(t,setCoord(DIM-1,i)) == PEON ){
+    72832:  136-block  0
+call    0 returned 72832
+branch  1 taken 72832 (fallthrough)
+branch  2 taken 0 (throw)
+    72832:  136-block  1
+call    3 returned 72832
+branch  4 taken 72832 (fallthrough)
+branch  5 taken 0 (throw)
+    72832:  136-block  2
+call    6 returned 72832
+branch  7 taken 72808 (fallthrough)
+branch  8 taken 24
+    72808:  136-block  3
+call    9 returned 72808
+branch 10 taken 72808 (fallthrough)
+branch 11 taken 0 (throw)
+    72808:  136-block  4
+call   12 returned 72808
+branch 13 taken 72808 (fallthrough)
+branch 14 taken 0 (throw)
+    72808:  136-block  5
+call   15 returned 72808
+branch 16 taken 72 (fallthrough)
+branch 17 taken 72736
+       96:  136-block  6
+    72736:  136-block  7
+    72832:  136-block  8
+branch 18 taken 72808 (fallthrough)
+branch 19 taken 24
+    72808:  136-block  9
+call   20 returned 72808
+    72832:  136-block 10
+branch 21 taken 72832 (fallthrough)
+branch 22 taken 0
+    72832:  136-block 11
+call   23 returned 72832
+    72832:  136-block 12
+branch 24 taken 96 (fallthrough)
+branch 25 taken 72736
+    %%%%%:  136-block 13
+branch 26 never executed
+branch 27 never executed
+    %%%%%:  136-block 14
+call   28 never executed
+    %%%%%:  136-block 15
+    %%%%%:  136-block 16
+    %%%%%:  136-block 17
+branch 29 never executed
+branch 30 never executed
+    %%%%%:  136-block 18
+call   31 never executed
+    %%%%%:  136-block 19
+       96:  137:                res=false;
+       96:  137-block  0
+        -:  138:            }
+        -:  139:        }
+        -:  140:    }
+     1138:  141:    return res;
+     1138:  141-block  0
+     1138:  141-block  1
+        -:  142:}
+        -:  143:
+        -:  144:
+function _Z8esMatrizSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1139 returned 100% blocks executed 100%
+     1139:  145:bool esMatriz(tablero t) {
+     1139:  145-block  0
+     1139:  146:    bool res = true;
+     1139:  147:    if (t.size() == DIM) {
+     1139:  147-block  0
+call    0 returned 1139
+branch  1 taken 1139 (fallthrough)
+branch  2 taken 0
+    10251:  148:        for (int i = 0; i < t.size();i++) {
+     1139:  148-block  0
+    10251:  148-block  1
+call    0 returned 10251
+branch  1 taken 9112 (fallthrough)
+branch  2 taken 1139
+     9112:  148-block  2
+     1139:  148-block  3
+     9112:  149:            if (t[i].size() != t.size()) {
+     9112:  149-block  0
+call    0 returned 9112
+call    1 returned 9112
+call    2 returned 9112
+branch  3 taken 1 (fallthrough)
+branch  4 taken 9111
+        1:  150:                res = false;
+        1:  150-block  0
+        -:  151:            }
+        -:  152:        }
+        -:  153:    }
+     1139:  154:    return res;
+     1139:  154-block  0
+        -:  155:}
+        -:  156:
+        -:  157:
+function _Z15esTableroValidoSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1139 returned 100% blocks executed 63%
+     1139:  158:bool esTableroValido(tablero t){
+     1139:  158-block  0
+     1139:  159:    return esMatriz(t) && casillasValidas(t) && sinPeonesNoCoronados(t) && cantidadValidaDePiezas(t);
+     1139:  159-block  0
+call    0 returned 1139
+branch  1 taken 1139 (fallthrough)
+branch  2 taken 0 (throw)
+     1139:  159-block  1
+call    3 returned 1139
+branch  4 taken 1138 (fallthrough)
+branch  5 taken 1
+     1138:  159-block  2
+call    6 returned 1138
+branch  7 taken 1138 (fallthrough)
+branch  8 taken 0 (throw)
+     1138:  159-block  3
+call    9 returned 1138
+branch 10 taken 1138 (fallthrough)
+branch 11 taken 0 (throw)
+     1138:  159-block  4
+branch 12 taken 1138 (fallthrough)
+branch 13 taken 0
+     1138:  159-block  5
+call   14 returned 1138
+branch 15 taken 1138 (fallthrough)
+branch 16 taken 0 (throw)
+     1138:  159-block  6
+call   17 returned 1138
+branch 18 taken 1138 (fallthrough)
+branch 19 taken 0 (throw)
+     1138:  159-block  7
+branch 20 taken 1135 (fallthrough)
+branch 21 taken 3
+     1135:  159-block  8
+call   22 returned 1135
+branch 23 taken 1135 (fallthrough)
+branch 24 taken 0 (throw)
+     1135:  159-block  9
+call   25 returned 1135
+branch 26 taken 1135 (fallthrough)
+branch 27 taken 0 (throw)
+     1135:  159-block 10
+branch 28 taken 1128 (fallthrough)
+branch 29 taken 7
+     1128:  159-block 11
+       11:  159-block 12
+     1139:  159-block 13
+branch 30 taken 1135 (fallthrough)
+branch 31 taken 4
+     1135:  159-block 14
+call   32 returned 1135
+     1139:  159-block 15
+branch 33 taken 1138 (fallthrough)
+branch 34 taken 1
+     1138:  159-block 16
+call   35 returned 1138
+     1139:  159-block 17
+branch 36 taken 1138 (fallthrough)
+branch 37 taken 1
+     1138:  159-block 18
+call   38 returned 1138
+     1139:  159-block 19
+branch 39 taken 1139 (fallthrough)
+branch 40 taken 0
+     1139:  159-block 20
+call   41 returned 1139
+     1139:  159-block 21
+     1139:  159-block 22
+    %%%%%:  159-block 23
+branch 42 never executed
+branch 43 never executed
+    %%%%%:  159-block 24
+call   44 never executed
+    %%%%%:  159-block 25
+    %%%%%:  159-block 26
+    %%%%%:  159-block 27
+branch 45 never executed
+branch 46 never executed
+    %%%%%:  159-block 28
+call   47 never executed
+    %%%%%:  159-block 29
+    %%%%%:  159-block 30
+    %%%%%:  159-block 31
+branch 48 never executed
+branch 49 never executed
+    %%%%%:  159-block 32
+call   50 never executed
+    %%%%%:  159-block 33
+    %%%%%:  159-block 34
+    %%%%%:  159-block 35
+branch 51 never executed
+branch 52 never executed
+    %%%%%:  159-block 36
+call   53 never executed
+    %%%%%:  159-block 37
+        -:  160:}
+        -:  161:
+        -:  162:
+function _Z15esJugadorValidoi called 1435 returned 100% blocks executed 100%
+     1435:  163:bool esJugadorValido(int j){
+     1435:  163-block  0
+     1435:  164:    return j==2 || j==1;
+     1435:  164-block  0
+branch  0 taken 1398 (fallthrough)
+branch  1 taken 37
+     1398:  164-block  1
+branch  2 taken 1102 (fallthrough)
+branch  3 taken 296
+     1139:  164-block  2
+      296:  164-block  3
+     1435:  164-block  4
+        -:  165:}
+        -:  166:
+        -:  167://ejercicio 2
+        -:  168:
+function _Z22cantidadPiezasAlInicioSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1 returned 100% blocks executed 63%
+        1:  169:bool cantidadPiezasAlInicio(tablero t){
+        1:  169-block  0
+        4:  170:    return aparicionesEnTablero(t,setCasilla(TORRE,NEGRO)) == 2  && aparicionesEnTablero(t,setCasilla(TORRE,BLANCO)) == 2  &&
+        1:  170-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  170-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  170-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  170-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  170-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  170-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  170-block  6
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:  170-block  7
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0
+        1:  170-block  8
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  170-block  9
+call   24 returned 1
+        1:  170-block 10
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:  170-block 11
+call   27 returned 1
+        1:  170-block 12
+    %%%%%:  170-block 13
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  170-block 14
+call   30 never executed
+    %%%%%:  170-block 15
+    %%%%%:  170-block 16
+    %%%%%:  170-block 17
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  170-block 18
+call   33 never executed
+    %%%%%:  170-block 19
+        4:  171:           aparicionesEnTablero(t,setCasilla(ALFIL,NEGRO)) == 2  && aparicionesEnTablero(t,setCasilla(ALFIL,BLANCO)) == 2  &&
+        1:  171-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  171-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  171-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  171-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  171-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  171-block  5
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  171-block  6
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:  171-block  7
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0
+        1:  171-block  8
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  171-block  9
+call   24 returned 1
+        1:  171-block 10
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:  171-block 11
+call   27 returned 1
+    %%%%%:  171-block 12
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  171-block 13
+call   30 never executed
+    %%%%%:  171-block 14
+    %%%%%:  171-block 15
+    %%%%%:  171-block 16
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  171-block 17
+call   33 never executed
+    %%%%%:  171-block 18
+    %%%%%:  171-block 19
+        4:  172:           aparicionesEnTablero(t,setCasilla(PEON,NEGRO)) == DIM && aparicionesEnTablero(t,setCasilla(PEON,BLANCO)) == DIM;
+        1:  172-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  172-block  1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  172-block  2
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  172-block  3
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  172-block  4
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  172-block  5
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:  172-block  6
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:  172-block  7
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0
+        1:  172-block  8
+    $$$$$:  172-block  9
+        1:  172-block 10
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  172-block 11
+call   24 returned 1
+        1:  172-block 12
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:  172-block 13
+call   27 returned 1
+        1:  172-block 14
+    %%%%%:  172-block 15
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  172-block 16
+call   30 never executed
+    %%%%%:  172-block 17
+    %%%%%:  172-block 18
+    %%%%%:  172-block 19
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  172-block 20
+call   33 never executed
+    %%%%%:  172-block 21
+    %%%%%:  172-block 22
+        -:  173:}
+        -:  174:
+        -:  175:
+function _Z17piezaEnCoordenadaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_ii called 41 returned 100% blocks executed 68%
+       41:  176:bool piezaEnCoordenada(tablero t, coordenada c, int pza, int col) {
+       41:  176-block  0
+       41:  177:    return pieza(t,c) == pza && color(t,c) == col;
+       41:  177-block  0
+call    0 returned 41
+branch  1 taken 41 (fallthrough)
+branch  2 taken 0 (throw)
+       41:  177-block  1
+call    3 returned 41
+branch  4 taken 40 (fallthrough)
+branch  5 taken 1
+       40:  177-block  2
+call    6 returned 40
+branch  7 taken 40 (fallthrough)
+branch  8 taken 0 (throw)
+       40:  177-block  3
+call    9 returned 40
+branch 10 taken 40 (fallthrough)
+branch 11 taken 0
+       40:  177-block  4
+        1:  177-block  5
+       41:  177-block  6
+branch 12 taken 40 (fallthrough)
+branch 13 taken 1
+       40:  177-block  7
+call   14 returned 40
+       41:  177-block  8
+branch 15 taken 41 (fallthrough)
+branch 16 taken 0
+       41:  177-block  9
+call   17 returned 41
+       41:  177-block 10
+       41:  177-block 11
+    %%%%%:  177-block 12
+branch 18 never executed
+branch 19 never executed
+    %%%%%:  177-block 13
+call   20 never executed
+    %%%%%:  177-block 14
+    %%%%%:  177-block 15
+    %%%%%:  177-block 16
+branch 21 never executed
+branch 22 never executed
+    %%%%%:  177-block 17
+call   23 never executed
+    %%%%%:  177-block 18
+        -:  178:}
+        -:  179:
+function _Z18reyesEnCoordenadasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1 returned 100% blocks executed 67%
+        1:  180:bool reyesEnCoordenadas(tablero t) {
+        1:  180-block  0
+        1:  181:    return piezaEnCoordenada(t,setCoord(0,4),REY,NEGRO) && piezaEnCoordenada(t,setCoord(DIM - 1,4),REY,BLANCO);
+        1:  181-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  181-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  181-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  181-block  3
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0
+        1:  181-block  4
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  181-block  5
+call   14 returned 1
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0 (throw)
+        1:  181-block  6
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:  181-block  7
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0
+        1:  181-block  8
+    $$$$$:  181-block  9
+        1:  181-block 10
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  181-block 11
+call   24 returned 1
+        1:  181-block 12
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0
+        1:  181-block 13
+call   27 returned 1
+        1:  181-block 14
+        1:  181-block 15
+    %%%%%:  181-block 16
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  181-block 17
+call   30 never executed
+    %%%%%:  181-block 18
+    %%%%%:  181-block 19
+    %%%%%:  181-block 20
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  181-block 21
+call   33 never executed
+    %%%%%:  181-block 22
+        -:  182:}
+        -:  183:
+function _Z19torresEnCoordenadasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1 returned 100% blocks executed 62%
+        1:  184:bool torresEnCoordenadas(tablero t){
+        1:  184-block  0
+        1:  185:    coordenada c1 = setCoord(0,0);
+        1:  185-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  186:    coordenada c2 = setCoord(0,DIM-1);
+        1:  186-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  187:    coordenada c3 = setCoord(DIM-1,0);
+        1:  187-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  188:    coordenada c4 = setCoord(DIM-1,DIM-1);
+        1:  188-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  189:    return piezaEnCoordenada(t,c2,TORRE,NEGRO) && piezaEnCoordenada(t,c1,TORRE,NEGRO) && piezaEnCoordenada(t,c3,TORRE,BLANCO) && piezaEnCoordenada(t,c4,TORRE,BLANCO);
+        1:  189-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  189-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  189-block  2
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:  189-block  3
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  189-block  4
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  189-block  5
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  189-block  6
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:  189-block  7
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+        1:  189-block  8
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  189-block  9
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:  189-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:  189-block 11
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0
+        1:  189-block 12
+    $$$$$:  189-block 13
+        1:  189-block 14
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0
+        1:  189-block 15
+call   34 returned 1
+        1:  189-block 16
+branch 35 taken 1 (fallthrough)
+branch 36 taken 0
+        1:  189-block 17
+call   37 returned 1
+        1:  189-block 18
+branch 38 taken 1 (fallthrough)
+branch 39 taken 0
+        1:  189-block 19
+call   40 returned 1
+        1:  189-block 20
+branch 41 taken 1 (fallthrough)
+branch 42 taken 0
+        1:  189-block 21
+call   43 returned 1
+        1:  189-block 22
+        1:  189-block 23
+    %%%%%:  189-block 24
+branch 44 never executed
+branch 45 never executed
+    %%%%%:  189-block 25
+call   46 never executed
+    %%%%%:  189-block 26
+    %%%%%:  189-block 27
+    %%%%%:  189-block 28
+branch 47 never executed
+branch 48 never executed
+    %%%%%:  189-block 29
+call   49 never executed
+    %%%%%:  189-block 30
+    %%%%%:  189-block 31
+    %%%%%:  189-block 32
+branch 50 never executed
+branch 51 never executed
+    %%%%%:  189-block 33
+call   52 never executed
+    %%%%%:  189-block 34
+    %%%%%:  189-block 35
+    %%%%%:  189-block 36
+branch 53 never executed
+branch 54 never executed
+    %%%%%:  189-block 37
+call   55 never executed
+    %%%%%:  189-block 38
+    %%%%%:  189-block 39
+        -:  190:}
+        -:  191:
+function _Z20alfilesEnCoordenadasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 1 returned 100% blocks executed 62%
+        1:  192:bool alfilesEnCoordenadas(tablero t){
+        1:  192-block  0
+        1:  193:    coordenada c1 = setCoord(0,2);
+        1:  193-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  194:    coordenada c2 = setCoord(0,DIM-3);
+        1:  194-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  195:    coordenada c3 = setCoord(DIM - 1,2);
+        1:  195-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  196:    coordenada c4 = setCoord(DIM - 1,DIM-3);
+        1:  196-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  197:    return piezaEnCoordenada(t,c1,ALFIL,NEGRO) && piezaEnCoordenada(t,c2,ALFIL,NEGRO) && piezaEnCoordenada(t,c3,ALFIL,BLANCO) && piezaEnCoordenada(t,c4,ALFIL,BLANCO);
+        1:  197-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  197-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  197-block  2
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0
+        1:  197-block  3
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  197-block  4
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  197-block  5
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  197-block  6
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:  197-block  7
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+        1:  197-block  8
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  197-block  9
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:  197-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:  197-block 11
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0
+        1:  197-block 12
+    $$$$$:  197-block 13
+        1:  197-block 14
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0
+        1:  197-block 15
+call   34 returned 1
+        1:  197-block 16
+branch 35 taken 1 (fallthrough)
+branch 36 taken 0
+        1:  197-block 17
+call   37 returned 1
+        1:  197-block 18
+branch 38 taken 1 (fallthrough)
+branch 39 taken 0
+        1:  197-block 19
+call   40 returned 1
+        1:  197-block 20
+branch 41 taken 1 (fallthrough)
+branch 42 taken 0
+        1:  197-block 21
+call   43 returned 1
+        1:  197-block 22
+        1:  197-block 23
+    %%%%%:  197-block 24
+branch 44 never executed
+branch 45 never executed
+    %%%%%:  197-block 25
+call   46 never executed
+    %%%%%:  197-block 26
+    %%%%%:  197-block 27
+    %%%%%:  197-block 28
+branch 47 never executed
+branch 48 never executed
+    %%%%%:  197-block 29
+call   49 never executed
+    %%%%%:  197-block 30
+    %%%%%:  197-block 31
+    %%%%%:  197-block 32
+branch 50 never executed
+branch 51 never executed
+    %%%%%:  197-block 33
+call   52 never executed
+    %%%%%:  197-block 34
+    %%%%%:  197-block 35
+    %%%%%:  197-block 36
+branch 53 never executed
+branch 54 never executed
+    %%%%%:  197-block 37
+call   55 never executed
+    %%%%%:  197-block 38
+    %%%%%:  197-block 39
+        -:  198:}
+        -:  199:
+function _Z19peonesEnCoordenadasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 2 returned 100% blocks executed 76%
+        2:  200:bool peonesEnCoordenadas(tablero t) {
+        2:  200-block  0
+        2:  201:    bool res = true;
+       18:  202:    for(int i = 0; i < DIM; i++){
+        2:  202-block  0
+       18:  202-block  1
+branch  0 taken 16 (fallthrough)
+branch  1 taken 2
+       16:  202-block  2
+       16:  203:        if (!piezaEnCoordenada(t,setCoord(1,i),PEON,NEGRO) || !piezaEnCoordenada(t,setCoord(6,i),PEON,BLANCO)) {
+       16:  203-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:  203-block  1
+call    3 returned 16
+branch  4 taken 16 (fallthrough)
+branch  5 taken 0 (throw)
+       16:  203-block  2
+call    6 returned 16
+branch  7 taken 16 (fallthrough)
+branch  8 taken 0 (throw)
+       16:  203-block  3
+branch  9 taken 15 (fallthrough)
+branch 10 taken 1
+       15:  203-block  4
+call   11 returned 15
+branch 12 taken 15 (fallthrough)
+branch 13 taken 0 (throw)
+       15:  203-block  5
+call   14 returned 15
+branch 15 taken 15 (fallthrough)
+branch 16 taken 0 (throw)
+       15:  203-block  6
+call   17 returned 15
+branch 18 taken 15 (fallthrough)
+branch 19 taken 0 (throw)
+       15:  203-block  7
+branch 20 taken 0 (fallthrough)
+branch 21 taken 15
+        1:  203-block  8
+       15:  203-block  9
+       16:  203-block 10
+branch 22 taken 15 (fallthrough)
+branch 23 taken 1
+       15:  203-block 11
+call   24 returned 15
+       16:  203-block 12
+branch 25 taken 16 (fallthrough)
+branch 26 taken 0
+       16:  203-block 13
+call   27 returned 16
+       16:  203-block 14
+branch 28 taken 1 (fallthrough)
+branch 29 taken 15
+    %%%%%:  203-block 15
+branch 30 never executed
+branch 31 never executed
+    %%%%%:  203-block 16
+call   32 never executed
+    %%%%%:  203-block 17
+    %%%%%:  203-block 18
+    %%%%%:  203-block 19
+branch 33 never executed
+branch 34 never executed
+    %%%%%:  203-block 20
+call   35 never executed
+    %%%%%:  203-block 21
+        1:  204:            res = false;
+        1:  204-block  0
+        -:  205:        }
+        -:  206:    }
+        2:  207:    return res;
+        2:  207-block  0
+        2:  207-block  1
+        -:  208:}
+        -:  209:
+function _Z19piezasEnCoordenadasSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 2 returned 100% blocks executed 63%
+        2:  210:bool piezasEnCoordenadas(tablero t){
+        2:  210-block  0
+        2:  211:    return (peonesEnCoordenadas(t) && torresEnCoordenadas(t) && alfilesEnCoordenadas(t) && reyesEnCoordenadas(t));
+        2:  211-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  211-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  211-block  2
+branch  6 taken 1 (fallthrough)
+branch  7 taken 1
+        1:  211-block  3
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  211-block  4
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  211-block  5
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  211-block  6
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:  211-block  7
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+        1:  211-block  8
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  211-block  9
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:  211-block 10
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:  211-block 11
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0
+        1:  211-block 12
+        1:  211-block 13
+        2:  211-block 14
+branch 32 taken 1 (fallthrough)
+branch 33 taken 1
+        1:  211-block 15
+call   34 returned 1
+        2:  211-block 16
+branch 35 taken 1 (fallthrough)
+branch 36 taken 1
+        1:  211-block 17
+call   37 returned 1
+        2:  211-block 18
+branch 38 taken 1 (fallthrough)
+branch 39 taken 1
+        1:  211-block 19
+call   40 returned 1
+        2:  211-block 20
+branch 41 taken 2 (fallthrough)
+branch 42 taken 0
+        2:  211-block 21
+call   43 returned 2
+        2:  211-block 22
+        2:  211-block 23
+    %%%%%:  211-block 24
+branch 44 never executed
+branch 45 never executed
+    %%%%%:  211-block 25
+call   46 never executed
+    %%%%%:  211-block 26
+    %%%%%:  211-block 27
+    %%%%%:  211-block 28
+branch 47 never executed
+branch 48 never executed
+    %%%%%:  211-block 29
+call   49 never executed
+    %%%%%:  211-block 30
+    %%%%%:  211-block 31
+    %%%%%:  211-block 32
+branch 50 never executed
+branch 51 never executed
+    %%%%%:  211-block 33
+call   52 never executed
+    %%%%%:  211-block 34
+    %%%%%:  211-block 35
+    %%%%%:  211-block 36
+branch 53 never executed
+branch 54 never executed
+    %%%%%:  211-block 37
+call   55 never executed
+    %%%%%:  211-block 38
+        -:  212:}
+        -:  213:
+        -:  214://ejercicio 3
+        -:  215:
+        -:  216:
+function _Z20movimientoPeonValidoSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EEiS1_S1_ called 5573 returned 100% blocks executed 83%
+     5573:  217:bool movimientoPeonValido(tablero t, int color, coordenada o, coordenada d) {
+     5573:  217-block  0
+     5573:  218:    return pieza(t,o) == PEON && (d.second == o.second) && ((color == BLANCO && d.first == (o.first - 1)) || (color == NEGRO && d.first == (o.first + 1)));
+     5573:  218-block  0
+call    0 returned 5573
+branch  1 taken 5573 (fallthrough)
+branch  2 taken 0 (throw)
+     5573:  218-block  1
+call    3 returned 5573
+branch  4 taken 2094 (fallthrough)
+branch  5 taken 3479
+     2094:  218-block  2
+branch  6 taken 246 (fallthrough)
+branch  7 taken 1848
+      246:  218-block  3
+branch  8 taken 170 (fallthrough)
+branch  9 taken 76
+      170:  218-block  4
+branch 10 taken 126 (fallthrough)
+branch 11 taken 44
+      202:  218-block  5
+branch 12 taken 76 (fallthrough)
+branch 13 taken 126
+       76:  218-block  6
+branch 14 taken 11 (fallthrough)
+branch 15 taken 65
+       55:  218-block  7
+     5518:  218-block  8
+     5573:  218-block  9
+branch 16 taken 5573 (fallthrough)
+branch 17 taken 0
+     5573:  218-block 10
+call   18 returned 5573
+     5573:  218-block 11
+     5573:  218-block 12
+    %%%%%:  218-block 13
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  218-block 14
+call   21 never executed
+    %%%%%:  218-block 15
+        -:  219:}
+        -:  220:
+function _Z17mueveEnHorizontalSt4pairIiiES0_ called 1396 returned 100% blocks executed 100%
+     1396:  221:bool mueveEnHorizontal(coordenada o, coordenada d) {
+     1396:  221-block  0
+     1396:  222:    return abs(o.first - d.first) == 0 && abs(o.second - d.second) == 1;
+     1396:  222-block  0
+branch  0 taken 151 (fallthrough)
+branch  1 taken 1245
+      151:  222-block  1
+branch  2 taken 43 (fallthrough)
+branch  3 taken 108
+       43:  222-block  2
+     1353:  222-block  3
+     1396:  222-block  4
+        -:  223:}
+        -:  224:
+function _Z15mueveEnVerticalSt4pairIiiES0_ called 1450 returned 100% blocks executed 100%
+     1450:  225:bool mueveEnVertical(coordenada o, coordenada d) {
+     1450:  225-block  0
+     1450:  226:    return abs(o.first - d.first) == 1 && abs(o.second - d.second) == 0;
+     1450:  226-block  0
+branch  0 taken 192 (fallthrough)
+branch  1 taken 1258
+      192:  226-block  1
+branch  2 taken 54 (fallthrough)
+branch  3 taken 138
+       54:  226-block  2
+     1396:  226-block  3
+     1450:  226-block  4
+        -:  227:}
+        -:  228:
+function _Z15mueveEnDiagonalSt4pairIiiES0_ called 1499 returned 100% blocks executed 100%
+     1499:  229:bool mueveEnDiagonal(coordenada o, coordenada d) {
+     1499:  229-block  0
+     1499:  230:    return abs(o.first - d.first) == 1 && abs(o.second - d.second) == 1;
+     1499:  230-block  0
+branch  0 taken 241 (fallthrough)
+branch  1 taken 1258
+      241:  230-block  1
+branch  2 taken 49 (fallthrough)
+branch  3 taken 192
+       49:  230-block  2
+     1450:  230-block  3
+     1499:  230-block  4
+        -:  231:}
+        -:  232:
+function _Z19movimientoReyValidoSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_ called 5249 returned 100% blocks executed 84%
+     5249:  233:bool movimientoReyValido(tablero t,coordenada o, coordenada d) {
+     5249:  233-block  0
+     5249:  234:    return (pieza(t, o) == REY) && (mueveEnDiagonal(o, d) || mueveEnVertical(o, d) || mueveEnHorizontal(o, d));
+     5249:  234-block  0
+call    0 returned 5249
+branch  1 taken 5249 (fallthrough)
+branch  2 taken 0 (throw)
+     5249:  234-block  1
+call    3 returned 5249
+branch  4 taken 1499 (fallthrough)
+branch  5 taken 3750
+     1499:  234-block  2
+call    6 returned 1499
+branch  7 taken 1450 (fallthrough)
+branch  8 taken 49
+     1450:  234-block  3
+call    9 returned 1450
+branch 10 taken 1396 (fallthrough)
+branch 11 taken 54
+     1396:  234-block  4
+call   12 returned 1396
+branch 13 taken 43 (fallthrough)
+branch 14 taken 1353
+      146:  234-block  5
+     5103:  234-block  6
+     5249:  234-block  7
+branch 15 taken 5249 (fallthrough)
+branch 16 taken 0
+     5249:  234-block  8
+call   17 returned 5249
+     5249:  234-block  9
+     5249:  234-block 10
+    %%%%%:  234-block 11
+branch 18 never executed
+branch 19 never executed
+    %%%%%:  234-block 12
+call   20 never executed
+    %%%%%:  234-block 13
+        -:  235:}
+        -:  236:
+function _Z23mueveParaAbajoIzquierdaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_iib called 10 returned 100% blocks executed 82%
+       10:  237:bool mueveParaAbajoIzquierda(tablero t, coordenada o, coordenada d, int i, int j, bool result) {
+       10:  237-block  0
+       10:  238:    if (!casillaVacia(t,setCoord(o.first + i,o.second - j))) {
+       10:  238-block  0
+call    0 returned 10
+call    1 returned 10
+call    2 returned 10
+branch  3 taken 10 (fallthrough)
+branch  4 taken 0 (throw)
+       10:  238-block  1
+call    5 returned 10
+branch  6 taken 2 (fallthrough)
+branch  7 taken 8
+    %%%%%:  238-block  2
+call    8 never executed
+        2:  239:        result = false;
+        2:  239-block  0
+        -:  240:    }
+       10:  241:    return result;
+       10:  241-block  0
+       10:  241-block  1
+        -:  242:}
+function _Z22mueveParaArribaDerechaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_iib called 47 returned 100% blocks executed 82%
+       47:  243:bool mueveParaArribaDerecha(tablero t, coordenada o, coordenada d, int i, int j, bool result) {
+       47:  243-block  0
+       47:  244:    if (!casillaVacia(t,setCoord(o.first - i,o.second + j))) {
+       47:  244-block  0
+call    0 returned 47
+call    1 returned 47
+call    2 returned 47
+branch  3 taken 47 (fallthrough)
+branch  4 taken 0 (throw)
+       47:  244-block  1
+call    5 returned 47
+branch  6 taken 19 (fallthrough)
+branch  7 taken 28
+    %%%%%:  244-block  2
+call    8 never executed
+       19:  245:        result = false;
+       19:  245-block  0
+        -:  246:    }
+       47:  247:    return result;
+       47:  247-block  0
+       47:  247-block  1
+        -:  248:}
+        -:  249:
+function _Z21mueveParaAbajoDerechaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_iib called 42 returned 100% blocks executed 82%
+       42:  250:bool mueveParaAbajoDerecha(tablero t, coordenada o, coordenada d, int i, int j, bool result) {
+       42:  250-block  0
+       42:  251:    if (!casillaVacia(t,setCoord(o.first + i,o.second + j))) {
+       42:  251-block  0
+call    0 returned 42
+call    1 returned 42
+call    2 returned 42
+branch  3 taken 42 (fallthrough)
+branch  4 taken 0 (throw)
+       42:  251-block  1
+call    5 returned 42
+branch  6 taken 17 (fallthrough)
+branch  7 taken 25
+    %%%%%:  251-block  2
+call    8 never executed
+       17:  252:        result = false;
+       17:  252-block  0
+        -:  253:    }
+       42:  254:    return result;
+       42:  254-block  0
+       42:  254-block  1
+        -:  255:}
+        -:  256:
+function _Z24mueveParaArribaIzquierdaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_iib called 30 returned 100% blocks executed 82%
+       30:  257:bool mueveParaArribaIzquierda(tablero t, coordenada o, coordenada d, int i, int j, bool result) {
+       30:  257-block  0
+       30:  258:    if (!casillaVacia(t,setCoord(o.first - i,o.second - j))) {
+       30:  258-block  0
+call    0 returned 30
+call    1 returned 30
+call    2 returned 30
+branch  3 taken 30 (fallthrough)
+branch  4 taken 0 (throw)
+       30:  258-block  1
+call    5 returned 30
+branch  6 taken 11 (fallthrough)
+branch  7 taken 19
+    %%%%%:  258-block  2
+call    8 never executed
+       11:  259:        result = false;
+       11:  259-block  0
+        -:  260:    }
+       30:  261:    return result;
+       30:  261-block  0
+       30:  261-block  1
+        -:  262:}
+        -:  263:
+function _Z21movimientoAlfilValidoSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_ called 5518 returned 100% blocks executed 78%
+     5518:  264:bool movimientoAlfilValido(tablero t, coordenada o, coordenada d){
+     5518:  264-block  0
+     5518:  265:    bool result = false;
+     5518:  266:    if(pieza(t,o) == ALFIL && abs(d.first-o.first) == abs(d.second-o.second)){
+     5518:  266-block  0
+call    0 returned 5518
+branch  1 taken 5518 (fallthrough)
+branch  2 taken 0 (throw)
+     5518:  266-block  1
+call    3 returned 5518
+branch  4 taken 481 (fallthrough)
+branch  5 taken 5037
+      481:  266-block  2
+branch  6 taken 74 (fallthrough)
+branch  7 taken 407
+       74:  266-block  3
+     5444:  266-block  4
+     5518:  266-block  5
+branch  8 taken 5518 (fallthrough)
+branch  9 taken 0
+     5518:  266-block  6
+call   10 returned 5518
+     5518:  266-block  7
+branch 11 taken 74 (fallthrough)
+branch 12 taken 5444
+    %%%%%:  266-block  8
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  266-block  9
+call   15 never executed
+    %%%%%:  266-block 10
+    %%%%%:  266-block 11
+call   16 never executed
+       74:  267:        result  = true;
+       74:  268:        int diferencia_abs1 = abs(d.first-o.first);
+       74:  269:        int diferencia_abs2 = abs(d.second - o.second);
+      277:  270:        for (int i = 0; i < diferencia_abs1; i++) {
+       74:  270-block  0
+      277:  270-block  1
+branch  0 taken 203 (fallthrough)
+branch  1 taken 74
+      203:  270-block  2
+       74:  270-block  3
+      203:  271:            if (enRango(i, 0, diferencia_abs1)) {
+      203:  271-block  0
+call    0 returned 203
+branch  1 taken 129 (fallthrough)
+branch  2 taken 74
+      625:  272:                for (int j = 0; j < diferencia_abs2; j++) {
+      129:  272-block  0
+      625:  272-block  1
+branch  0 taken 496 (fallthrough)
+branch  1 taken 129
+      496:  272-block  2
+      129:  272-block  3
+      496:  273:                    if (enRango(j, 0, diferencia_abs2) && (abs(i) == abs(j))) {
+      496:  273-block  0
+call    0 returned 496
+branch  1 taken 367 (fallthrough)
+branch  2 taken 129
+      367:  273-block  1
+branch  3 taken 129 (fallthrough)
+branch  4 taken 238
+      129:  273-block  2
+      367:  273-block  3
+      496:  273-block  4
+branch  5 taken 129 (fallthrough)
+branch  6 taken 367
+      129:  274:                        if(d.first > o.first && d.second > o.second) {
+      129:  274-block  0
+branch  0 taken 52 (fallthrough)
+branch  1 taken 77
+       52:  274-block  1
+branch  2 taken 42 (fallthrough)
+branch  3 taken 10
+       42:  275:                            result = mueveParaAbajoDerecha(t, o, d, i, j, result);
+       42:  275-block  0
+call    0 returned 42
+call    1 returned 42
+branch  2 taken 42 (fallthrough)
+branch  3 taken 0 (throw)
+       42:  275-block  1
+call    4 returned 42
+    %%%%%:  275-block  2
+call    5 never executed
+    %%%%%:  275-block  3
+call    6 never executed
+       87:  276:                        }else if (d.first > o.first && o.second > d.second) {
+       87:  276-block  0
+branch  0 taken 10 (fallthrough)
+branch  1 taken 77
+       10:  276-block  1
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0
+       10:  277:                            result = mueveParaAbajoIzquierda(t,o,d,i,j,result);
+       10:  277-block  0
+call    0 returned 10
+call    1 returned 10
+branch  2 taken 10 (fallthrough)
+branch  3 taken 0 (throw)
+       10:  277-block  1
+call    4 returned 10
+    %%%%%:  277-block  2
+call    5 never executed
+    %%%%%:  277-block  3
+call    6 never executed
+       77:  278:                        }else if(d.first < o.first && d.second < o.second){
+       77:  278-block  0
+branch  0 taken 77 (fallthrough)
+branch  1 taken 0
+       77:  278-block  1
+branch  2 taken 30 (fallthrough)
+branch  3 taken 47
+       30:  279:                            result = mueveParaArribaIzquierda(t,o,d,i,j,result);
+       30:  279-block  0
+call    0 returned 30
+call    1 returned 30
+branch  2 taken 30 (fallthrough)
+branch  3 taken 0 (throw)
+       30:  279-block  1
+call    4 returned 30
+    %%%%%:  279-block  2
+call    5 never executed
+    %%%%%:  279-block  3
+call    6 never executed
+       47:  280:                        }else if(d.first < o.first && d.second > o.second){
+       47:  280-block  0
+branch  0 taken 47 (fallthrough)
+branch  1 taken 0
+       47:  280-block  1
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0
+      129:  281:                            result = mueveParaArribaDerecha(t,o,d,i,j,result);
+       47:  281-block  0
+call    0 returned 47
+call    1 returned 47
+branch  2 taken 47 (fallthrough)
+branch  3 taken 0 (throw)
+       47:  281-block  1
+call    4 returned 47
+      129:  281-block  2
+    %%%%%:  281-block  3
+call    5 never executed
+        -:  282:                        }
+        -:  283:                    }
+        -:  284:                }
+        -:  285:            }
+        -:  286:        }
+        -:  287:    }
+     5518:  288:    return result;
+     5518:  288-block  0
+     5518:  288-block  1
+        -:  289:}
+        -:  290:
+function _Z21movimientoTorreValidoSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_ called 5488 returned 100% blocks executed 86%
+     5488:  291:bool movimientoTorreValido(tablero t, coordenada o, coordenada d){
+     5488:  291-block  0
+     5488:  292:    bool resV = false;
+     5488:  293:    bool resH = false;
+     5488:  294:    if (pieza(t,o) == TORRE){
+     5488:  294-block  0
+call    0 returned 5488
+call    1 returned 5488
+call    2 returned 5488
+branch  3 taken 1499 (fallthrough)
+branch  4 taken 3989
+     1499:  295:        if (d.second == o.second) {
+     1499:  295-block  0
+branch  0 taken 178 (fallthrough)
+branch  1 taken 1321
+      178:  296:            resV = true;
+      178:  297:            if (d.first < o.first){ //para arriba
+      178:  297-block  0
+branch  0 taken 110 (fallthrough)
+branch  1 taken 68
+      460:  298:                for(int i= o.first-1 ;i>d.first ;i--){
+      110:  298-block  0
+      460:  298-block  1
+branch  0 taken 350 (fallthrough)
+branch  1 taken 110
+      350:  298-block  2
+      110:  298-block  3
+      350:  299:                    if(enRango(i,o.first,d.first)){
+      350:  299-block  0
+call    0 returned 350
+branch  1 taken 350 (fallthrough)
+branch  2 taken 0
+      350:  300:                        if(!casillaVacia(t,setCoord(i,o.second))){
+      350:  300-block  0
+call    0 returned 350
+call    1 returned 350
+call    2 returned 350
+branch  3 taken 350 (fallthrough)
+branch  4 taken 0 (throw)
+      350:  300-block  1
+call    5 returned 350
+branch  6 taken 50 (fallthrough)
+branch  7 taken 300
+    %%%%%:  300-block  2
+call    8 never executed
+    %%%%%:  300-block  3
+call    9 never executed
+       50:  301:                            resV=false;
+       50:  301-block  0
+        -:  302:                        }
+        -:  303:                    }
+        -:  304:                }
+       68:  305:            }else if (d.first > o.first){  //para abajo
+       68:  305-block  0
+branch  0 taken 68 (fallthrough)
+branch  1 taken 0
+      351:  306:                for(int i= o.first+1 ;i<d.first ;i++){
+       68:  306-block  0
+      241:  306-block  1
+branch  0 taken 173 (fallthrough)
+branch  1 taken 68
+      173:  306-block  2
+       68:  306-block  3
+      178:  306-block  4
+      173:  307:                    if(enRango(i,o.first,d.first)){
+      173:  307-block  0
+call    0 returned 173
+branch  1 taken 173 (fallthrough)
+branch  2 taken 0
+      173:  308:                        if(!casillaVacia(t,setCoord(i,o.second))){
+      173:  308-block  0
+call    0 returned 173
+call    1 returned 173
+call    2 returned 173
+branch  3 taken 173 (fallthrough)
+branch  4 taken 0 (throw)
+      173:  308-block  1
+call    5 returned 173
+branch  6 taken 20 (fallthrough)
+branch  7 taken 153
+    %%%%%:  308-block  2
+call    8 never executed
+    %%%%%:  308-block  3
+call    9 never executed
+       20:  309:                            resV=false;
+       20:  309-block  0
+        -:  310:                        }
+        -:  311:                    }
+        -:  312:                }
+        -:  313:            }
+     1321:  314:        }else if (d.first == o.first) {
+     1321:  314-block  0
+branch  0 taken 161 (fallthrough)
+branch  1 taken 1160
+      161:  315:            resH = true;
+      161:  316:            if (d.second > o.second){ //para la derecha
+      161:  316-block  0
+branch  0 taken 84 (fallthrough)
+branch  1 taken 77
+      285:  317:                for(int i = o.second +1; i < d.second; i++) {
+       84:  317-block  0
+      285:  317-block  1
+branch  0 taken 201 (fallthrough)
+branch  1 taken 84
+      201:  317-block  2
+       84:  317-block  3
+      201:  318:                    if (enRango(i,o.second,d.second)) {
+      201:  318-block  0
+call    0 returned 201
+branch  1 taken 201 (fallthrough)
+branch  2 taken 0
+      201:  319:                        if (!casillaVacia(t,setCoord(o.first,i))) {
+      201:  319-block  0
+call    0 returned 201
+call    1 returned 201
+call    2 returned 201
+branch  3 taken 201 (fallthrough)
+branch  4 taken 0 (throw)
+      201:  319-block  1
+call    5 returned 201
+branch  6 taken 26 (fallthrough)
+branch  7 taken 175
+    %%%%%:  319-block  2
+call    8 never executed
+    %%%%%:  319-block  3
+call    9 never executed
+       26:  320:                            resH = false;
+       26:  320-block  0
+        -:  321:                        }
+        -:  322:                    }
+        -:  323:                }
+       77:  324:            }else if(d.second < o.second){ // para izquierda
+       77:  324-block  0
+branch  0 taken 77 (fallthrough)
+branch  1 taken 0
+     1682:  325:                for(int i = o.second - 1; i > d.second; i--) {
+       77:  325-block  0
+      260:  325-block  1
+branch  0 taken 183 (fallthrough)
+branch  1 taken 77
+      183:  325-block  2
+       77:  325-block  3
+      161:  325-block  4
+     1499:  325-block  5
+      183:  326:                    if (enRango(i,o.second,d.second)) {
+      183:  326-block  0
+call    0 returned 183
+branch  1 taken 183 (fallthrough)
+branch  2 taken 0
+      183:  327:                        if (!casillaVacia(t,setCoord(o.first,i))) {
+      183:  327-block  0
+call    0 returned 183
+call    1 returned 183
+call    2 returned 183
+branch  3 taken 183 (fallthrough)
+branch  4 taken 0 (throw)
+      183:  327-block  1
+call    5 returned 183
+branch  6 taken 20 (fallthrough)
+branch  7 taken 163
+    %%%%%:  327-block  2
+call    8 never executed
+       20:  328:                            resH = false;
+       20:  328-block  0
+        -:  329:                        }
+        -:  330:                    }
+        -:  331:                }
+        -:  332:            }
+        -:  333:        }
+        -:  334:    }
+     5488:  335:    return resH || resV;
+     5488:  335-block  0
+branch  0 taken 5363 (fallthrough)
+branch  1 taken 125
+     5363:  335-block  1
+branch  2 taken 114 (fallthrough)
+branch  3 taken 5249
+      239:  335-block  2
+     5249:  335-block  3
+     5488:  335-block  4
+     5488:  335-block  5
+        -:  336:}
+        -:  337:
+function _Z21movimientoPiezaValidoSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_ called 5573 returned 100% blocks executed 60%
+     5573:  338:bool movimientoPiezaValido(tablero t, coordenada o, coordenada d){
+     5573:  338-block  0
+     5573:  339:    return (movimientoPeonValido(t, color(t,o),o,d) || movimientoAlfilValido(t,o,d) || movimientoTorreValido(t,o,d) || movimientoReyValido(t,o,d));
+     5573:  339-block  0
+call    0 returned 5573
+branch  1 taken 5573 (fallthrough)
+branch  2 taken 0 (throw)
+     5573:  339-block  1
+call    3 returned 5573
+call    4 returned 5573
+branch  5 taken 5573 (fallthrough)
+branch  6 taken 0 (throw)
+     5573:  339-block  2
+call    7 returned 5573
+branch  8 taken 5573 (fallthrough)
+branch  9 taken 0 (throw)
+     5573:  339-block  3
+branch 10 taken 5518 (fallthrough)
+branch 11 taken 55
+     5518:  339-block  4
+call   12 returned 5518
+branch 13 taken 5518 (fallthrough)
+branch 14 taken 0 (throw)
+     5518:  339-block  5
+call   15 returned 5518
+branch 16 taken 5518 (fallthrough)
+branch 17 taken 0 (throw)
+     5518:  339-block  6
+branch 18 taken 5488 (fallthrough)
+branch 19 taken 30
+     5488:  339-block  7
+call   20 returned 5488
+branch 21 taken 5488 (fallthrough)
+branch 22 taken 0 (throw)
+     5488:  339-block  8
+call   23 returned 5488
+branch 24 taken 5488 (fallthrough)
+branch 25 taken 0 (throw)
+     5488:  339-block  9
+branch 26 taken 5249 (fallthrough)
+branch 27 taken 239
+     5249:  339-block 10
+call   28 returned 5249
+branch 29 taken 5249 (fallthrough)
+branch 30 taken 0 (throw)
+     5249:  339-block 11
+call   31 returned 5249
+branch 32 taken 5249 (fallthrough)
+branch 33 taken 0 (throw)
+     5249:  339-block 12
+branch 34 taken 146 (fallthrough)
+branch 35 taken 5103
+      470:  339-block 13
+     5103:  339-block 14
+     5573:  339-block 15
+branch 36 taken 5249 (fallthrough)
+branch 37 taken 324
+     5249:  339-block 16
+call   38 returned 5249
+     5573:  339-block 17
+branch 39 taken 5488 (fallthrough)
+branch 40 taken 85
+     5488:  339-block 18
+call   41 returned 5488
+     5573:  339-block 19
+branch 42 taken 5518 (fallthrough)
+branch 43 taken 55
+     5518:  339-block 20
+call   44 returned 5518
+     5573:  339-block 21
+branch 45 taken 5573 (fallthrough)
+branch 46 taken 0
+     5573:  339-block 22
+call   47 returned 5573
+     5573:  339-block 23
+branch 48 taken 5573 (fallthrough)
+branch 49 taken 0
+     5573:  339-block 24
+call   50 returned 5573
+     5573:  339-block 25
+     5573:  339-block 26
+    %%%%%:  339-block 27
+branch 51 never executed
+branch 52 never executed
+    %%%%%:  339-block 28
+call   53 never executed
+    %%%%%:  339-block 29
+    %%%%%:  339-block 30
+    %%%%%:  339-block 31
+branch 54 never executed
+branch 55 never executed
+    %%%%%:  339-block 32
+call   56 never executed
+    %%%%%:  339-block 33
+    %%%%%:  339-block 34
+    %%%%%:  339-block 35
+branch 57 never executed
+branch 58 never executed
+    %%%%%:  339-block 36
+call   59 never executed
+    %%%%%:  339-block 37
+    %%%%%:  339-block 38
+    %%%%%:  339-block 39
+branch 60 never executed
+branch 61 never executed
+    %%%%%:  339-block 40
+call   62 never executed
+    %%%%%:  339-block 41
+    %%%%%:  339-block 42
+    %%%%%:  339-block 43
+branch 63 never executed
+branch 64 never executed
+    %%%%%:  339-block 44
+call   65 never executed
+    %%%%%:  339-block 45
+        -:  340:}
+        -:  341:
+        -:  342:
+function _Z17capturaPeonValidaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_ called 671 returned 100% blocks executed 75%
+      671:  343:bool capturaPeonValida(tablero t, coordenada o, coordenada d){
+      671:  343-block  0
+      671:  344:    return ((color(t,o)==BLANCO && d.first - o.first == -1 && (d.second == o.second -1 || d.second == o.second+1)) || (color(t,o)==NEGRO && d.first - o.first == 1 && (d.second == o.second -1 || d.second == o.second+1)));
+      671:  344-block  0
+call    0 returned 671
+branch  1 taken 671 (fallthrough)
+branch  2 taken 0 (throw)
+      671:  344-block  1
+call    3 returned 671
+branch  4 taken 416 (fallthrough)
+branch  5 taken 255
+      416:  344-block  2
+branch  6 taken 29 (fallthrough)
+branch  7 taken 387
+       29:  344-block  3
+branch  8 taken 24 (fallthrough)
+branch  9 taken 5
+       24:  344-block  4
+branch 10 taken 22 (fallthrough)
+branch 11 taken 2
+      664:  344-block  5
+call   12 returned 664
+branch 13 taken 664 (fallthrough)
+branch 14 taken 0 (throw)
+      664:  344-block  6
+call   15 returned 664
+branch 16 taken 255 (fallthrough)
+branch 17 taken 409
+      255:  344-block  7
+branch 18 taken 34 (fallthrough)
+branch 19 taken 221
+       34:  344-block  8
+branch 20 taken 31 (fallthrough)
+branch 21 taken 3
+       31:  344-block  9
+branch 22 taken 4 (fallthrough)
+branch 23 taken 27
+       14:  344-block 10
+      657:  344-block 11
+      671:  344-block 12
+branch 24 taken 664 (fallthrough)
+branch 25 taken 7
+      664:  344-block 13
+call   26 returned 664
+      671:  344-block 14
+branch 27 taken 671 (fallthrough)
+branch 28 taken 0
+      671:  344-block 15
+call   29 returned 671
+      671:  344-block 16
+      671:  344-block 17
+    %%%%%:  344-block 18
+branch 30 never executed
+branch 31 never executed
+    %%%%%:  344-block 19
+call   32 never executed
+    %%%%%:  344-block 20
+    %%%%%:  344-block 21
+    %%%%%:  344-block 22
+branch 33 never executed
+branch 34 never executed
+    %%%%%:  344-block 23
+call   35 never executed
+    %%%%%:  344-block 24
+        -:  345:}
+        -:  346:
+function _Z14casillaAtacadaSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EES1_S1_ called 1626 returned 100% blocks executed 61%
+     1626:  347:bool casillaAtacada(tablero t, coordenada o, coordenada d){
+     1626:  347-block  0
+     1626:  348:    return !casillaVacia(t,o) && ((pieza(t,o) != PEON && movimientoPiezaValido(t,o,d)) || (pieza(t,o) == PEON && capturaPeonValida(t,o,d)));
+     1626:  348-block  0
+call    0 returned 1626
+branch  1 taken 1626 (fallthrough)
+branch  2 taken 0 (throw)
+     1626:  348-block  1
+call    3 returned 1626
+branch  4 taken 1626 (fallthrough)
+branch  5 taken 0 (throw)
+     1626:  348-block  2
+branch  6 taken 1626 (fallthrough)
+branch  7 taken 0
+     1626:  348-block  3
+call    8 returned 1626
+branch  9 taken 1626 (fallthrough)
+branch 10 taken 0 (throw)
+     1626:  348-block  4
+call   11 returned 1626
+branch 12 taken 955 (fallthrough)
+branch 13 taken 671
+      955:  348-block  5
+call   14 returned 955
+branch 15 taken 955 (fallthrough)
+branch 16 taken 0 (throw)
+      955:  348-block  6
+call   17 returned 955
+branch 18 taken 955 (fallthrough)
+branch 19 taken 0 (throw)
+      955:  348-block  7
+branch 20 taken 886 (fallthrough)
+branch 21 taken 69
+     1557:  348-block  8
+call   22 returned 1557
+branch 23 taken 1557 (fallthrough)
+branch 24 taken 0 (throw)
+     1557:  348-block  9
+call   25 returned 1557
+branch 26 taken 671 (fallthrough)
+branch 27 taken 886
+      671:  348-block 10
+call   28 returned 671
+branch 29 taken 671 (fallthrough)
+branch 30 taken 0 (throw)
+      671:  348-block 11
+call   31 returned 671
+branch 32 taken 671 (fallthrough)
+branch 33 taken 0 (throw)
+      671:  348-block 12
+branch 34 taken 14 (fallthrough)
+branch 35 taken 657
+       83:  348-block 13
+     1543:  348-block 14
+     1626:  348-block 15
+branch 36 taken 671 (fallthrough)
+branch 37 taken 955
+      671:  348-block 16
+call   38 returned 671
+     1626:  348-block 17
+branch 39 taken 1557 (fallthrough)
+branch 40 taken 69
+     1557:  348-block 18
+call   41 returned 1557
+     1626:  348-block 19
+branch 42 taken 955 (fallthrough)
+branch 43 taken 671
+      955:  348-block 20
+call   44 returned 955
+     1626:  348-block 21
+branch 45 taken 1626 (fallthrough)
+branch 46 taken 0
+     1626:  348-block 22
+call   47 returned 1626
+     1626:  348-block 23
+branch 48 taken 1626 (fallthrough)
+branch 49 taken 0
+     1626:  348-block 24
+call   50 returned 1626
+     1626:  348-block 25
+     1626:  348-block 26
+    %%%%%:  348-block 27
+branch 51 never executed
+branch 52 never executed
+    %%%%%:  348-block 28
+call   53 never executed
+    %%%%%:  348-block 29
+    %%%%%:  348-block 30
+    %%%%%:  348-block 31
+branch 54 never executed
+branch 55 never executed
+    %%%%%:  348-block 32
+call   56 never executed
+    %%%%%:  348-block 33
+    %%%%%:  348-block 34
+    %%%%%:  348-block 35
+branch 57 never executed
+branch 58 never executed
+    %%%%%:  348-block 36
+call   59 never executed
+    %%%%%:  348-block 37
+    %%%%%:  348-block 38
+    %%%%%:  348-block 39
+branch 60 never executed
+branch 61 never executed
+    %%%%%:  348-block 40
+call   62 never executed
+    %%%%%:  348-block 41
+    %%%%%:  348-block 42
+    %%%%%:  348-block 43
+branch 63 never executed
+branch 64 never executed
+    %%%%%:  348-block 44
+call   65 never executed
+    %%%%%:  348-block 45
+        -:  349:}
+        -:  350:
+        -:  351:
+        -:  352:
+        -:  353://EJERCICIO 4
+        -:  354:
+        -:  355:
+function _Z19enLineaFinalInicialSt4pairIiiE called 72 returned 100% blocks executed 100%
+       72:  356:bool enLineaFinalInicial(coordenada c){
+       72:  356-block  0
+       72:  357:    return (c.first==0 || c.first==DIM-1);
+       72:  357-block  0
+branch  0 taken 72 (fallthrough)
+branch  1 taken 0
+       72:  357-block  1
+branch  2 taken 12 (fallthrough)
+branch  3 taken 60
+       12:  357-block  2
+       60:  357-block  3
+       72:  357-block  4
+        -:  358:}
+        -:  359:
+function _Z22piezaCorrectaEnDestinoSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES6_S1_S1_ called 37 returned 100% blocks executed 63%
+       37:  360:bool piezaCorrectaEnDestino(posicion p, posicion q, coordenada o, coordenada d){
+       37:  360-block  0
+       37:  361:    return color(p.first,o) == color(q.first,d) && ((enLineaFinalInicial(d) && pieza(q.first,d) == TORRE) || !enLineaFinalInicial(d)  && pieza(q.first,d) == pieza(p.first,o));
+       37:  361-block  0
+call    0 returned 37
+branch  1 taken 37 (fallthrough)
+branch  2 taken 0 (throw)
+       37:  361-block  1
+call    3 returned 37
+call    4 returned 37
+branch  5 taken 37 (fallthrough)
+branch  6 taken 0 (throw)
+       37:  361-block  2
+call    7 returned 37
+branch  8 taken 37 (fallthrough)
+branch  9 taken 0
+       37:  361-block  3
+call   10 returned 37
+branch 11 taken 7 (fallthrough)
+branch 12 taken 30
+        7:  361-block  4
+call   13 returned 7
+branch 14 taken 7 (fallthrough)
+branch 15 taken 0 (throw)
+        7:  361-block  5
+call   16 returned 7
+branch 17 taken 5 (fallthrough)
+branch 18 taken 2
+       35:  361-block  6
+call   19 returned 35
+branch 20 taken 30 (fallthrough)
+branch 21 taken 5
+       30:  361-block  7
+call   22 returned 30
+branch 23 taken 30 (fallthrough)
+branch 24 taken 0 (throw)
+       30:  361-block  8
+call   25 returned 30
+call   26 returned 30
+branch 27 taken 30 (fallthrough)
+branch 28 taken 0 (throw)
+       30:  361-block  9
+call   29 returned 30
+branch 30 taken 30 (fallthrough)
+branch 31 taken 0
+       32:  361-block 10
+        5:  361-block 11
+       37:  361-block 12
+branch 32 taken 30 (fallthrough)
+branch 33 taken 7
+       30:  361-block 13
+call   34 returned 30
+       37:  361-block 14
+branch 35 taken 30 (fallthrough)
+branch 36 taken 7
+       30:  361-block 15
+call   37 returned 30
+       37:  361-block 16
+branch 38 taken 7 (fallthrough)
+branch 39 taken 30
+        7:  361-block 17
+call   40 returned 7
+       37:  361-block 18
+branch 41 taken 37 (fallthrough)
+branch 42 taken 0
+       37:  361-block 19
+call   43 returned 37
+       37:  361-block 20
+branch 44 taken 37 (fallthrough)
+branch 45 taken 0
+       37:  361-block 21
+call   46 returned 37
+       37:  361-block 22
+       37:  361-block 23
+    %%%%%:  361-block 24
+branch 47 never executed
+branch 48 never executed
+    %%%%%:  361-block 25
+call   49 never executed
+    %%%%%:  361-block 26
+    %%%%%:  361-block 27
+    %%%%%:  361-block 28
+branch 50 never executed
+branch 51 never executed
+    %%%%%:  361-block 29
+call   52 never executed
+    %%%%%:  361-block 30
+    %%%%%:  361-block 31
+    %%%%%:  361-block 32
+branch 53 never executed
+branch 54 never executed
+    %%%%%:  361-block 33
+call   55 never executed
+    %%%%%:  361-block 34
+    %%%%%:  361-block 35
+    %%%%%:  361-block 36
+branch 56 never executed
+branch 57 never executed
+    %%%%%:  361-block 37
+call   58 never executed
+    %%%%%:  361-block 38
+    %%%%%:  361-block 39
+    %%%%%:  361-block 40
+branch 59 never executed
+branch 60 never executed
+    %%%%%:  361-block 41
+call   61 never executed
+    %%%%%:  361-block 42
+        -:  362:}
+        -:  363:
+function _Z9perteneceSt4pairIiiESt6vectorIS0_SaIS0_EE called 70307 returned 100% blocks executed 100%
+    70307:  364:bool pertenece(coordenada c, vector<coordenada> C) {
+    70307:  364-block  0
+    70307:  365:    bool result = false;
+   220117:  366:    for(int i = 0; i < C.size();i++) {
+    70307:  366-block  0
+   220117:  366-block  1
+call    0 returned 220117
+branch  1 taken 149810 (fallthrough)
+branch  2 taken 70307
+   149810:  366-block  2
+   149810:  367:        if (c == C[i]) {
+   149810:  367-block  0
+call    0 returned 149810
+call    1 returned 149810
+branch  2 taken 3007 (fallthrough)
+branch  3 taken 146803
+     3007:  368:            result = true;
+     3007:  368-block  0
+        -:  369:        }
+        -:  370:    }
+    70307:  371:    return result;
+    70307:  371-block  0
+        -:  372:}
+        -:  373:
+        -:  374:
+function _Z26posicionesIgualesExceptoEnSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES6_S3_ called 1085 returned 100% blocks executed 67%
+     1085:  375:bool posicionesIgualesExceptoEn(posicion p, posicion q, vector<coordenada> C){
+     1085:  375-block  0
+     1085:  376:    bool res= true;
+     9765:  377:    for(int i=0;i<DIM;i++){
+     1085:  377-block  0
+     9765:  377-block  1
+branch  0 taken 8680 (fallthrough)
+branch  1 taken 1085
+     8680:  377-block  2
+    78120:  378:        for(int j=0;j<DIM;j++){
+     8680:  378-block  0
+    78120:  378-block  1
+branch  0 taken 69440 (fallthrough)
+branch  1 taken 8680
+    69440:  378-block  2
+    69440:  379:            coordenada c=setCoord(i,j);
+    69440:  379-block  0
+call    0 returned 69440
+branch  1 taken 69440 (fallthrough)
+branch  2 taken 0 (throw)
+    69440:  380:            if(coordenadaEnRango(c)){
+    69440:  380-block  0
+call    0 returned 69440
+branch  1 taken 69440 (fallthrough)
+branch  2 taken 0
+    69440:  381:                if(!pertenece(c,C)){
+    69440:  381-block  0
+call    0 returned 69440
+branch  1 taken 69440 (fallthrough)
+branch  2 taken 0 (throw)
+    69440:  381-block  1
+call    3 returned 69440
+branch  4 taken 69440 (fallthrough)
+branch  5 taken 0 (throw)
+    69440:  381-block  2
+call    6 returned 69440
+branch  7 taken 67270 (fallthrough)
+branch  8 taken 2170
+    %%%%%:  381-block  3
+call    9 never executed
+    %%%%%:  381-block  4
+    67270:  382:                    if (pieza(p.first,c)!=pieza(q.first,c) || color(p.first,c)!=color(q.first,c)) {
+    67270:  382-block  0
+call    0 returned 67270
+branch  1 taken 67270 (fallthrough)
+branch  2 taken 0 (throw)
+    67270:  382-block  1
+call    3 returned 67270
+call    4 returned 67270
+branch  5 taken 67270 (fallthrough)
+branch  6 taken 0 (throw)
+    67270:  382-block  2
+call    7 returned 67270
+branch  8 taken 67268 (fallthrough)
+branch  9 taken 2
+    67268:  382-block  3
+call   10 returned 67268
+branch 11 taken 67268 (fallthrough)
+branch 12 taken 0 (throw)
+    67268:  382-block  4
+call   13 returned 67268
+call   14 returned 67268
+branch 15 taken 67268 (fallthrough)
+branch 16 taken 0 (throw)
+    67268:  382-block  5
+call   17 returned 67268
+branch 18 taken 0 (fallthrough)
+branch 19 taken 67268
+        2:  382-block  6
+    67268:  382-block  7
+    67270:  382-block  8
+branch 20 taken 67268 (fallthrough)
+branch 21 taken 2
+    67268:  382-block  9
+call   22 returned 67268
+    67270:  382-block 10
+branch 23 taken 67268 (fallthrough)
+branch 24 taken 2
+    67268:  382-block 11
+call   25 returned 67268
+    67270:  382-block 12
+branch 26 taken 67270 (fallthrough)
+branch 27 taken 0
+    67270:  382-block 13
+call   28 returned 67270
+    67270:  382-block 14
+branch 29 taken 67270 (fallthrough)
+branch 30 taken 0
+    67270:  382-block 15
+call   31 returned 67270
+    67270:  382-block 16
+branch 32 taken 2 (fallthrough)
+branch 33 taken 67268
+    %%%%%:  382-block 17
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  382-block 18
+call   36 never executed
+    %%%%%:  382-block 19
+    %%%%%:  382-block 20
+    %%%%%:  382-block 21
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  382-block 22
+call   39 never executed
+    %%%%%:  382-block 23
+    %%%%%:  382-block 24
+    %%%%%:  382-block 25
+branch 40 never executed
+branch 41 never executed
+    %%%%%:  382-block 26
+call   42 never executed
+    %%%%%:  382-block 27
+    %%%%%:  382-block 28
+    %%%%%:  382-block 29
+branch 43 never executed
+branch 44 never executed
+    %%%%%:  382-block 30
+call   45 never executed
+    %%%%%:  382-block 31
+    %%%%%:  382-block 32
+        2:  383:                        res = false;
+        2:  383-block  0
+        -:  384:                    }
+        -:  385:                }
+        -:  386:            }
+        -:  387:        }
+        -:  388:    }
+     1085:  389:    return res;
+     1085:  389-block  0
+     1085:  389-block  1
+        -:  390:}
+        -:  391:
+function _Z18esMovimientoValidoSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES1_S1_ called 67573 returned 100% blocks executed 60%
+    67573:  392:bool esMovimientoValido(posicion p, coordenada o, coordenada d){
+    67573:  392-block  0
+    67573:  393:    return jugador(p) == color(p.first,o) && !casillaVacia(p.first,o) && casillaVacia(p.first,d) && movimientoPiezaValido(p.first,o,d);
+    67573:  393-block  0
+call    0 returned 67573
+branch  1 taken 67573 (fallthrough)
+branch  2 taken 0 (throw)
+    67573:  393-block  1
+call    3 returned 67573
+call    4 returned 67573
+branch  5 taken 67573 (fallthrough)
+branch  6 taken 0 (throw)
+    67573:  393-block  2
+call    7 returned 67573
+branch  8 taken 5635 (fallthrough)
+branch  9 taken 61938
+     5635:  393-block  3
+call   10 returned 5635
+branch 11 taken 5635 (fallthrough)
+branch 12 taken 0 (throw)
+     5635:  393-block  4
+call   13 returned 5635
+branch 14 taken 5635 (fallthrough)
+branch 15 taken 0 (throw)
+     5635:  393-block  5
+branch 16 taken 5635 (fallthrough)
+branch 17 taken 0
+     5635:  393-block  6
+call   18 returned 5635
+branch 19 taken 5635 (fallthrough)
+branch 20 taken 0 (throw)
+     5635:  393-block  7
+call   21 returned 5635
+branch 22 taken 5635 (fallthrough)
+branch 23 taken 0 (throw)
+     5635:  393-block  8
+branch 24 taken 4618 (fallthrough)
+branch 25 taken 1017
+     4618:  393-block  9
+call   26 returned 4618
+branch 27 taken 4618 (fallthrough)
+branch 28 taken 0 (throw)
+     4618:  393-block 10
+call   29 returned 4618
+branch 30 taken 4618 (fallthrough)
+branch 31 taken 0 (throw)
+     4618:  393-block 11
+branch 32 taken 401 (fallthrough)
+branch 33 taken 4217
+      401:  393-block 12
+    67172:  393-block 13
+    67573:  393-block 14
+branch 34 taken 4618 (fallthrough)
+branch 35 taken 62955
+     4618:  393-block 15
+call   36 returned 4618
+    67573:  393-block 16
+branch 37 taken 5635 (fallthrough)
+branch 38 taken 61938
+     5635:  393-block 17
+call   39 returned 5635
+    67573:  393-block 18
+branch 40 taken 5635 (fallthrough)
+branch 41 taken 61938
+     5635:  393-block 19
+call   42 returned 5635
+    67573:  393-block 20
+branch 43 taken 67573 (fallthrough)
+branch 44 taken 0
+    67573:  393-block 21
+call   45 returned 67573
+    67573:  393-block 22
+branch 46 taken 67573 (fallthrough)
+branch 47 taken 0
+    67573:  393-block 23
+call   48 returned 67573
+    67573:  393-block 24
+    67573:  393-block 25
+    %%%%%:  393-block 26
+branch 49 never executed
+branch 50 never executed
+    %%%%%:  393-block 27
+call   51 never executed
+    %%%%%:  393-block 28
+    %%%%%:  393-block 29
+    %%%%%:  393-block 30
+branch 52 never executed
+branch 53 never executed
+    %%%%%:  393-block 31
+call   54 never executed
+    %%%%%:  393-block 32
+    %%%%%:  393-block 33
+    %%%%%:  393-block 34
+branch 55 never executed
+branch 56 never executed
+    %%%%%:  393-block 35
+call   57 never executed
+    %%%%%:  393-block 36
+    %%%%%:  393-block 37
+    %%%%%:  393-block 38
+branch 58 never executed
+branch 59 never executed
+    %%%%%:  393-block 39
+call   60 never executed
+    %%%%%:  393-block 40
+    %%%%%:  393-block 41
+    %%%%%:  393-block 42
+branch 61 never executed
+branch 62 never executed
+    %%%%%:  393-block 43
+call   63 never executed
+    %%%%%:  393-block 44
+        -:  394:}
+        -:  395:
+function _Z15esCapturaValidaSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES1_S1_ called 67535 returned 100% blocks executed 60%
+    67535:  396:bool esCapturaValida(posicion p, coordenada o, coordenada d){
+    67535:  396-block  0
+    67535:  397:    return (!casillaVacia(p.first,o))  && (!casillaVacia(p.first,d))  && (color(p.first,o) != color(p.first,d)) &&  casillaAtacada(p.first,o,d);
+    67535:  397-block  0
+call    0 returned 67535
+branch  1 taken 67535 (fallthrough)
+branch  2 taken 0 (throw)
+    67535:  397-block  1
+call    3 returned 67535
+branch  4 taken 67535 (fallthrough)
+branch  5 taken 0 (throw)
+    67535:  397-block  2
+branch  6 taken 7965 (fallthrough)
+branch  7 taken 59570
+     7965:  397-block  3
+call    8 returned 7965
+branch  9 taken 7965 (fallthrough)
+branch 10 taken 0 (throw)
+     7965:  397-block  4
+call   11 returned 7965
+branch 12 taken 7965 (fallthrough)
+branch 13 taken 0 (throw)
+     7965:  397-block  5
+branch 14 taken 1596 (fallthrough)
+branch 15 taken 6369
+     1596:  397-block  6
+call   16 returned 1596
+branch 17 taken 1596 (fallthrough)
+branch 18 taken 0 (throw)
+     1596:  397-block  7
+call   19 returned 1596
+call   20 returned 1596
+branch 21 taken 1596 (fallthrough)
+branch 22 taken 0 (throw)
+     1596:  397-block  8
+call   23 returned 1596
+branch 24 taken 806 (fallthrough)
+branch 25 taken 790
+      806:  397-block  9
+call   26 returned 806
+branch 27 taken 806 (fallthrough)
+branch 28 taken 0 (throw)
+      806:  397-block 10
+call   29 returned 806
+branch 30 taken 806 (fallthrough)
+branch 31 taken 0 (throw)
+      806:  397-block 11
+branch 32 taken 48 (fallthrough)
+branch 33 taken 758
+       48:  397-block 12
+    67487:  397-block 13
+    67535:  397-block 14
+branch 34 taken 806 (fallthrough)
+branch 35 taken 66729
+      806:  397-block 15
+call   36 returned 806
+    67535:  397-block 16
+branch 37 taken 1596 (fallthrough)
+branch 38 taken 65939
+     1596:  397-block 17
+call   39 returned 1596
+    67535:  397-block 18
+branch 40 taken 1596 (fallthrough)
+branch 41 taken 65939
+     1596:  397-block 19
+call   42 returned 1596
+    67535:  397-block 20
+branch 43 taken 7965 (fallthrough)
+branch 44 taken 59570
+     7965:  397-block 21
+call   45 returned 7965
+    67535:  397-block 22
+branch 46 taken 67535 (fallthrough)
+branch 47 taken 0
+    67535:  397-block 23
+call   48 returned 67535
+    67535:  397-block 24
+    67535:  397-block 25
+    %%%%%:  397-block 26
+branch 49 never executed
+branch 50 never executed
+    %%%%%:  397-block 27
+call   51 never executed
+    %%%%%:  397-block 28
+    %%%%%:  397-block 29
+    %%%%%:  397-block 30
+branch 52 never executed
+branch 53 never executed
+    %%%%%:  397-block 31
+call   54 never executed
+    %%%%%:  397-block 32
+    %%%%%:  397-block 33
+    %%%%%:  397-block 34
+branch 55 never executed
+branch 56 never executed
+    %%%%%:  397-block 35
+call   57 never executed
+    %%%%%:  397-block 36
+    %%%%%:  397-block 37
+    %%%%%:  397-block 38
+branch 58 never executed
+branch 59 never executed
+    %%%%%:  397-block 39
+call   60 never executed
+    %%%%%:  397-block 40
+    %%%%%:  397-block 41
+    %%%%%:  397-block 42
+branch 61 never executed
+branch 62 never executed
+    %%%%%:  397-block 43
+call   63 never executed
+    %%%%%:  397-block 44
+        -:  398:}
+        -:  399:
+function _Z17posicionSiguienteSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES6_S1_S1_ called 1085 returned 100% blocks executed 52%
+     1085:  400:bool posicionSiguiente (posicion p, posicion q, coordenada o, coordenada d){
+     1085:  400-block  0
+     2170:  401:    vector<coordenada> c = {o, d};
+     1085:  401-block  0
+call    0 returned 1085
+call    1 returned 1085
+branch  2 taken 1085 (fallthrough)
+branch  3 taken 0 (throw)
+     1085:  401-block  1
+call    4 returned 1085
+     1085:  401-block  2
+call    5 returned 1085
+    %%%%%:  401-block  3
+    %%%%%:  401-block  4
+    %%%%%:  401-block  5
+    %%%%%:  401-block  6
+call    6 never executed
+     2170:  402:    return posicionesIgualesExceptoEn(p,q, c) && casillaVacia(q.first,o) && (esMovimientoValido(p,o,d) || esCapturaValida(p,o,d)) && piezaCorrectaEnDestino(p,q,o,d);
+call    0 returned 1085
+branch  1 taken 1085 (fallthrough)
+branch  2 taken 0 (throw)
+     1085:  402-block  0
+call    3 returned 1085
+branch  4 taken 1085 (fallthrough)
+branch  5 taken 0 (throw)
+     1085:  402-block  1
+call    6 returned 1085
+branch  7 taken 1085 (fallthrough)
+branch  8 taken 0 (throw)
+     1085:  402-block  2
+call    9 returned 1085
+branch 10 taken 1085 (fallthrough)
+branch 11 taken 0 (throw)
+     1085:  402-block  3
+branch 12 taken 1084 (fallthrough)
+branch 13 taken 1
+     1084:  402-block  4
+call   14 returned 1084
+branch 15 taken 1084 (fallthrough)
+branch 16 taken 0 (throw)
+     1084:  402-block  5
+call   17 returned 1084
+branch 18 taken 1084 (fallthrough)
+branch 19 taken 0 (throw)
+     1084:  402-block  6
+branch 20 taken 39 (fallthrough)
+branch 21 taken 1045
+       39:  402-block  7
+call   22 returned 39
+branch 23 taken 39 (fallthrough)
+branch 24 taken 0 (throw)
+       39:  402-block  8
+call   25 returned 39
+branch 26 taken 39 (fallthrough)
+branch 27 taken 0 (throw)
+       39:  402-block  9
+branch 28 taken 9 (fallthrough)
+branch 29 taken 30
+        9:  402-block 10
+call   30 returned 9
+branch 31 taken 9 (fallthrough)
+branch 32 taken 0 (throw)
+        9:  402-block 11
+call   33 returned 9
+branch 34 taken 9 (fallthrough)
+branch 35 taken 0 (throw)
+        9:  402-block 12
+branch 36 taken 7 (fallthrough)
+branch 37 taken 2
+       37:  402-block 13
+call   38 returned 37
+branch 39 taken 37 (fallthrough)
+branch 40 taken 0 (throw)
+       37:  402-block 14
+call   41 returned 37
+branch 42 taken 37 (fallthrough)
+branch 43 taken 0 (throw)
+       37:  402-block 15
+call   44 returned 37
+branch 45 taken 37 (fallthrough)
+branch 46 taken 0 (throw)
+       37:  402-block 16
+branch 47 taken 32 (fallthrough)
+branch 48 taken 5
+       32:  402-block 17
+     1053:  402-block 18
+     1085:  402-block 19
+branch 49 taken 37 (fallthrough)
+branch 50 taken 1048
+       37:  402-block 20
+call   51 returned 37
+     1085:  402-block 21
+branch 52 taken 37 (fallthrough)
+branch 53 taken 1048
+       37:  402-block 22
+call   54 returned 37
+     1085:  402-block 23
+branch 55 taken 9 (fallthrough)
+branch 56 taken 1076
+        9:  402-block 24
+call   57 returned 9
+     1085:  402-block 25
+branch 58 taken 39 (fallthrough)
+branch 59 taken 1046
+       39:  402-block 26
+call   60 returned 39
+     1085:  402-block 27
+branch 61 taken 1084 (fallthrough)
+branch 62 taken 1
+     1084:  402-block 28
+call   63 returned 1084
+     1085:  402-block 29
+branch 64 taken 1085 (fallthrough)
+branch 65 taken 0
+     1085:  402-block 30
+call   66 returned 1085
+     1085:  402-block 31
+branch 67 taken 1085 (fallthrough)
+branch 68 taken 0
+     1085:  402-block 32
+call   69 returned 1085
+     1085:  402-block 33
+branch 70 taken 1085 (fallthrough)
+branch 71 taken 0
+     1085:  402-block 34
+call   72 returned 1085
+     1085:  402-block 35
+    %%%%%:  402-block 36
+call   73 never executed
+    %%%%%:  402-block 37
+branch 74 never executed
+branch 75 never executed
+    %%%%%:  402-block 38
+call   76 never executed
+    %%%%%:  402-block 39
+    %%%%%:  402-block 40
+    %%%%%:  402-block 41
+branch 77 never executed
+branch 78 never executed
+    %%%%%:  402-block 42
+call   79 never executed
+    %%%%%:  402-block 43
+    %%%%%:  402-block 44
+    %%%%%:  402-block 45
+branch 80 never executed
+branch 81 never executed
+    %%%%%:  402-block 46
+call   82 never executed
+    %%%%%:  402-block 47
+    %%%%%:  402-block 48
+    %%%%%:  402-block 49
+branch 83 never executed
+branch 84 never executed
+    %%%%%:  402-block 50
+call   85 never executed
+    %%%%%:  402-block 51
+    %%%%%:  402-block 52
+    %%%%%:  402-block 53
+branch 86 never executed
+branch 87 never executed
+    %%%%%:  402-block 54
+call   88 never executed
+    %%%%%:  402-block 55
+    %%%%%:  402-block 56
+    %%%%%:  402-block 57
+branch 89 never executed
+branch 90 never executed
+    %%%%%:  402-block 58
+call   91 never executed
+    %%%%%:  402-block 59
+    %%%%%:  402-block 60
+    %%%%%:  402-block 61
+branch 92 never executed
+branch 93 never executed
+    %%%%%:  402-block 62
+call   94 never executed
+    %%%%%:  402-block 63
+    %%%%%:  402-block 64
+    %%%%%:  402-block 65
+branch 95 never executed
+branch 96 never executed
+    %%%%%:  402-block 66
+call   97 never executed
+    %%%%%:  402-block 67
+    %%%%%:  402-block 68
+        -:  403:}
+        -:  404:
+        -:  405://EJERCICIO 5
+        -:  406:
+        -:  407:
+function _Z4swapRSt6vectorISt4pairIiiESaIS1_EEii called 32 returned 100% blocks executed 100%
+       32:  408:void swap(vector<casilla> &v, int i, int j) {
+       32:  408-block  0
+       32:  409:    casilla copia = v[i];
+       32:  409-block  0
+call    0 returned 32
+       32:  410:    v[i] = v[j];
+call    0 returned 32
+call    1 returned 32
+call    2 returned 32
+       32:  411:    v[j] = copia;
+call    0 returned 32
+call    1 returned 32
+       32:  412:}
+        -:  413:
+function _Z21indiceCasillaMinDesdeSt6vectorISt4pairIiiESaIS1_EEi called 32 returned 100% blocks executed 100%
+       32:  414:int indiceCasillaMinDesde(vector<casilla> v, int d) {
+       32:  414-block  0
+       32:  415:    int iMin = d;
+       32:  416:    casilla minima;
+       32:  417:    minima.first = 4;
+       32:  418:    minima.second = 1;
+      186:  419:    for(int i = d; i < v.size(); i++) {
+       32:  419-block  0
+      186:  419-block  1
+call    0 returned 186
+branch  1 taken 154 (fallthrough)
+branch  2 taken 32
+      154:  419-block  2
+      154:  420:        if (minima.first > v[i].first && v[i].first != 0) {
+      154:  420-block  0
+call    0 returned 154
+branch  1 taken 77 (fallthrough)
+branch  2 taken 77
+       77:  420-block  1
+call    3 returned 77
+branch  4 taken 32 (fallthrough)
+branch  5 taken 45
+       32:  420-block  2
+      122:  420-block  3
+      154:  420-block  4
+branch  6 taken 32 (fallthrough)
+branch  7 taken 122
+       32:  421:            minima = v[i];
+       32:  421-block  0
+call    0 returned 32
+call    1 returned 32
+       32:  422:            iMin = i;
+        -:  423:        }
+        -:  424:    }
+       32:  425:    return iMin;
+       32:  425-block  0
+        -:  426:}
+        -:  427:
+function _Z11ordenarFilaSt6vectorISt4pairIiiESaIS1_EE called 16 returned 100% blocks executed 79%
+       16:  428:vector<casilla> ordenarFila(vector<casilla> fila) {
+       16:  428-block  0
+       16:  429:    vector<casilla> filaOrdenada = fila;
+       16:  429-block  0
+call    0 returned 16
+      144:  430:    for(int i = 0; i < fila.size();i++) {
+      144:  430-block  0
+call    0 returned 144
+branch  1 taken 128 (fallthrough)
+branch  2 taken 16
+      128:  430-block  1
+      128:  431:        if (filaOrdenada[i].first != 0) {
+      128:  431-block  0
+call    0 returned 128
+branch  1 taken 32 (fallthrough)
+branch  2 taken 96
+       32:  432:            int minimo = indiceCasillaMinDesde(filaOrdenada,i);
+       32:  432-block  0
+call    0 returned 32
+branch  1 taken 32 (fallthrough)
+branch  2 taken 0 (throw)
+       32:  432-block  1
+call    3 returned 32
+branch  4 taken 32 (fallthrough)
+branch  5 taken 0 (throw)
+       32:  432-block  2
+call    6 returned 32
+    %%%%%:  432-block  3
+call    7 never executed
+    %%%%%:  432-block  4
+    %%%%%:  432-block  5
+call    8 never executed
+       32:  433:            swap(filaOrdenada,i,minimo);
+call    0 returned 32
+branch  1 taken 32 (fallthrough)
+branch  2 taken 0 (throw)
+       32:  433-block  0
+        -:  434:        }
+        -:  435:    }
+       16:  436:    return filaOrdenada;
+       16:  436-block  0
+       16:  436-block  1
+        -:  437:}
+        -:  438:
+        -:  439://EJERCICIO 6
+        -:  440:
+function _Z9quienGanoSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 3 returned 100% blocks executed 86%
+        3:  441:int quienGano (posicion p){
+        3:  441-block  0
+        3:  442:    int ganador = 0;
+        3:  443:    if (esJaqueMate(p)){
+        3:  443-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:  443-block  1
+call    4 returned 3
+branch  5 taken 1 (fallthrough)
+branch  6 taken 2
+    %%%%%:  443-block  2
+call    7 never executed
+        1:  444:        ganador = contrincante(jugador(p));
+        1:  444-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+        -:  445:    }
+        3:  446:    return ganador;
+        3:  446-block  0
+        3:  446-block  1
+        -:  447:}
+        -:  448:
+        -:  449:
+function _Z10atacaAlReySt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES1_ called 363 returned 100% blocks executed 69%
+      363:  450:bool atacaAlRey(posicion p, coordenada o) {
+      363:  450-block  0
+      363:  451:    bool result = false;
+     3267:  452:    for(int i = 0; i < DIM;i++) {
+      363:  452-block  0
+     3267:  452-block  1
+branch  0 taken 2904 (fallthrough)
+branch  1 taken 363
+     2904:  452-block  2
+    26136:  453:        for(int j = 0; j < DIM;j++) {
+     2904:  453-block  0
+    26136:  453-block  1
+branch  0 taken 23232 (fallthrough)
+branch  1 taken 2904
+    23232:  453-block  2
+    23232:  454:            coordenada d = setCoord(i,j);
+    23232:  454-block  0
+call    0 returned 23232
+branch  1 taken 23232 (fallthrough)
+branch  2 taken 0 (throw)
+    23232:  455:            if (coordenadaEnRango(d)) {
+    23232:  455-block  0
+call    0 returned 23232
+branch  1 taken 23232 (fallthrough)
+branch  2 taken 0
+    23232:  456:                if( pieza(p.first,d) == REY && color(p.first,d) == jugador(p) && esCapturaValida(p,o,d)){
+    23232:  456-block  0
+call    0 returned 23232
+branch  1 taken 23232 (fallthrough)
+branch  2 taken 0 (throw)
+    23232:  456-block  1
+call    3 returned 23232
+branch  4 taken 726 (fallthrough)
+branch  5 taken 22506
+      726:  456-block  2
+call    6 returned 726
+branch  7 taken 726 (fallthrough)
+branch  8 taken 0 (throw)
+      726:  456-block  3
+call    9 returned 726
+call   10 returned 726
+branch 11 taken 726 (fallthrough)
+branch 12 taken 0 (throw)
+      726:  456-block  4
+call   13 returned 726
+branch 14 taken 363 (fallthrough)
+branch 15 taken 363
+      363:  456-block  5
+call   16 returned 363
+branch 17 taken 363 (fallthrough)
+branch 18 taken 0 (throw)
+      363:  456-block  6
+call   19 returned 363
+branch 20 taken 363 (fallthrough)
+branch 21 taken 0 (throw)
+      363:  456-block  7
+branch 22 taken 23 (fallthrough)
+branch 23 taken 340
+       23:  456-block  8
+    23209:  456-block  9
+    23232:  456-block 10
+branch 24 taken 363 (fallthrough)
+branch 25 taken 22869
+      363:  456-block 11
+call   26 returned 363
+    23232:  456-block 12
+branch 27 taken 726 (fallthrough)
+branch 28 taken 22506
+      726:  456-block 13
+call   29 returned 726
+    23232:  456-block 14
+branch 30 taken 726 (fallthrough)
+branch 31 taken 22506
+      726:  456-block 15
+call   32 returned 726
+    23232:  456-block 16
+branch 33 taken 23232 (fallthrough)
+branch 34 taken 0
+    23232:  456-block 17
+call   35 returned 23232
+    23232:  456-block 18
+branch 36 taken 23 (fallthrough)
+branch 37 taken 23209
+    %%%%%:  456-block 19
+branch 38 never executed
+branch 39 never executed
+    %%%%%:  456-block 20
+call   40 never executed
+    %%%%%:  456-block 21
+    %%%%%:  456-block 22
+    %%%%%:  456-block 23
+branch 41 never executed
+branch 42 never executed
+    %%%%%:  456-block 24
+call   43 never executed
+    %%%%%:  456-block 25
+    %%%%%:  456-block 26
+    %%%%%:  456-block 27
+branch 44 never executed
+branch 45 never executed
+    %%%%%:  456-block 28
+call   46 never executed
+    %%%%%:  456-block 29
+    %%%%%:  456-block 30
+    %%%%%:  456-block 31
+branch 47 never executed
+branch 48 never executed
+    %%%%%:  456-block 32
+call   49 never executed
+    %%%%%:  456-block 33
+    %%%%%:  456-block 34
+       23:  457:                    result = true;
+       23:  457-block  0
+        -:  458:                }
+        -:  459:            }
+        -:  460:        }
+        -:  461:    }
+      363:  462:    return result;
+      363:  462-block  0
+      363:  462-block  1
+        -:  463:}
+        -:  464:
+function _Z14jugadorEnJaqueSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiEi called 61 returned 100% blocks executed 73%
+       61:  465:bool jugadorEnJaque(posicion p, int j) {
+       61:  465-block  0
+       61:  466:    bool result = false;
+      122:  467:    posicion q;
+       61:  467-block  0
+call    0 returned 61
+       61:  467-block  1
+call    1 returned 61
+    %%%%%:  467-block  2
+call    2 never executed
+       61:  468:    q.first = p.first;
+call    0 returned 61
+branch  1 taken 61 (fallthrough)
+branch  2 taken 0 (throw)
+       61:  469:    q.second = j;
+      549:  470:    for(int i = 0; i < DIM;i++) {
+       61:  470-block  0
+      549:  470-block  1
+branch  0 taken 488 (fallthrough)
+branch  1 taken 61
+      488:  470-block  2
+     4392:  471:        for(int j = 0; j < DIM;j++) {
+      488:  471-block  0
+     4392:  471-block  1
+branch  0 taken 3904 (fallthrough)
+branch  1 taken 488
+     3904:  471-block  2
+     3904:  472:            coordenada o = setCoord(i,j);
+     3904:  472-block  0
+call    0 returned 3904
+branch  1 taken 3904 (fallthrough)
+branch  2 taken 0 (throw)
+     3904:  473:            if (coordenadaEnRango(o) && (color(q.first,o) == contrincante(j)) && atacaAlRey(q,o)) {
+     3904:  473-block  0
+call    0 returned 3904
+branch  1 taken 3904 (fallthrough)
+branch  2 taken 0
+     3904:  473-block  1
+call    3 returned 3904
+branch  4 taken 3904 (fallthrough)
+branch  5 taken 0 (throw)
+     3904:  473-block  2
+call    6 returned 3904
+call    7 returned 3904
+branch  8 taken 363 (fallthrough)
+branch  9 taken 3541
+      363:  473-block  3
+call   10 returned 363
+branch 11 taken 363 (fallthrough)
+branch 12 taken 0 (throw)
+      363:  473-block  4
+call   13 returned 363
+branch 14 taken 363 (fallthrough)
+branch 15 taken 0 (throw)
+      363:  473-block  5
+branch 16 taken 23 (fallthrough)
+branch 17 taken 340
+       23:  473-block  6
+     3881:  473-block  7
+     3904:  473-block  8
+branch 18 taken 363 (fallthrough)
+branch 19 taken 3541
+      363:  473-block  9
+call   20 returned 363
+     3904:  473-block 10
+branch 21 taken 3904 (fallthrough)
+branch 22 taken 0
+     3904:  473-block 11
+call   23 returned 3904
+     3904:  473-block 12
+branch 24 taken 23 (fallthrough)
+branch 25 taken 3881
+    %%%%%:  473-block 13
+branch 26 never executed
+branch 27 never executed
+    %%%%%:  473-block 14
+call   28 never executed
+    %%%%%:  473-block 15
+    %%%%%:  473-block 16
+    %%%%%:  473-block 17
+branch 29 never executed
+branch 30 never executed
+    %%%%%:  473-block 18
+call   31 never executed
+    %%%%%:  473-block 19
+    %%%%%:  473-block 20
+    %%%%%:  473-block 21
+       23:  474:                result = true;
+       23:  474-block  0
+        -:  475:            }
+        -:  476:        }
+        -:  477:    }
+       61:  478:    return result;
+       61:  478-block  0
+        -:  479:}
+        -:  480:
+function _Z16tienenMovimientoSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES3_ called 1 returned 100% blocks executed 78%
+        1:  481:bool tienenMovimiento (posicion p, vector<coordenada> piezas){
+        1:  481-block  0
+        1:  482:    bool result = false;
+       14:  483:    for (int i=0;i<piezas.size();i++){
+        1:  483-block  0
+       14:  483-block  1
+call    0 returned 14
+branch  1 taken 13 (fallthrough)
+branch  2 taken 1
+       13:  483-block  2
+      117:  484:        for(int j=0; j< DIM;j++){
+       13:  484-block  0
+      117:  484-block  1
+branch  0 taken 104 (fallthrough)
+branch  1 taken 13
+      104:  484-block  2
+      936:  485:            for(int k = 0; k < DIM;k++) {
+      104:  485-block  0
+      936:  485-block  1
+branch  0 taken 832 (fallthrough)
+branch  1 taken 104
+      832:  485-block  2
+      832:  486:                if (pertenece(piezas[i],piezas)) {
+      832:  486-block  0
+call    0 returned 832
+call    1 returned 832
+call    2 returned 832
+branch  3 taken 832 (fallthrough)
+branch  4 taken 0 (throw)
+      832:  486-block  1
+call    5 returned 832
+branch  6 taken 832 (fallthrough)
+branch  7 taken 0
+    %%%%%:  486-block  2
+call    8 never executed
+    %%%%%:  486-block  3
+call    9 never executed
+      832:  487:                    coordenada d = setCoord(j,k);
+      832:  487-block  0
+call    0 returned 832
+branch  1 taken 832 (fallthrough)
+branch  2 taken 0 (throw)
+      832:  488:                    if(coordenadaEnRango(d) && (esMovimientoValido(p,piezas[i],d) || esCapturaValida(p,piezas[i],d))){
+      832:  488-block  0
+call    0 returned 832
+branch  1 taken 832 (fallthrough)
+branch  2 taken 0
+      832:  488-block  1
+call    3 returned 832
+call    4 returned 832
+branch  5 taken 832 (fallthrough)
+branch  6 taken 0 (throw)
+      832:  488-block  2
+call    7 returned 832
+branch  8 taken 832 (fallthrough)
+branch  9 taken 0 (throw)
+      832:  488-block  3
+branch 10 taken 821 (fallthrough)
+branch 11 taken 11
+      821:  488-block  4
+call   12 returned 821
+call   13 returned 821
+branch 14 taken 821 (fallthrough)
+branch 15 taken 0 (throw)
+      821:  488-block  5
+call   16 returned 821
+branch 17 taken 821 (fallthrough)
+branch 18 taken 0 (throw)
+      821:  488-block  6
+branch 19 taken 0 (fallthrough)
+branch 20 taken 821
+       11:  488-block  7
+      821:  488-block  8
+      832:  488-block  9
+branch 21 taken 821 (fallthrough)
+branch 22 taken 11
+      821:  488-block 10
+call   23 returned 821
+      832:  488-block 11
+branch 24 taken 832 (fallthrough)
+branch 25 taken 0
+      832:  488-block 12
+call   26 returned 832
+      832:  488-block 13
+branch 27 taken 11 (fallthrough)
+branch 28 taken 821
+    %%%%%:  488-block 14
+branch 29 never executed
+branch 30 never executed
+    %%%%%:  488-block 15
+call   31 never executed
+    %%%%%:  488-block 16
+    %%%%%:  488-block 17
+    %%%%%:  488-block 18
+branch 32 never executed
+branch 33 never executed
+    %%%%%:  488-block 19
+call   34 never executed
+    %%%%%:  488-block 20
+    %%%%%:  488-block 21
+      832:  489:                        result = true;
+       11:  489-block  0
+      832:  489-block  1
+        -:  490:                    }
+        -:  491:                }
+        -:  492:            }
+        -:  493:        }
+        -:  494:    }
+        1:  495:    return result;
+        1:  495-block  0
+        1:  495-block  1
+        -:  496:}
+        -:  497:
+function _Z21hayMovimientosLegalesSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 1 returned 100% blocks executed 67%
+        1:  498:bool hayMovimientosLegales(posicion p){
+        1:  498-block  0
+        1:  499:    bool res=false;
+        2:  500:    vector<coordenada> movibles;
+        1:  500-block  0
+call    0 returned 1
+        1:  500-block  1
+call    1 returned 1
+    %%%%%:  500-block  2
+call    2 never executed
+        9:  501:    for(int i=0;i<p.first.size();i++){
+        9:  501-block  0
+call    0 returned 9
+branch  1 taken 8 (fallthrough)
+branch  2 taken 1
+        8:  501-block  1
+       72:  502:        for(int j=0;j<p.first.size();j++){
+        8:  502-block  0
+       72:  502-block  1
+call    0 returned 72
+branch  1 taken 64 (fallthrough)
+branch  2 taken 8
+       64:  502-block  2
+       64:  503:            coordenada c=setCoord(i,j);
+       64:  503-block  0
+call    0 returned 64
+branch  1 taken 64 (fallthrough)
+branch  2 taken 0 (throw)
+       64:  504:            if(coordenadaEnRango(c) && piezaCorrecta(pieza(p.first,c)) && (color(p.first, c) == jugador(p))){
+       64:  504-block  0
+call    0 returned 64
+branch  1 taken 64 (fallthrough)
+branch  2 taken 0
+       64:  504-block  1
+call    3 returned 64
+branch  4 taken 64 (fallthrough)
+branch  5 taken 0 (throw)
+       64:  504-block  2
+call    6 returned 64
+call    7 returned 64
+branch  8 taken 26 (fallthrough)
+branch  9 taken 38
+       26:  504-block  3
+call   10 returned 26
+branch 11 taken 26 (fallthrough)
+branch 12 taken 0 (throw)
+       26:  504-block  4
+call   13 returned 26
+call   14 returned 26
+branch 15 taken 26 (fallthrough)
+branch 16 taken 0 (throw)
+       26:  504-block  5
+call   17 returned 26
+branch 18 taken 13 (fallthrough)
+branch 19 taken 13
+       13:  504-block  6
+       51:  504-block  7
+       64:  504-block  8
+branch 20 taken 26 (fallthrough)
+branch 21 taken 38
+       26:  504-block  9
+call   22 returned 26
+       64:  504-block 10
+branch 23 taken 26 (fallthrough)
+branch 24 taken 38
+       26:  504-block 11
+call   25 returned 26
+       64:  504-block 12
+branch 26 taken 64 (fallthrough)
+branch 27 taken 0
+       64:  504-block 13
+call   28 returned 64
+       64:  504-block 14
+branch 29 taken 13 (fallthrough)
+branch 30 taken 51
+    %%%%%:  504-block 15
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  504-block 16
+call   33 never executed
+    %%%%%:  504-block 17
+    %%%%%:  504-block 18
+    %%%%%:  504-block 19
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  504-block 20
+call   36 never executed
+    %%%%%:  504-block 21
+    %%%%%:  504-block 22
+    %%%%%:  504-block 23
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  504-block 24
+call   39 never executed
+    %%%%%:  504-block 25
+    %%%%%:  504-block 26
+    %%%%%:  504-block 27
+       13:  505:                movibles.push_back(c);
+       13:  505-block  0
+call    0 returned 13
+branch  1 taken 13 (fallthrough)
+branch  2 taken 0 (throw)
+       13:  505-block  1
+        -:  506:            }
+        -:  507:        }
+        -:  508:    }
+        1:  509:    if(movibles.size()>=0 &&  tienenMovimiento(p,movibles)){
+        1:  509-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  509-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  509-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  509-block  3
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  509-block  4
+    $$$$$:  509-block  5
+        1:  509-block  6
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0
+        1:  509-block  7
+call   14 returned 1
+        1:  509-block  8
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0
+        1:  509-block  9
+call   17 returned 1
+        1:  509-block 10
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+    %%%%%:  509-block 11
+branch 20 never executed
+branch 21 never executed
+    %%%%%:  509-block 12
+call   22 never executed
+    %%%%%:  509-block 13
+    %%%%%:  509-block 14
+    %%%%%:  509-block 15
+branch 23 never executed
+branch 24 never executed
+    %%%%%:  509-block 16
+call   25 never executed
+    %%%%%:  509-block 17
+    %%%%%:  509-block 18
+        1:  510:        res=true;
+        1:  510-block  0
+        -:  511:    }
+        1:  512:    return res;
+        1:  512-block  0
+        -:  513:}
+        -:  514:
+        -:  515:
+function _Z12soloHayReyesSt6vectorIS_ISt4pairIiiESaIS1_EESaIS3_EE called 3 returned 100% blocks executed 77%
+        3:  516:bool soloHayReyes(tablero t){
+        3:  516-block  0
+        3:  517:    bool result = false;
+       27:  518:    for(int i= 0;i<t.size();i++){
+        3:  518-block  0
+       27:  518-block  1
+call    0 returned 27
+branch  1 taken 24 (fallthrough)
+branch  2 taken 3
+       24:  518-block  2
+      216:  519:        for(int j = 0; j< t.size();j++){
+       24:  519-block  0
+      216:  519-block  1
+call    0 returned 216
+branch  1 taken 192 (fallthrough)
+branch  2 taken 24
+      192:  519-block  2
+      192:  520:            coordenada c = setCoord(i,j);
+      192:  520-block  0
+call    0 returned 192
+branch  1 taken 192 (fallthrough)
+branch  2 taken 0 (throw)
+      192:  521:            if (coordenadaEnRango(c)){
+      192:  521-block  0
+call    0 returned 192
+branch  1 taken 192 (fallthrough)
+branch  2 taken 0
+      192:  522:                result = (casillaVacia(t,c) || pieza(t,c) == REY);
+      192:  522-block  0
+call    0 returned 192
+branch  1 taken 192 (fallthrough)
+branch  2 taken 0 (throw)
+      192:  522-block  1
+call    3 returned 192
+branch  4 taken 192 (fallthrough)
+branch  5 taken 0 (throw)
+      192:  522-block  2
+branch  6 taken 34 (fallthrough)
+branch  7 taken 158
+       34:  522-block  3
+call    8 returned 34
+branch  9 taken 34 (fallthrough)
+branch 10 taken 0 (throw)
+       34:  522-block  4
+call   11 returned 34
+branch 12 taken 6 (fallthrough)
+branch 13 taken 28
+      164:  522-block  5
+       28:  522-block  6
+      192:  522-block  7
+branch 14 taken 34 (fallthrough)
+branch 15 taken 158
+       34:  522-block  8
+call   16 returned 34
+      192:  522-block  9
+branch 17 taken 192 (fallthrough)
+branch 18 taken 0
+      192:  522-block 10
+call   19 returned 192
+      192:  522-block 11
+    %%%%%:  522-block 12
+branch 20 never executed
+branch 21 never executed
+    %%%%%:  522-block 13
+call   22 never executed
+    %%%%%:  522-block 14
+    %%%%%:  522-block 15
+    %%%%%:  522-block 16
+branch 23 never executed
+branch 24 never executed
+    %%%%%:  522-block 17
+call   25 never executed
+    %%%%%:  522-block 18
+    %%%%%:  522-block 19
+        -:  523:            }
+        -:  524:        }
+        -:  525:    }
+        3:  526:    return result;
+        3:  526-block  0
+        3:  526-block  1
+        -:  527:}
+        -:  528:
+        -:  529:
+function _Z8esEmpateSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 3 returned 100% blocks executed 65%
+        3:  530:bool esEmpate(posicion p){
+        3:  530-block  0
+        3:  531:    return (soloHayReyes(p.first) || (!jugadorEnJaque(p,p.second) && !hayMovimientosLegales(p)));
+        3:  531-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  531-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  531-block  2
+branch  6 taken 1 (fallthrough)
+branch  7 taken 2
+        1:  531-block  3
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  531-block  4
+call   11 returned 1
+branch 12 taken 1 (fallthrough)
+branch 13 taken 0 (throw)
+        1:  531-block  5
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0
+        1:  531-block  6
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:  531-block  7
+call   19 returned 1
+branch 20 taken 1 (fallthrough)
+branch 21 taken 0 (throw)
+        1:  531-block  8
+branch 22 taken 0 (fallthrough)
+branch 23 taken 1
+        2:  531-block  9
+        1:  531-block 10
+        3:  531-block 11
+branch 24 taken 1 (fallthrough)
+branch 25 taken 2
+        1:  531-block 12
+call   26 returned 1
+        3:  531-block 13
+branch 27 taken 1 (fallthrough)
+branch 28 taken 2
+        1:  531-block 14
+call   29 returned 1
+        3:  531-block 15
+branch 30 taken 3 (fallthrough)
+branch 31 taken 0
+        3:  531-block 16
+call   32 returned 3
+        3:  531-block 17
+        3:  531-block 18
+    %%%%%:  531-block 19
+branch 33 never executed
+branch 34 never executed
+    %%%%%:  531-block 20
+call   35 never executed
+    %%%%%:  531-block 21
+    %%%%%:  531-block 22
+    %%%%%:  531-block 23
+branch 36 never executed
+branch 37 never executed
+    %%%%%:  531-block 24
+call   38 never executed
+    %%%%%:  531-block 25
+    %%%%%:  531-block 26
+    %%%%%:  531-block 27
+branch 39 never executed
+branch 40 never executed
+    %%%%%:  531-block 28
+call   41 never executed
+    %%%%%:  531-block 29
+        -:  532:}
+        -:  533:
+function _Z16esPosicionValidaSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 1423 returned 100% blocks executed 70%
+     1423:  534:bool esPosicionValida(posicion p){
+     1423:  534-block  0
+     1423:  535:    return esJugadorValido(jugador(p)) && esTableroValido(p.first);
+     1423:  535-block  0
+call    0 returned 1423
+branch  1 taken 1423 (fallthrough)
+branch  2 taken 0 (throw)
+     1423:  535-block  1
+call    3 returned 1423
+call    4 returned 1423
+branch  5 taken 1127 (fallthrough)
+branch  6 taken 296
+     1127:  535-block  2
+call    7 returned 1127
+branch  8 taken 1127 (fallthrough)
+branch  9 taken 0 (throw)
+     1127:  535-block  3
+call   10 returned 1127
+branch 11 taken 1127 (fallthrough)
+branch 12 taken 0 (throw)
+     1127:  535-block  4
+branch 13 taken 1127 (fallthrough)
+branch 14 taken 0
+     1127:  535-block  5
+      296:  535-block  6
+     1423:  535-block  7
+branch 15 taken 1127 (fallthrough)
+branch 16 taken 296
+     1127:  535-block  8
+call   17 returned 1127
+     1423:  535-block  9
+branch 18 taken 1423 (fallthrough)
+branch 19 taken 0
+     1423:  535-block 10
+call   20 returned 1423
+     1423:  535-block 11
+     1423:  535-block 12
+    %%%%%:  535-block 13
+branch 21 never executed
+branch 22 never executed
+    %%%%%:  535-block 14
+call   23 never executed
+    %%%%%:  535-block 15
+    %%%%%:  535-block 16
+    %%%%%:  535-block 17
+branch 24 never executed
+branch 25 never executed
+    %%%%%:  535-block 18
+call   26 never executed
+    %%%%%:  535-block 19
+        -:  536:}
+        -:  537:
+function _Z13loPoneEnJaqueSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES1_S1_ called 296 returned 100% blocks executed 15%
+      296:  538:bool loPoneEnJaque(posicion p, coordenada o, coordenada d) {
+      296:  538-block  0
+      296:  539:    bool result = false;
+      592:  540:    posicion q;
+      296:  540-block  0
+call    0 returned 296
+      296:  540-block  1
+call    1 returned 296
+    %%%%%:  540-block  2
+call    2 never executed
+      296:  541:    if (esPosicionValida(q)) {
+call    0 returned 296
+branch  1 taken 296 (fallthrough)
+branch  2 taken 0 (throw)
+      296:  541-block  0
+call    3 returned 296
+branch  4 taken 296 (fallthrough)
+branch  5 taken 0 (throw)
+      296:  541-block  1
+call    6 returned 296
+branch  7 taken 0 (fallthrough)
+branch  8 taken 296
+    %%%%%:  541-block  2
+call    9 never executed
+    %%%%%:  541-block  3
+    #####:  542:        result = posicionSiguiente(p,q,o,d) && jugador(p) == jugador(q) && jugadorEnJaque(q,q.second);
+    $$$$$:  542-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  542-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  542-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  542-block  3
+branch  9 never executed
+branch 10 never executed
+    $$$$$:  542-block  4
+call   11 never executed
+branch 12 never executed
+branch 13 never executed
+    $$$$$:  542-block  5
+call   14 never executed
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    $$$$$:  542-block  6
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    $$$$$:  542-block  7
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    $$$$$:  542-block  8
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    $$$$$:  542-block  9
+branch 27 never executed
+branch 28 never executed
+    $$$$$:  542-block 10
+    $$$$$:  542-block 11
+    $$$$$:  542-block 12
+branch 29 never executed
+branch 30 never executed
+    $$$$$:  542-block 13
+call   31 never executed
+    $$$$$:  542-block 14
+branch 32 never executed
+branch 33 never executed
+    $$$$$:  542-block 15
+call   34 never executed
+    $$$$$:  542-block 16
+branch 35 never executed
+branch 36 never executed
+    $$$$$:  542-block 17
+call   37 never executed
+    $$$$$:  542-block 18
+branch 38 never executed
+branch 39 never executed
+    $$$$$:  542-block 19
+call   40 never executed
+    $$$$$:  542-block 20
+branch 41 never executed
+branch 42 never executed
+    $$$$$:  542-block 21
+call   43 never executed
+    $$$$$:  542-block 22
+    %%%%%:  542-block 23
+branch 44 never executed
+branch 45 never executed
+    %%%%%:  542-block 24
+call   46 never executed
+    %%%%%:  542-block 25
+    %%%%%:  542-block 26
+    %%%%%:  542-block 27
+branch 47 never executed
+branch 48 never executed
+    %%%%%:  542-block 28
+call   49 never executed
+    %%%%%:  542-block 29
+    %%%%%:  542-block 30
+    %%%%%:  542-block 31
+branch 50 never executed
+branch 51 never executed
+    %%%%%:  542-block 32
+call   52 never executed
+    %%%%%:  542-block 33
+    %%%%%:  542-block 34
+    %%%%%:  542-block 35
+branch 53 never executed
+branch 54 never executed
+    %%%%%:  542-block 36
+call   55 never executed
+    %%%%%:  542-block 37
+    %%%%%:  542-block 38
+    %%%%%:  542-block 39
+branch 56 never executed
+branch 57 never executed
+    %%%%%:  542-block 40
+call   58 never executed
+    %%%%%:  542-block 41
+    %%%%%:  542-block 42
+        -:  543:    }
+      296:  544:    return result;
+      296:  544-block  0
+        -:  545:}
+        -:  546:
+function _Z13esJugadaLegalSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES1_S1_ called 65575 returned 100% blocks executed 65%
+    65575:  547:bool esJugadaLegal(posicion p, coordenada o, coordenada d){
+    65575:  547-block  0
+    65575:  548:    return (esMovimientoValido(p,o,d) || esCapturaValida(p,o,d)) && (!loPoneEnJaque(p,o,d));
+    65575:  548-block  0
+call    0 returned 65575
+branch  1 taken 65575 (fallthrough)
+branch  2 taken 0 (throw)
+    65575:  548-block  1
+call    3 returned 65575
+branch  4 taken 65575 (fallthrough)
+branch  5 taken 0 (throw)
+    65575:  548-block  2
+branch  6 taken 65291 (fallthrough)
+branch  7 taken 284
+    65291:  548-block  3
+call    8 returned 65291
+branch  9 taken 65291 (fallthrough)
+branch 10 taken 0 (throw)
+    65291:  548-block  4
+call   11 returned 65291
+branch 12 taken 65291 (fallthrough)
+branch 13 taken 0 (throw)
+    65291:  548-block  5
+branch 14 taken 12 (fallthrough)
+branch 15 taken 65279
+      296:  548-block  6
+call   16 returned 296
+branch 17 taken 296 (fallthrough)
+branch 18 taken 0 (throw)
+      296:  548-block  7
+call   19 returned 296
+branch 20 taken 296 (fallthrough)
+branch 21 taken 0 (throw)
+      296:  548-block  8
+branch 22 taken 296 (fallthrough)
+branch 23 taken 0
+      296:  548-block  9
+    65279:  548-block 10
+    65575:  548-block 11
+branch 24 taken 296 (fallthrough)
+branch 25 taken 65279
+      296:  548-block 12
+call   26 returned 296
+    65575:  548-block 13
+branch 27 taken 65291 (fallthrough)
+branch 28 taken 284
+    65291:  548-block 14
+call   29 returned 65291
+    65575:  548-block 15
+branch 30 taken 65575 (fallthrough)
+branch 31 taken 0
+    65575:  548-block 16
+call   32 returned 65575
+    65575:  548-block 17
+    65575:  548-block 18
+    %%%%%:  548-block 19
+branch 33 never executed
+branch 34 never executed
+    %%%%%:  548-block 20
+call   35 never executed
+    %%%%%:  548-block 21
+    %%%%%:  548-block 22
+    %%%%%:  548-block 23
+branch 36 never executed
+branch 37 never executed
+    %%%%%:  548-block 24
+call   38 never executed
+    %%%%%:  548-block 25
+    %%%%%:  548-block 26
+    %%%%%:  548-block 27
+branch 39 never executed
+branch 40 never executed
+    %%%%%:  548-block 28
+call   41 never executed
+    %%%%%:  548-block 29
+        -:  549:}
+        -:  550:
+function _Z33existeMovimientoParaSalirDelJaqueSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 2 returned 100% blocks executed 75%
+        2:  551:bool existeMovimientoParaSalirDelJaque(posicion p) {
+        2:  551-block  0
+        2:  552:    bool result = false;
+       18:  553:    for(int i= 0;i< DIM;i++){
+        2:  553-block  0
+       18:  553-block  1
+branch  0 taken 16 (fallthrough)
+branch  1 taken 2
+       16:  553-block  2
+      144:  554:        for(int j = 0; j< DIM;j++){
+       16:  554-block  0
+      144:  554-block  1
+branch  0 taken 128 (fallthrough)
+branch  1 taken 16
+      128:  554-block  2
+      128:  555:            coordenada o = setCoord(i,j);
+      128:  555-block  0
+call    0 returned 128
+branch  1 taken 128 (fallthrough)
+branch  2 taken 0 (throw)
+     1152:  556:            for(int k= 0;k < DIM;k++){
+      128:  556-block  0
+     1152:  556-block  1
+branch  0 taken 1024 (fallthrough)
+branch  1 taken 128
+     1024:  556-block  2
+     9216:  557:                for(int n = 0; n < DIM;n++){
+     1024:  557-block  0
+     9216:  557-block  1
+branch  0 taken 8192 (fallthrough)
+branch  1 taken 1024
+     8192:  557-block  2
+     8192:  558:                    coordenada d = setCoord(k,n);
+     8192:  558-block  0
+call    0 returned 8192
+branch  1 taken 8192 (fallthrough)
+branch  2 taken 0 (throw)
+     8192:  559:                    if (o != d) {
+     8192:  559-block  0
+call    0 returned 8192
+branch  1 taken 8064 (fallthrough)
+branch  2 taken 128
+     8064:  560:                        if (coordenadaEnRango(o) && coordenadaEnRango(d)) {
+     8064:  560-block  0
+call    0 returned 8064
+branch  1 taken 8064 (fallthrough)
+branch  2 taken 0
+     8064:  560-block  1
+call    3 returned 8064
+branch  4 taken 8064 (fallthrough)
+branch  5 taken 0
+     8064:  560-block  2
+    $$$$$:  560-block  3
+     8064:  560-block  4
+branch  6 taken 8064 (fallthrough)
+branch  7 taken 0
+     8064:  561:                            result = color(p.first,o) == jugador(p) && esJugadaLegal(p,o,d);
+     8064:  561-block  0
+call    0 returned 8064
+branch  1 taken 8064 (fallthrough)
+branch  2 taken 0 (throw)
+     8064:  561-block  1
+call    3 returned 8064
+call    4 returned 8064
+branch  5 taken 8064 (fallthrough)
+branch  6 taken 0 (throw)
+     8064:  561-block  2
+call    7 returned 8064
+branch  8 taken 504 (fallthrough)
+branch  9 taken 7560
+      504:  561-block  3
+call   10 returned 504
+branch 11 taken 504 (fallthrough)
+branch 12 taken 0 (throw)
+      504:  561-block  4
+call   13 returned 504
+branch 14 taken 504 (fallthrough)
+branch 15 taken 0 (throw)
+      504:  561-block  5
+branch 16 taken 8 (fallthrough)
+branch 17 taken 496
+        8:  561-block  6
+     8056:  561-block  7
+     8064:  561-block  8
+branch 18 taken 504 (fallthrough)
+branch 19 taken 7560
+      504:  561-block  9
+call   20 returned 504
+     8064:  561-block 10
+branch 21 taken 8064 (fallthrough)
+branch 22 taken 0
+     8064:  561-block 11
+call   23 returned 8064
+     8064:  561-block 12
+branch 24 taken 8064 (fallthrough)
+branch 25 taken 0
+     8064:  561-block 13
+call   26 returned 8064
+     8064:  561-block 14
+    %%%%%:  561-block 15
+branch 27 never executed
+branch 28 never executed
+    %%%%%:  561-block 16
+call   29 never executed
+    %%%%%:  561-block 17
+    %%%%%:  561-block 18
+    %%%%%:  561-block 19
+branch 30 never executed
+branch 31 never executed
+    %%%%%:  561-block 20
+call   32 never executed
+    %%%%%:  561-block 21
+    %%%%%:  561-block 22
+    %%%%%:  561-block 23
+branch 33 never executed
+branch 34 never executed
+    %%%%%:  561-block 24
+call   35 never executed
+    %%%%%:  561-block 25
+    %%%%%:  561-block 26
+    %%%%%:  561-block 27
+        -:  562:                        }
+        -:  563:                    }
+        -:  564:                }
+        -:  565:            }
+        -:  566:        }
+        -:  567:    }
+        2:  568:    return result;
+        2:  568-block  0
+        2:  568-block  1
+        -:  569:}
+        -:  570:
+function _Z11esJaqueMateSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 14 returned 100% blocks executed 68%
+       14:  571:bool esJaqueMate(posicion p){
+       14:  571-block  0
+       14:  572:    return (jugadorEnJaque(p,p.second) && (!existeMovimientoParaSalirDelJaque(p)));
+       14:  572-block  0
+call    0 returned 14
+branch  1 taken 14 (fallthrough)
+branch  2 taken 0 (throw)
+       14:  572-block  1
+call    3 returned 14
+branch  4 taken 14 (fallthrough)
+branch  5 taken 0 (throw)
+       14:  572-block  2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 12
+        2:  572-block  3
+call    8 returned 2
+branch  9 taken 2 (fallthrough)
+branch 10 taken 0 (throw)
+        2:  572-block  4
+call   11 returned 2
+branch 12 taken 2 (fallthrough)
+branch 13 taken 0 (throw)
+        2:  572-block  5
+branch 14 taken 2 (fallthrough)
+branch 15 taken 0
+        2:  572-block  6
+       12:  572-block  7
+       14:  572-block  8
+branch 16 taken 2 (fallthrough)
+branch 17 taken 12
+        2:  572-block  9
+call   18 returned 2
+       14:  572-block 10
+branch 19 taken 14 (fallthrough)
+branch 20 taken 0
+       14:  572-block 11
+call   21 returned 14
+       14:  572-block 12
+       14:  572-block 13
+    %%%%%:  572-block 14
+branch 22 never executed
+branch 23 never executed
+    %%%%%:  572-block 15
+call   24 never executed
+    %%%%%:  572-block 16
+    %%%%%:  572-block 17
+    %%%%%:  572-block 18
+branch 25 never executed
+branch 26 never executed
+    %%%%%:  572-block 19
+call   27 never executed
+    %%%%%:  572-block 20
+        -:  573:}
+        -:  574:
+        -:  575:// Ejercicio 7
+        -:  576:
+        -:  577:
+function _Z10moverPiezaSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES1_S1_ called 1127 returned 100% blocks executed 69%
+     1127:  578:posicion moverPieza(posicion p, coordenada o, coordenada d) {
+     1127:  578-block  0
+     1127:  579:    posicion q = p;
+     1127:  579-block  0
+call    0 returned 1127
+     1127:  580:    if (esPosicionValida(p)) {
+call    0 returned 1127
+branch  1 taken 1127 (fallthrough)
+branch  2 taken 0 (throw)
+     1127:  580-block  0
+call    3 returned 1127
+branch  4 taken 1127 (fallthrough)
+branch  5 taken 0 (throw)
+     1127:  580-block  1
+call    6 returned 1127
+branch  7 taken 1127 (fallthrough)
+branch  8 taken 0
+    %%%%%:  580-block  2
+call    9 never executed
+    %%%%%:  580-block  3
+     1127:  581:        if (esMovimientoValido(p,o,d) || esCapturaValida(p,o,d)) {
+     1127:  581-block  0
+call    0 returned 1127
+branch  1 taken 1127 (fallthrough)
+branch  2 taken 0 (throw)
+     1127:  581-block  1
+call    3 returned 1127
+branch  4 taken 1127 (fallthrough)
+branch  5 taken 0 (throw)
+     1127:  581-block  2
+branch  6 taken 1051 (fallthrough)
+branch  7 taken 76
+     1051:  581-block  3
+call    8 returned 1051
+branch  9 taken 1051 (fallthrough)
+branch 10 taken 0 (throw)
+     1051:  581-block  4
+call   11 returned 1051
+branch 12 taken 1051 (fallthrough)
+branch 13 taken 0 (throw)
+     1051:  581-block  5
+branch 14 taken 6 (fallthrough)
+branch 15 taken 1045
+       82:  581-block  6
+     1045:  581-block  7
+     1127:  581-block  8
+branch 16 taken 1051 (fallthrough)
+branch 17 taken 76
+     1051:  581-block  9
+call   18 returned 1051
+     1127:  581-block 10
+branch 19 taken 1127 (fallthrough)
+branch 20 taken 0
+     1127:  581-block 11
+call   21 returned 1127
+     1127:  581-block 12
+branch 22 taken 82 (fallthrough)
+branch 23 taken 1045
+    %%%%%:  581-block 13
+branch 24 never executed
+branch 25 never executed
+    %%%%%:  581-block 14
+call   26 never executed
+    %%%%%:  581-block 15
+    %%%%%:  581-block 16
+    %%%%%:  581-block 17
+branch 27 never executed
+branch 28 never executed
+    %%%%%:  581-block 18
+call   29 never executed
+    %%%%%:  581-block 19
+    %%%%%:  581-block 20
+       82:  582:            q.first[o.first][o.second] = cVACIA;
+       82:  582-block  0
+call    0 returned 82
+branch  1 taken 82 (fallthrough)
+branch  2 taken 0 (throw)
+       82:  582-block  1
+call    3 returned 82
+call    4 returned 82
+call    5 returned 82
+    %%%%%:  582-block  2
+    %%%%%:  582-block  3
+       82:  583:            if ((d.first == DIM - 1 || d.first == 0) && pieza(p.first,o) == PEON){
+branch  0 taken 75 (fallthrough)
+branch  1 taken 7
+       75:  583-block  0
+branch  2 taken 21 (fallthrough)
+branch  3 taken 54
+       28:  583-block  1
+call    4 returned 28
+branch  5 taken 28 (fallthrough)
+branch  6 taken 0 (throw)
+       28:  583-block  2
+call    7 returned 28
+branch  8 taken 3 (fallthrough)
+branch  9 taken 25
+        3:  583-block  3
+       79:  583-block  4
+       82:  583-block  5
+branch 10 taken 28 (fallthrough)
+branch 11 taken 54
+       28:  583-block  6
+call   12 returned 28
+       82:  583-block  7
+branch 13 taken 3 (fallthrough)
+branch 14 taken 79
+    %%%%%:  583-block  8
+branch 15 never executed
+branch 16 never executed
+    %%%%%:  583-block  9
+call   17 never executed
+    %%%%%:  583-block 10
+    %%%%%:  583-block 11
+        3:  584:                casilla c = setCasilla(TORRE,color(p.first,o));
+        3:  584-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  584-block  1
+call    3 returned 3
+call    4 returned 3
+branch  5 taken 3 (fallthrough)
+branch  6 taken 0 (throw)
+        3:  584-block  2
+call    7 returned 3
+    %%%%%:  584-block  3
+call    8 never executed
+    %%%%%:  584-block  4
+    %%%%%:  584-block  5
+    %%%%%:  584-block  6
+call    9 never executed
+        3:  585:                q.first[d.first][d.second] = c;
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        -:  586:            } else {
+     1127:  587:                q.first[d.first][d.second] = p.first[o.first][o.second];
+       79:  587-block  0
+call    0 returned 79
+call    1 returned 79
+call    2 returned 79
+call    3 returned 79
+call    4 returned 79
+       82:  587-block  1
+     1127:  587-block  2
+        -:  588:            }
+        -:  589:        }
+        -:  590:    }
+     1127:  591:    return q;
+     1127:  591-block  0
+     1127:  591-block  1
+        -:  592:}
+        -:  593:
+        -:  594:
+        -:  595:
+function _Z19alMoverQuedaEnJaqueSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 2 returned 100% blocks executed 68%
+        2:  596:bool alMoverQuedaEnJaque(posicion p) {
+        2:  596-block  0
+        2:  597:    bool result = false;
+       18:  598:    for(int i = 0; i < DIM; i++) {
+        2:  598-block  0
+       18:  598-block  1
+branch  0 taken 16 (fallthrough)
+branch  1 taken 2
+       16:  598-block  2
+      144:  599:        for (int j = 0; j < DIM; j++) {
+       16:  599-block  0
+      144:  599-block  1
+branch  0 taken 128 (fallthrough)
+branch  1 taken 16
+      128:  599-block  2
+     1152:  600:            for (int k = 0; k < DIM; k++){
+      128:  600-block  0
+     1152:  600-block  1
+branch  0 taken 1024 (fallthrough)
+branch  1 taken 128
+     1024:  600-block  2
+     9216:  601:                for (int l = 0; l < DIM; l++){
+     1024:  601-block  0
+     9216:  601-block  1
+branch  0 taken 8192 (fallthrough)
+branch  1 taken 1024
+     8192:  601-block  2
+     8192:  602:                    coordenada o = setCoord(i,j);
+     8192:  602-block  0
+call    0 returned 8192
+branch  1 taken 8192 (fallthrough)
+branch  2 taken 0 (throw)
+     8192:  603:                    coordenada d = setCoord(k,l);
+     8192:  603-block  0
+call    0 returned 8192
+branch  1 taken 8192 (fallthrough)
+branch  2 taken 0 (throw)
+     8192:  604:                    if (color(p.first,o) == jugador(p) && (o != d)) {
+     8192:  604-block  0
+call    0 returned 8192
+branch  1 taken 8192 (fallthrough)
+branch  2 taken 0 (throw)
+     8192:  604-block  1
+call    3 returned 8192
+call    4 returned 8192
+branch  5 taken 8192 (fallthrough)
+branch  6 taken 0 (throw)
+     8192:  604-block  2
+call    7 returned 8192
+branch  8 taken 1088 (fallthrough)
+branch  9 taken 7104
+     1088:  604-block  3
+call   10 returned 1088
+branch 11 taken 1071 (fallthrough)
+branch 12 taken 17
+     1071:  604-block  4
+     7121:  604-block  5
+     8192:  604-block  6
+branch 13 taken 8192 (fallthrough)
+branch 14 taken 0
+     8192:  604-block  7
+call   15 returned 8192
+     8192:  604-block  8
+branch 16 taken 8192 (fallthrough)
+branch 17 taken 0
+     8192:  604-block  9
+call   18 returned 8192
+     8192:  604-block 10
+branch 19 taken 1071 (fallthrough)
+branch 20 taken 7121
+    %%%%%:  604-block 11
+branch 21 never executed
+branch 22 never executed
+    %%%%%:  604-block 12
+call   23 never executed
+    %%%%%:  604-block 13
+    %%%%%:  604-block 14
+    %%%%%:  604-block 15
+branch 24 never executed
+branch 25 never executed
+    %%%%%:  604-block 16
+call   26 never executed
+    %%%%%:  604-block 17
+    %%%%%:  604-block 18
+    %%%%%:  604-block 19
+call   27 never executed
+     2142:  605:                        posicion q1 = moverPieza(p,o,d);
+     1071:  605-block  0
+call    0 returned 1071
+branch  1 taken 1071 (fallthrough)
+branch  2 taken 0 (throw)
+     1071:  605-block  1
+call    3 returned 1071
+branch  4 taken 1071 (fallthrough)
+branch  5 taken 0 (throw)
+     1071:  605-block  2
+call    6 returned 1071
+     1071:  605-block  3
+call    7 returned 1071
+    %%%%%:  605-block  4
+    %%%%%:  605-block  5
+call    8 never executed
+    %%%%%:  605-block  6
+     1071:  606:                        if (posicionSiguiente(p,q1,o,d) && jugadorEnJaque(q1,contrincante(q1.second))) {
+call    0 returned 1071
+branch  1 taken 1071 (fallthrough)
+branch  2 taken 0 (throw)
+     1071:  606-block  0
+call    3 returned 1071
+branch  4 taken 1071 (fallthrough)
+branch  5 taken 0 (throw)
+     1071:  606-block  1
+call    6 returned 1071
+branch  7 taken 1071 (fallthrough)
+branch  8 taken 0 (throw)
+     1071:  606-block  2
+branch  9 taken 21 (fallthrough)
+branch 10 taken 1050
+       21:  606-block  3
+call   11 returned 21
+call   12 returned 21
+branch 13 taken 21 (fallthrough)
+branch 14 taken 0 (throw)
+       21:  606-block  4
+call   15 returned 21
+branch 16 taken 21 (fallthrough)
+branch 17 taken 0 (throw)
+       21:  606-block  5
+branch 18 taken 1 (fallthrough)
+branch 19 taken 20
+        1:  606-block  6
+     1070:  606-block  7
+     1071:  606-block  8
+branch 20 taken 21 (fallthrough)
+branch 21 taken 1050
+       21:  606-block  9
+call   22 returned 21
+     1071:  606-block 10
+branch 23 taken 1071 (fallthrough)
+branch 24 taken 0
+     1071:  606-block 11
+call   25 returned 1071
+     1071:  606-block 12
+branch 26 taken 1071 (fallthrough)
+branch 27 taken 0
+     1071:  606-block 13
+call   28 returned 1071
+     1071:  606-block 14
+branch 29 taken 1 (fallthrough)
+branch 30 taken 1070
+    %%%%%:  606-block 15
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  606-block 16
+call   33 never executed
+    %%%%%:  606-block 17
+    %%%%%:  606-block 18
+    %%%%%:  606-block 19
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  606-block 20
+call   36 never executed
+    %%%%%:  606-block 21
+    %%%%%:  606-block 22
+    %%%%%:  606-block 23
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  606-block 24
+call   39 never executed
+    %%%%%:  606-block 25
+    %%%%%:  606-block 26
+        1:  607:                            result = true;
+        1:  607-block  0
+        -:  608:                        }
+        -:  609:                    }
+        -:  610:                }
+        -:  611:            }
+        -:  612:        }
+        -:  613:    }
+        2:  614:    return result;
+        2:  614-block  0
+        2:  614-block  1
+        -:  615:}
+        -:  616:
+        -:  617://ejercicio 8
+        -:  618:
+        -:  619:
+function _Z27unicaMovidaPosibleDeJugadorSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 12 returned 100% blocks executed 76%
+       12:  620:pair<coordenada, coordenada> unicaMovidaPosibleDeJugador(posicion p){
+       12:  620-block  0
+       12:  621:    coordenada c1;
+       12:  622:    coordenada c2;
+       45:  623:    for(int i=0; i<DIM; i++){
+       12:  623-block  0
+       45:  623-block  1
+branch  0 taken 44 (fallthrough)
+branch  1 taken 1
+       33:  623-block  2
+      363:  624:        for(int j=0; j<DIM; j++){
+       44:  624-block  0
+      363:  624-block  1
+branch  0 taken 330 (fallthrough)
+branch  1 taken 33
+      319:  624-block  2
+     2903:  625:            for(int k=0; k<DIM; k++){
+      330:  625-block  0
+     2903:  625-block  1
+branch  0 taken 2584 (fallthrough)
+branch  1 taken 319
+     2573:  625-block  2
+    23221:  626:                for(int l=0; l<DIM; l++){
+     2584:  626-block  0
+    23221:  626-block  1
+branch  0 taken 20648 (fallthrough)
+branch  1 taken 2573
+    20637:  626-block  2
+    20648:  627:                    c1 = setCoord(i,j);
+    20648:  627-block  0
+call    0 returned 20648
+branch  1 taken 20648 (fallthrough)
+branch  2 taken 0 (throw)
+    20648:  627-block  1
+call    3 returned 20648
+    20648:  628:                    c2 = setCoord(k,l);
+call    0 returned 20648
+branch  1 taken 20648 (fallthrough)
+branch  2 taken 0 (throw)
+    20648:  628-block  0
+call    3 returned 20648
+    20648:  629:                    if(esJugadaLegal(p,c1,c2) && (color(p.first,c1) == p.second) && (c1 != c2)){
+call    0 returned 20648
+branch  1 taken 20648 (fallthrough)
+branch  2 taken 0 (throw)
+    20648:  629-block  0
+call    3 returned 20648
+branch  4 taken 20648 (fallthrough)
+branch  5 taken 0 (throw)
+    20648:  629-block  1
+branch  6 taken 28 (fallthrough)
+branch  7 taken 20620
+       28:  629-block  2
+call    8 returned 28
+branch  9 taken 28 (fallthrough)
+branch 10 taken 0 (throw)
+       28:  629-block  3
+call   11 returned 28
+branch 12 taken 25 (fallthrough)
+branch 13 taken 3
+       25:  629-block  4
+call   14 returned 25
+branch 15 taken 25 (fallthrough)
+branch 16 taken 0
+       25:  629-block  5
+    20623:  629-block  6
+    20648:  629-block  7
+branch 17 taken 28 (fallthrough)
+branch 18 taken 20620
+       28:  629-block  8
+call   19 returned 28
+    20648:  629-block  9
+branch 20 taken 20648 (fallthrough)
+branch 21 taken 0
+    20648:  629-block 10
+call   22 returned 20648
+    20648:  629-block 11
+branch 23 taken 25 (fallthrough)
+branch 24 taken 20623
+    %%%%%:  629-block 12
+branch 25 never executed
+branch 26 never executed
+    %%%%%:  629-block 13
+call   27 never executed
+    %%%%%:  629-block 14
+    %%%%%:  629-block 15
+    %%%%%:  629-block 16
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  629-block 17
+call   30 never executed
+    %%%%%:  629-block 18
+    %%%%%:  629-block 19
+    %%%%%:  629-block 20
+call   31 never executed
+       50:  630:                        posicion q = moverPieza(p,c1,c2);
+       25:  630-block  0
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:  630-block  1
+call    3 returned 25
+branch  4 taken 25 (fallthrough)
+branch  5 taken 0 (throw)
+       25:  630-block  2
+call    6 returned 25
+       14:  630-block  3
+       14:  630-block  4
+       11:  630-block  5
+    %%%%%:  630-block  6
+    %%%%%:  630-block  7
+call    7 never executed
+    %%%%%:  630-block  8
+       25:  631:                        if (!jugadorEnJaque(q,q.second)){
+call    0 returned 25
+branch  1 taken 25 (fallthrough)
+branch  2 taken 0 (throw)
+       25:  631-block  0
+call    3 returned 25
+branch  4 taken 25 (fallthrough)
+branch  5 taken 0 (throw)
+       25:  631-block  1
+call    6 returned 25
+branch  7 taken 11 (fallthrough)
+branch  8 taken 14
+    %%%%%:  631-block  2
+call    9 never executed
+    %%%%%:  631-block  3
+       25:  632:                            return make_pair(c1,c2);
+       11:  632-block  0
+call    0 returned 11
+branch  1 taken 11 (fallthrough)
+branch  2 taken 0 (throw)
+       11:  632-block  1
+       14:  632-block  2
+       25:  632-block  3
+call    3 returned 25
+branch  4 taken 14
+branch  5 taken 11
+        -:  633:                        }
+        -:  634:                    }
+        -:  635:                }
+        -:  636:            }
+        -:  637:        }
+        -:  638:    }
+        1:  639:    c1= setCoord(-1,-1);
+        1:  639-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  639-block  1
+call    3 returned 1
+        1:  640:    c2 = setCoord(-1,-1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  640-block  0
+call    3 returned 1
+       12:  641:    return make_pair(c1,c2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  641-block  0
+       12:  641-block  1
+       12:  641-block  2
+        -:  642:}
+        -:  643:
+        -:  644:
+function _Z18completarSecuenciaSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES0_IS_IS1_S1_ESaIS7_EE called 1 returned 100% blocks executed 69%
+        1:  645:secuencia completarSecuencia(posicion p,secuencia s) {
+        1:  645-block  0
+        1:  646:    secuencia sCompleta;
+        1:  646-block  0
+call    0 returned 1
+        2:  647:    posicion q = p;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  647-block  0
+call    3 returned 1
+    %%%%%:  647-block  1
+call    4 never executed
+    %%%%%:  647-block  2
+call    5 never executed
+        -:  648:
+        5:  649:    for(int i = 0; i < s.size(); i++) {
+        1:  649-block  0
+        5:  649-block  1
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:  650:        sCompleta.push_back(s[i]);
+        4:  650-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:  651:        q = moverPieza(q, s[i].first, s[i].second);
+        4:  651-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+branch  3 taken 4 (fallthrough)
+branch  4 taken 0 (throw)
+        4:  651-block  1
+call    5 returned 4
+branch  6 taken 4 (fallthrough)
+branch  7 taken 0 (throw)
+        4:  651-block  2
+call    8 returned 4
+call    9 returned 4
+call   10 returned 4
+    %%%%%:  651-block  3
+call   11 never executed
+    %%%%%:  651-block  4
+        4:  652:        q.second = contrincante((q.second));
+call    0 returned 4
+        4:  653:        pair<coordenada, coordenada> jugada = unicaMovidaPosibleDeJugador(q);
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  653-block  0
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  653-block  1
+call    6 returned 4
+    %%%%%:  653-block  2
+call    7 never executed
+    %%%%%:  653-block  3
+        4:  654:        sCompleta.push_back(jugada);
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  655:        q = moverPieza(q, jugada.first, jugada.second);
+        4:  655-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  655-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  655-block  2
+call    6 returned 4
+call    7 returned 4
+call    8 returned 4
+    %%%%%:  655-block  3
+call    9 never executed
+    %%%%%:  655-block  4
+    %%%%%:  655-block  5
+        4:  656:        q.second = contrincante((q.second));
+call    0 returned 4
+        -:  657:
+        -:  658:    }
+        2:  659:    return sCompleta;
+        1:  659-block  0
+        1:  659-block  1
+        -:  660:}
+        -:  661:
+function _Z17ejecutarSecuenciaRSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES0_IS_IS1_S1_ESaIS8_EE called 1 returned 100% blocks executed 69%
+        1:  662:void ejecutarSecuencia(posicion &p, secuencia s) {
+        1:  662-block  0
+        2:  663:    posicion q = p;
+        1:  663-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  663-block  1
+call    3 returned 1
+    %%%%%:  663-block  2
+call    4 never executed
+        1:  664:    s = completarSecuencia(p,s);
+        1:  664-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  664-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  664-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  664-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    %%%%%:  664-block  4
+call   13 never executed
+    %%%%%:  664-block  5
+    %%%%%:  664-block  6
+call   14 never executed
+    %%%%%:  664-block  7
+        -:  665:
+        9:  666:    for(int i = 0; i < s.size();i++) {
+        9:  666-block  0
+call    0 returned 9
+branch  1 taken 8 (fallthrough)
+branch  2 taken 1
+        8:  667:        q = moverPieza(q, s[i].first, s[i].second);
+        8:  667-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 8 (fallthrough)
+branch  4 taken 0 (throw)
+        8:  667-block  1
+call    5 returned 8
+branch  6 taken 8 (fallthrough)
+branch  7 taken 0 (throw)
+        8:  667-block  2
+call    8 returned 8
+call    9 returned 8
+call   10 returned 8
+    %%%%%:  667-block  3
+call   11 never executed
+    %%%%%:  667-block  4
+        8:  668:        q.second = contrincante((q.second));
+call    0 returned 8
+        -:  669:
+        -:  670:    }
+        1:  671:    p = q;
+        1:  671-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  672:}
+        -:  673:
+        -:  674://EJERCICIO 9
+        -:  675:
+function _Z14indiceDelMinioSt6vectorIS_ISt4pairIS0_IiiES1_ESaIS2_EESaIS4_EE called 3 returned 100% blocks executed 92%
+        3:  676:int indiceDelMinio(vector<secuencia> v) {
+        3:  676-block  0
+        3:  677:    int iMin = 0;
+        6:  678:    for (int i = 0; i < v.size();i++) {
+        3:  678-block  0
+        6:  678-block  1
+call    0 returned 6
+branch  1 taken 3 (fallthrough)
+branch  2 taken 3
+        3:  678-block  2
+        3:  679:        if (v[iMin].size() > v[i].size()) {
+        3:  679-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+branch  4 taken 0 (fallthrough)
+branch  5 taken 3
+    #####:  680:            iMin = i;
+    $$$$$:  680-block  0
+        -:  681:        }
+        -:  682:    }
+        3:  683:    return iMin;
+        3:  683-block  0
+        -:  684:}
+        -:  685:
+        -:  686:
+function _Z19movimientosPosiblesSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiE called 8 returned 100% blocks executed 82%
+        8:  687:secuencia movimientosPosibles(posicion p) {
+        8:  687-block  0
+        8:  688:    secuencia v;
+        8:  688-block  0
+call    0 returned 8
+       72:  689:    for(int i = 0; i < DIM; i++) {
+       72:  689-block  0
+branch  0 taken 64 (fallthrough)
+branch  1 taken 8
+       64:  689-block  1
+      576:  690:        for(int j = 0;j < DIM;j++) {
+       64:  690-block  0
+      576:  690-block  1
+branch  0 taken 512 (fallthrough)
+branch  1 taken 64
+      512:  690-block  2
+     4608:  691:            for(int k = 0; k < DIM; k++) {
+      512:  691-block  0
+     4608:  691-block  1
+branch  0 taken 4096 (fallthrough)
+branch  1 taken 512
+     4096:  691-block  2
+    36864:  692:                for(int l = 0; l < DIM;l++) {
+     4096:  692-block  0
+    36864:  692-block  1
+branch  0 taken 32768 (fallthrough)
+branch  1 taken 4096
+    32768:  692-block  2
+    32768:  693:                    coordenada o = setCoord(i,j);
+    32768:  693-block  0
+call    0 returned 32768
+branch  1 taken 32768 (fallthrough)
+branch  2 taken 0 (throw)
+    32768:  694:                    coordenada d = setCoord(k,l);
+    32768:  694-block  0
+call    0 returned 32768
+branch  1 taken 32768 (fallthrough)
+branch  2 taken 0 (throw)
+    32768:  695:                    if (esJugadaLegal(p,o,d) && o != d) {
+    32768:  695-block  0
+call    0 returned 32768
+branch  1 taken 32768 (fallthrough)
+branch  2 taken 0 (throw)
+    32768:  695-block  1
+call    3 returned 32768
+branch  4 taken 32768 (fallthrough)
+branch  5 taken 0 (throw)
+    32768:  695-block  2
+branch  6 taken 225 (fallthrough)
+branch  7 taken 32543
+      225:  695-block  3
+call    8 returned 225
+branch  9 taken 225 (fallthrough)
+branch 10 taken 0
+      225:  695-block  4
+    32543:  695-block  5
+    32768:  695-block  6
+branch 11 taken 32768 (fallthrough)
+branch 12 taken 0
+    32768:  695-block  7
+call   13 returned 32768
+    32768:  695-block  8
+branch 14 taken 225 (fallthrough)
+branch 15 taken 32543
+    %%%%%:  695-block  9
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  695-block 10
+call   18 never executed
+    %%%%%:  695-block 11
+    %%%%%:  695-block 12
+      225:  696:                        v.push_back(make_pair(o, d));
+      225:  696-block  0
+call    0 returned 225
+branch  1 taken 225 (fallthrough)
+branch  2 taken 0 (throw)
+      225:  696-block  1
+call    3 returned 225
+branch  4 taken 225 (fallthrough)
+branch  5 taken 0 (throw)
+      225:  696-block  2
+    %%%%%:  696-block  3
+    %%%%%:  696-block  4
+    %%%%%:  696-block  5
+call    6 never executed
+        -:  697:                    }
+        -:  698:                }
+        -:  699:            }
+        -:  700:        }
+        -:  701:    }
+        8:  702:    return v;
+        8:  702-block  0
+        8:  702-block  1
+        -:  703:}
+        -:  704:
+function _Z8contieneSt6vectorIS_ISt4pairIS0_IiiES1_ESaIS2_EESaIS4_EES2_i called 138 returned 100% blocks executed 45%
+      138:  705:bool contiene(vector<secuencia> v, pair<coordenada, coordenada> mov, int k) {
+      138:  705-block  0
+      138:  706:    bool result = false;
+      138:  707:    for (int i = 0; i < v.size();i++) {
+      138:  707-block  0
+      138:  707-block  1
+call    0 returned 138
+branch  1 taken 0 (fallthrough)
+branch  2 taken 138
+    $$$$$:  707-block  2
+    #####:  708:        if (v[i][k-1] == mov) {
+    $$$$$:  708-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed
+branch  4 never executed
+    #####:  709:            result = true;
+    $$$$$:  709-block  0
+        -:  710:        }
+        -:  711:    }
+      138:  712:    return result;
+      138:  712-block  0
+        -:  713:}
+        -:  714:
+function _Z18filtrarMovimientosSt6vectorISt4pairIS0_IiiES1_ESaIS2_EES_IS4_SaIS4_EEi called 5 returned 100% blocks executed 80%
+        5:  715:secuencia filtrarMovimientos(secuencia s, vector<secuencia> v, int k) {
+        5:  715-block  0
+        5:  716:    secuencia modificada;
+        5:  716-block  0
+call    0 returned 5
+      143:  717:    for (int i = 0; i < s.size();i++) {
+      143:  717-block  0
+call    0 returned 143
+branch  1 taken 138 (fallthrough)
+branch  2 taken 5
+      138:  717-block  1
+      138:  718:        if (!contiene(v,s[i],k)) {
+      138:  718-block  0
+call    0 returned 138
+call    1 returned 138
+branch  2 taken 138 (fallthrough)
+branch  3 taken 0 (throw)
+      138:  718-block  1
+call    4 returned 138
+branch  5 taken 138 (fallthrough)
+branch  6 taken 0 (throw)
+      138:  718-block  2
+call    7 returned 138
+branch  8 taken 138 (fallthrough)
+branch  9 taken 0
+    %%%%%:  718-block  3
+call   10 never executed
+    %%%%%:  718-block  4
+    %%%%%:  718-block  5
+call   11 never executed
+      138:  719:            modificada.push_back(s[i]);
+      138:  719-block  0
+call    0 returned 138
+call    1 returned 138
+branch  2 taken 138 (fallthrough)
+branch  3 taken 0 (throw)
+      138:  719-block  1
+        -:  720:        }
+        -:  721:    }
+        5:  722:    return modificada;
+        5:  722-block  0
+        5:  722-block  1
+        -:  723:}
+        -:  724:
+        -:  725:
+        -:  726:
+        -:  727:// Por cada pieza, la cantidad de secuencia posibles, y q no se hayan ya hecho
+function _Z23cantMovimientosPosiblesSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES0_IS0_IS_IS1_S1_ESaIS7_EESaIS9_EEi called 8 returned 100% blocks executed 64%
+        8:  728:int cantMovimientosPosibles(posicion p, vector<secuencia> v, int k) {
+        8:  728-block  0
+       16:  729:    secuencia movimientos;
+        8:  729-block  0
+call    0 returned 8
+call    1 returned 8
+    %%%%%:  729-block  1
+call    2 never executed
+        8:  730:    if (k == 0) {
+branch  0 taken 3 (fallthrough)
+branch  1 taken 5
+        3:  731:        movimientos = movimientosPosibles(p);
+        3:  731-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  731-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  731-block  2
+call    6 returned 3
+call    7 returned 3
+call    8 returned 3
+    %%%%%:  731-block  3
+call    9 never executed
+    %%%%%:  731-block  4
+        5:  732:    } else if (k == 1) {
+        5:  732-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 2
+        3:  733:        movimientos = movimientosPosibles(p);
+        3:  733-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  733-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  733-block  2
+call    6 returned 3
+call    7 returned 3
+call    8 returned 3
+    %%%%%:  733-block  3
+call    9 never executed
+    %%%%%:  733-block  4
+        3:  734:        movimientos = filtrarMovimientos(movimientos,v,k);
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  734-block  0
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  734-block  1
+call    6 returned 3
+branch  7 taken 3 (fallthrough)
+branch  8 taken 0 (throw)
+        3:  734-block  2
+call    9 returned 3
+call   10 returned 3
+call   11 returned 3
+call   12 returned 3
+    %%%%%:  734-block  3
+call   13 never executed
+    %%%%%:  734-block  4
+    %%%%%:  734-block  5
+call   14 never executed
+    %%%%%:  734-block  6
+        2:  735:    } else if (k == 2) {
+        2:  735-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  736:        movimientos = movimientosPosibles(p);
+        2:  736-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  736-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  736-block  2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+    %%%%%:  736-block  3
+call    9 never executed
+    %%%%%:  736-block  4
+        2:  737:        movimientos = filtrarMovimientos(movimientos,v,k);
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  737-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  737-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:  737-block  2
+call    9 returned 2
+call   10 returned 2
+call   11 returned 2
+call   12 returned 2
+    %%%%%:  737-block  3
+call   13 never executed
+    %%%%%:  737-block  4
+    %%%%%:  737-block  5
+call   14 never executed
+    %%%%%:  737-block  6
+        -:  738:    }
+       16:  739:    return movimientos.size();
+        8:  739-block  0
+call    0 returned 8
+        8:  739-block  1
+        -:  740:}
+        -:  741:
+        -:  742:
+function _Z26movimientoPosibleParaJaqueSt4pairISt6vectorIS0_IS_IiiESaIS1_EESaIS3_EEiES0_IS0_IS_IS1_S1_ESaIS7_EESaIS9_EE called 3 returned 100% blocks executed 69%
+        3:  743:secuencia movimientoPosibleParaJaque(posicion p, vector<secuencia> vMov) {
+        3:  743-block  0
+        6:  744:    posicion q = p;
+        3:  744-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  744-block  1
+call    3 returned 3
+    %%%%%:  744-block  2
+call    4 never executed
+        3:  745:    secuencia mov;
+        3:  745-block  0
+call    0 returned 3
+        3:  746:    pair<coordenada, coordenada> jugada;
+       27:  747:    for (int i = 0; i < DIM; i++) {
+       27:  747-block  0
+branch  0 taken 24 (fallthrough)
+branch  1 taken 3
+       24:  747-block  1
+      216:  748:        for (int j = 0; j < DIM; j++) {
+       24:  748-block  0
+      216:  748-block  1
+branch  0 taken 192 (fallthrough)
+branch  1 taken 24
+      192:  748-block  2
+     1728:  749:            for(int k = 0; k < DIM; k++) {
+      192:  749-block  0
+     1728:  749-block  1
+branch  0 taken 1536 (fallthrough)
+branch  1 taken 192
+     1536:  749-block  2
+    13824:  750:                for(int l = 0; l < DIM; l++) {
+     1536:  750-block  0
+    13824:  750-block  1
+branch  0 taken 12288 (fallthrough)
+branch  1 taken 1536
+    12288:  750-block  2
+    12288:  751:                    coordenada o = setCoord(i,j);
+    12288:  751-block  0
+call    0 returned 12288
+branch  1 taken 12288 (fallthrough)
+branch  2 taken 0 (throw)
+    12288:  752:                    coordenada d = setCoord(k,l);
+    12288:  752-block  0
+call    0 returned 12288
+branch  1 taken 12288 (fallthrough)
+branch  2 taken 0 (throw)
+    12288:  753:                    if (jugada.first != setCoord(-1,-1) && jugada.second != setCoord(-1,-1) && esJugadaLegal(q,o,d) && mov.size() < 3 && !esJaqueMate(q) && color(q.first, o) == jugador(q)) {
+    12288:  753-block  0
+call    0 returned 12288
+branch  1 taken 12288 (fallthrough)
+branch  2 taken 0 (throw)
+    12288:  753-block  1
+call    3 returned 12288
+branch  4 taken 11655 (fallthrough)
+branch  5 taken 633
+    11655:  753-block  2
+call    6 returned 11655
+branch  7 taken 11655 (fallthrough)
+branch  8 taken 0 (throw)
+    11655:  753-block  3
+call    9 returned 11655
+branch 10 taken 11655 (fallthrough)
+branch 11 taken 0
+    11655:  753-block  4
+call   12 returned 11655
+branch 13 taken 11655 (fallthrough)
+branch 14 taken 0 (throw)
+    11655:  753-block  5
+call   15 returned 11655
+branch 16 taken 11655 (fallthrough)
+branch 17 taken 0 (throw)
+    11655:  753-block  6
+branch 18 taken 35 (fallthrough)
+branch 19 taken 11620
+       35:  753-block  7
+call   20 returned 35
+branch 21 taken 9 (fallthrough)
+branch 22 taken 26
+        9:  753-block  8
+call   23 returned 9
+branch 24 taken 9 (fallthrough)
+branch 25 taken 0 (throw)
+        9:  753-block  9
+call   26 returned 9
+branch 27 taken 9 (fallthrough)
+branch 28 taken 0 (throw)
+        9:  753-block 10
+branch 29 taken 9 (fallthrough)
+branch 30 taken 0
+        9:  753-block 11
+call   31 returned 9
+branch 32 taken 9 (fallthrough)
+branch 33 taken 0 (throw)
+        9:  753-block 12
+call   34 returned 9
+call   35 returned 9
+branch 36 taken 9 (fallthrough)
+branch 37 taken 0 (throw)
+        9:  753-block 13
+call   38 returned 9
+branch 39 taken 8 (fallthrough)
+branch 40 taken 1
+        8:  753-block 14
+    12280:  753-block 15
+    12288:  753-block 16
+branch 41 taken 9 (fallthrough)
+branch 42 taken 12279
+        9:  753-block 17
+call   43 returned 9
+    12288:  753-block 18
+branch 44 taken 9 (fallthrough)
+branch 45 taken 12279
+        9:  753-block 19
+call   46 returned 9
+    12288:  753-block 20
+branch 47 taken 9 (fallthrough)
+branch 48 taken 12279
+        9:  753-block 21
+call   49 returned 9
+    12288:  753-block 22
+branch 50 taken 11655 (fallthrough)
+branch 51 taken 633
+    11655:  753-block 23
+call   52 returned 11655
+    12288:  753-block 24
+branch 53 taken 8 (fallthrough)
+branch 54 taken 12280
+    %%%%%:  753-block 25
+branch 55 never executed
+branch 56 never executed
+    %%%%%:  753-block 26
+call   57 never executed
+    %%%%%:  753-block 27
+    %%%%%:  753-block 28
+    %%%%%:  753-block 29
+branch 58 never executed
+branch 59 never executed
+    %%%%%:  753-block 30
+call   60 never executed
+    %%%%%:  753-block 31
+    %%%%%:  753-block 32
+    %%%%%:  753-block 33
+branch 61 never executed
+branch 62 never executed
+    %%%%%:  753-block 34
+call   63 never executed
+    %%%%%:  753-block 35
+    %%%%%:  753-block 36
+    %%%%%:  753-block 37
+branch 64 never executed
+branch 65 never executed
+    %%%%%:  753-block 38
+call   66 never executed
+    %%%%%:  753-block 39
+    %%%%%:  753-block 40
+    %%%%%:  753-block 41
+    %%%%%:  753-block 42
+        8:  754:                        if (cantMovimientosPosibles(q,vMov,mov.size()) > 0) {
+        8:  754-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 8 (fallthrough)
+branch  3 taken 0 (throw)
+        8:  754-block  1
+call    4 returned 8
+branch  5 taken 8 (fallthrough)
+branch  6 taken 0 (throw)
+        8:  754-block  2
+call    7 returned 8
+branch  8 taken 8 (fallthrough)
+branch  9 taken 0 (throw)
+        8:  754-block  3
+call   10 returned 8
+call   11 returned 8
+branch 12 taken 8 (fallthrough)
+branch 13 taken 0
+    %%%%%:  754-block  4
+call   14 never executed
+    %%%%%:  754-block  5
+    %%%%%:  754-block  6
+call   15 never executed
+    %%%%%:  754-block  7
+        8:  755:                            q = moverPieza(q,o,d);
+        8:  755-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  755-block  1
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:  755-block  2
+call    6 returned 8
+call    7 returned 8
+call    8 returned 8
+    %%%%%:  755-block  3
+call    9 never executed
+    %%%%%:  755-block  4
+        8:  756:                            mov.push_back(make_pair(o,d));
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  756-block  0
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:  756-block  1
+    %%%%%:  756-block  2
+        -:  757:                        }
+        8:  758:                        q.second = contrincante(jugador(q));
+        8:  758-block  0
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  758-block  1
+call    3 returned 8
+call    4 returned 8
+call    5 returned 8
+        8:  759:                        jugada = unicaMovidaPosibleDeJugador(q);
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  759-block  0
+call    3 returned 8
+branch  4 taken 8 (fallthrough)
+branch  5 taken 0 (throw)
+        8:  759-block  1
+call    6 returned 8
+call    7 returned 8
+    %%%%%:  759-block  2
+call    8 never executed
+    %%%%%:  759-block  3
+        8:  760:                        if(jugada.first != setCoord(-1,-1) && jugada.second != setCoord(-1,-1)){
+call    0 returned 8
+branch  1 taken 8 (fallthrough)
+branch  2 taken 0 (throw)
+        8:  760-block  0
+call    3 returned 8
+branch  4 taken 7 (fallthrough)
+branch  5 taken 1
+        7:  760-block  1
+call    6 returned 7
+branch  7 taken 7 (fallthrough)
+branch  8 taken 0 (throw)
+        7:  760-block  2
+call    9 returned 7
+branch 10 taken 7 (fallthrough)
+branch 11 taken 0
+        7:  760-block  3
+        1:  760-block  4
+        8:  760-block  5
+branch 12 taken 7 (fallthrough)
+branch 13 taken 1
+    %%%%%:  760-block  6
+    %%%%%:  760-block  7
+        7:  761:                            q = moverPieza(q,jugada.first,jugada.second);
+        7:  761-block  0
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:  761-block  1
+call    3 returned 7
+branch  4 taken 7 (fallthrough)
+branch  5 taken 0 (throw)
+        7:  761-block  2
+call    6 returned 7
+call    7 returned 7
+call    8 returned 7
+    %%%%%:  761-block  3
+call    9 never executed
+    %%%%%:  761-block  4
+    %%%%%:  761-block  5
+    %%%%%:  761-block  6
+call   10 never executed
+        7:  762:                            q.second = contrincante(jugador(q));
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:  762-block  0
+call    3 returned 7
+call    4 returned 7
+call    5 returned 7
+        -:  763:                        }
+        -:  764:                    }
+        -:  765:                }
+        -:  766:            }
+        -:  767:        }
+        -:  768:    }
+        6:  769:    return mov;
+        3:  769-block  0
+        3:  769-block  1
+        -:  770:}
+        -:  771:
+        -:  772:
+        -:  773:
+        -:  774:
+        -:  775:
+        -:  776:

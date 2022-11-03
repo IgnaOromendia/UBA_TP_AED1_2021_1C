@@ -1,0 +1,1018 @@
+        -:    0:Source:C:/Users/Usuario/Desktop/por_favor_funciona/template-alumnos/tests/ej3_casillasAtacadasTEST.cpp
+        -:    0:Graph:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\tests\ej3_casillasAtacadasTEST.gcno
+        -:    0:Data:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\tests\ej3_casillasAtacadasTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../definiciones.h"
+        -:    2:#include "../ejercicios.h"
+        -:    3:#include "../auxiliares.h"
+        -:    4:#include "gtest/gtest.h"
+        -:    5:# include <utility>
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+function _ZN50casillasAtacadasTEST_atacadasDelJugadorActual_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN50casillasAtacadasTEST_atacadasDelJugadorActual_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN50casillasAtacadasTEST_atacadasDelJugadorActual_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+function _ZN50casillasAtacadasTEST_atacadasDelJugadorActual_TestC1Ev called 1 returned 100% blocks executed 100%
+        8:    9:TEST(casillasAtacadasTEST, atacadasDelJugadorActual) {
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:    9-block  0
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:    9-block  1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:    9-block  2
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    %%%%%:    9-block  3
+call   16 never executed
+    %%%%%:    9-block  4
+    %%%%%:    9-block  5
+call   17 never executed
+    %%%%%:    9-block  6
+    %%%%%:    9-block  7
+call   18 never executed
+    %%%%%:    9-block  8
+call   19 never executed
+        1:    9-block  9
+        1:    9-block 10
+call   20 returned 1
+call   21 returned 1
+        1:    9-block 11
+        1:    9-block 12
+call   22 returned 1
+        1:    9-block 13
+        1:    9-block 14
+        1:    9-block 15
+call   23 returned 1
+        -:   10:	tablero t = {
+        -:   11:            {cVACIA, cREY_N, cVACIA, cALFIL_N, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   12:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   13:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   14:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cPEON_N, cVACIA},
+        -:   15:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cPEON_B, cVACIA, cVACIA},
+        -:   16:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   17:            {cVACIA, cVACIA, cVACIA, cVACIA, cREY_B, cVACIA, cVACIA, cVACIA},
+        -:   18:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+       10:   19:    };
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   19-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   19-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   19-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   19-block  4
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   19-block  5
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   19-block  6
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   19-block  7
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   19-block  8
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   19-block  9
+call   36 returned 1
+        9:   19-block 10
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   19-block 11
+call   39 returned 8
+        1:   19-block 12
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   19-block 13
+    %%%%%:   19-block 14
+    %%%%%:   19-block 15
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   19-block 16
+call   51 never executed
+    %%%%%:   19-block 17
+    %%%%%:   19-block 18
+    %%%%%:   19-block 19
+call   52 never executed
+    %%%%%:   19-block 20
+    %%%%%:   19-block 21
+call   53 never executed
+    %%%%%:   19-block 22
+    %%%%%:   19-block 23
+call   54 never executed
+    %%%%%:   19-block 24
+    %%%%%:   19-block 25
+call   55 never executed
+    %%%%%:   19-block 26
+    %%%%%:   19-block 27
+call   56 never executed
+    %%%%%:   19-block 28
+    %%%%%:   19-block 29
+call   57 never executed
+    %%%%%:   19-block 30
+    %%%%%:   19-block 31
+call   58 never executed
+    %%%%%:   19-block 32
+    %%%%%:   19-block 33
+call   59 never executed
+    %%%%%:   19-block 34
+    %%%%%:   19-block 35
+    %%%%%:   19-block 36
+call   60 never executed
+        2:   20:	posicion p = make_pair(t, BLANCO);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   20-block  0
+    %%%%%:   20-block  1
+call    4 never executed
+    %%%%%:   20-block  2
+call    5 never executed
+        -:   21:
+        1:   22:	int j = BLANCO;
+        -:   23:
+        -:   24:	vector<coordenada> esperado = { 
+        -:   25:		make_pair(6,3), make_pair(5,3), make_pair(5,4), make_pair(5,5), make_pair(6,5), make_pair(7,5), make_pair(7,4), make_pair(7,3), //Rey Blanco en (6,4)
+        -:   26:		make_pair(3,4), make_pair(3,6)	//Peon Blanco en (4,5)
+        2:   27:	};
+        1:   27-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   27-block  1
+call    4 returned 1
+call    5 returned 1
+    %%%%%:   27-block  2
+    %%%%%:   27-block  3
+call    6 never executed
+    %%%%%:   27-block  4
+call    7 never executed
+        -:   28:	
+        2:   29:	vector<coordenada> atacadas = casillasAtacadas(p, j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   29-block  0
+call    4 never executed
+        1:   30:	EXPECT_EQ(ordenarVectorPares(esperado), ordenarVectorPares(atacadas));
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   30-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   30-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:   30-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    $$$$$:   30-block  5
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    $$$$$:   30-block  6
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    $$$$$:   30-block  7
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    $$$$$:   30-block  8
+call   26 never executed
+call   27 never executed
+        1:   30-block  9
+call   28 returned 1
+    %%%%%:   30-block 10
+    %%%%%:   30-block 11
+call   29 never executed
+    %%%%%:   30-block 12
+    %%%%%:   30-block 13
+call   30 never executed
+    %%%%%:   30-block 14
+    %%%%%:   30-block 15
+call   31 never executed
+    %%%%%:   30-block 16
+    %%%%%:   30-block 17
+call   32 never executed
+    %%%%%:   30-block 18
+        1:   31:}
+    %%%%%:   31-block  0
+call    0 never executed
+        -:   32:
+function _ZN49casillasAtacadasTEST_atacadasDelContrincante_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN49casillasAtacadasTEST_atacadasDelContrincante_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN49casillasAtacadasTEST_atacadasDelContrincante_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+function _ZN49casillasAtacadasTEST_atacadasDelContrincante_TestC1Ev called 1 returned 100% blocks executed 100%
+        8:   33:TEST(casillasAtacadasTEST, atacadasDelContrincante) {
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   33-block  0
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   33-block  1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   33-block  2
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    %%%%%:   33-block  3
+call   16 never executed
+    %%%%%:   33-block  4
+    %%%%%:   33-block  5
+call   17 never executed
+    %%%%%:   33-block  6
+    %%%%%:   33-block  7
+call   18 never executed
+    %%%%%:   33-block  8
+call   19 never executed
+        1:   33-block  9
+        1:   33-block 10
+call   20 returned 1
+call   21 returned 1
+        1:   33-block 11
+        1:   33-block 12
+call   22 returned 1
+        1:   33-block 13
+        1:   33-block 14
+        1:   33-block 15
+call   23 returned 1
+        -:   34:	tablero t = {
+        -:   35:            {cVACIA, cREY_N, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   36:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   37:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   38:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cPEON_N, cVACIA},
+        -:   39:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cPEON_B, cVACIA, cVACIA},
+        -:   40:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   41:            {cVACIA, cVACIA, cVACIA, cVACIA, cREY_B, cVACIA, cVACIA, cVACIA},
+        -:   42:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+       10:   43:    };
+        1:   43-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   43-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   43-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   43-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   43-block  4
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   43-block  5
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   43-block  6
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   43-block  7
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   43-block  8
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   43-block  9
+call   36 returned 1
+        9:   43-block 10
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   43-block 11
+call   39 returned 8
+        1:   43-block 12
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   43-block 13
+    %%%%%:   43-block 14
+    %%%%%:   43-block 15
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   43-block 16
+call   51 never executed
+    %%%%%:   43-block 17
+    %%%%%:   43-block 18
+    %%%%%:   43-block 19
+call   52 never executed
+    %%%%%:   43-block 20
+    %%%%%:   43-block 21
+call   53 never executed
+    %%%%%:   43-block 22
+    %%%%%:   43-block 23
+call   54 never executed
+    %%%%%:   43-block 24
+    %%%%%:   43-block 25
+call   55 never executed
+    %%%%%:   43-block 26
+    %%%%%:   43-block 27
+call   56 never executed
+    %%%%%:   43-block 28
+    %%%%%:   43-block 29
+call   57 never executed
+    %%%%%:   43-block 30
+    %%%%%:   43-block 31
+call   58 never executed
+    %%%%%:   43-block 32
+    %%%%%:   43-block 33
+call   59 never executed
+    %%%%%:   43-block 34
+    %%%%%:   43-block 35
+    %%%%%:   43-block 36
+call   60 never executed
+        2:   44:	posicion p = make_pair(t, BLANCO);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   44-block  0
+    %%%%%:   44-block  1
+call    4 never executed
+    %%%%%:   44-block  2
+call    5 never executed
+        -:   45:
+        1:   46:	int j = NEGRO;
+        -:   47:
+        -:   48:	vector<coordenada> esperado = {
+        -:   49:		make_pair(0,0), make_pair(0,2), make_pair(1,0), make_pair(1,1), make_pair(1,2), //Rey Negro en (0,1)
+        -:   50:		make_pair(4,5), make_pair(4,7) //Peon Negro en (3,6)
+        -:   51:
+        2:   52:	};
+        1:   52-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   52-block  1
+call    4 returned 1
+call    5 returned 1
+    %%%%%:   52-block  2
+    %%%%%:   52-block  3
+call    6 never executed
+    %%%%%:   52-block  4
+call    7 never executed
+        -:   53:
+        2:   54:	vector<coordenada> atacadas = casillasAtacadas(p, j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   54-block  0
+call    4 never executed
+        1:   55:	EXPECT_EQ(ordenarVectorPares(esperado), ordenarVectorPares(atacadas));
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   55-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:   55-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    $$$$$:   55-block  5
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    $$$$$:   55-block  6
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    $$$$$:   55-block  7
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    $$$$$:   55-block  8
+call   26 never executed
+call   27 never executed
+        1:   55-block  9
+call   28 returned 1
+    %%%%%:   55-block 10
+    %%%%%:   55-block 11
+call   29 never executed
+    %%%%%:   55-block 12
+    %%%%%:   55-block 13
+call   30 never executed
+    %%%%%:   55-block 14
+    %%%%%:   55-block 15
+call   31 never executed
+    %%%%%:   55-block 16
+    %%%%%:   55-block 17
+call   32 never executed
+    %%%%%:   55-block 18
+        1:   56:}
+    %%%%%:   56-block  0
+call    0 never executed
+        -:   57:
+function _ZN35casillasAtacadasTEST_leDanMasa_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN35casillasAtacadasTEST_leDanMasa_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN35casillasAtacadasTEST_leDanMasa_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+function _ZN35casillasAtacadasTEST_leDanMasa_TestC1Ev called 1 returned 100% blocks executed 100%
+        8:   58:TEST(casillasAtacadasTEST, leDanMasa) {
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   58-block  0
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   58-block  1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   58-block  2
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    %%%%%:   58-block  3
+call   16 never executed
+    %%%%%:   58-block  4
+    %%%%%:   58-block  5
+call   17 never executed
+    %%%%%:   58-block  6
+    %%%%%:   58-block  7
+call   18 never executed
+    %%%%%:   58-block  8
+call   19 never executed
+        1:   58-block  9
+        1:   58-block 10
+call   20 returned 1
+call   21 returned 1
+        1:   58-block 11
+        1:   58-block 12
+call   22 returned 1
+        1:   58-block 13
+        1:   58-block 14
+        1:   58-block 15
+call   23 returned 1
+        -:   59:    tablero t = {
+        -:   60:            {cALFIL_N, cREY_N, cPEON_N, cVACIA, cVACIA, cVACIA, cVACIA, cREY_B},
+        -:   61:            {cTORRE_N, cPEON_B,cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   62:            {cALFIL_N, cTORRE_N,cPEON_N, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   63:            {cVACIA, cPEON_N, cVACIA ,   cVACIA  , cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   64:            {cVACIA, cVACIA, cVACIA ,   cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   65:            {cVACIA, cVACIA, cVACIA,    cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   66:            {cVACIA, cVACIA, cVACIA,   cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   67:            {cVACIA, cVACIA, cVACIA,   cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+       10:   68:    };
+        1:   68-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   68-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   68-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   68-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   68-block  4
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   68-block  5
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   68-block  6
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   68-block  7
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   68-block  8
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   68-block  9
+call   36 returned 1
+        9:   68-block 10
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   68-block 11
+call   39 returned 8
+        1:   68-block 12
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   68-block 13
+    %%%%%:   68-block 14
+    %%%%%:   68-block 15
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   68-block 16
+call   51 never executed
+    %%%%%:   68-block 17
+    %%%%%:   68-block 18
+    %%%%%:   68-block 19
+call   52 never executed
+    %%%%%:   68-block 20
+    %%%%%:   68-block 21
+call   53 never executed
+    %%%%%:   68-block 22
+    %%%%%:   68-block 23
+call   54 never executed
+    %%%%%:   68-block 24
+    %%%%%:   68-block 25
+call   55 never executed
+    %%%%%:   68-block 26
+    %%%%%:   68-block 27
+call   56 never executed
+    %%%%%:   68-block 28
+    %%%%%:   68-block 29
+call   57 never executed
+    %%%%%:   68-block 30
+    %%%%%:   68-block 31
+call   58 never executed
+    %%%%%:   68-block 32
+    %%%%%:   68-block 33
+call   59 never executed
+    %%%%%:   68-block 34
+    %%%%%:   68-block 35
+    %%%%%:   68-block 36
+call   60 never executed
+        2:   69:    posicion p = make_pair(t, NEGRO);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   69-block  0
+    %%%%%:   69-block  1
+call    4 never executed
+    %%%%%:   69-block  2
+call    5 never executed
+        -:   70:
+        1:   71:    int j = NEGRO;
+        -:   72:
+        -:   73:    vector<coordenada> esperado = {
+        -:   74:            make_pair(1,1), make_pair(1,3), make_pair(4,0), make_pair(3,3), make_pair(4,2), make_pair(1,2)
+        2:   75:    };
+        1:   75-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   75-block  1
+call    4 returned 1
+call    5 returned 1
+    %%%%%:   75-block  2
+    %%%%%:   75-block  3
+call    6 never executed
+    %%%%%:   75-block  4
+call    7 never executed
+        -:   76:
+        2:   77:    vector<coordenada> atacadas = casillasAtacadas(p, j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   77-block  0
+call    4 never executed
+        1:   78:    EXPECT_EQ(ordenarVectorPares(esperado), ordenarVectorPares(atacadas));
+        1:   78-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   78-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   78-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   78-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:   78-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    $$$$$:   78-block  5
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    $$$$$:   78-block  6
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    $$$$$:   78-block  7
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    $$$$$:   78-block  8
+call   26 never executed
+call   27 never executed
+        1:   78-block  9
+call   28 returned 1
+    %%%%%:   78-block 10
+    %%%%%:   78-block 11
+call   29 never executed
+    %%%%%:   78-block 12
+    %%%%%:   78-block 13
+call   30 never executed
+    %%%%%:   78-block 14
+    %%%%%:   78-block 15
+call   31 never executed
+    %%%%%:   78-block 16
+    %%%%%:   78-block 17
+call   32 never executed
+    %%%%%:   78-block 18
+        1:   79:}
+    %%%%%:   79-block  0
+call    0 never executed
+        -:   80:
+function _ZN46casillasAtacadasTEST_alfilTodoContemplado_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN46casillasAtacadasTEST_alfilTodoContemplado_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN46casillasAtacadasTEST_alfilTodoContemplado_Test8TestBodyEv called 1 returned 100% blocks executed 42%
+function _ZN46casillasAtacadasTEST_alfilTodoContemplado_TestC1Ev called 1 returned 100% blocks executed 100%
+        8:   81:TEST(casillasAtacadasTEST, alfilTodoContemplado) {
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   81-block  0
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   81-block  1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   81-block  2
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    %%%%%:   81-block  3
+call   16 never executed
+    %%%%%:   81-block  4
+    %%%%%:   81-block  5
+call   17 never executed
+    %%%%%:   81-block  6
+    %%%%%:   81-block  7
+call   18 never executed
+        1:   81-block  8
+        1:   81-block  9
+call   19 returned 1
+call   20 returned 1
+        1:   81-block 10
+        1:   81-block 11
+call   21 returned 1
+        1:   81-block 12
+        1:   81-block 13
+        1:   81-block 14
+call   22 returned 1
+        -:   82:    tablero t = {
+        -:   83:            {cREY_N, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   84:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   85:            {cVACIA, cVACIA, cPEON_B, cVACIA, cPEON_B, cVACIA, cVACIA, cVACIA},
+        -:   86:            {cVACIA, cVACIA, cVACIA, cALFIL_N, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   87:            {cVACIA, cVACIA, cPEON_B, cVACIA, cPEON_B, cVACIA, cVACIA, cVACIA},
+        -:   88:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   89:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   90:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cREY_B},
+       10:   91:    };
+        1:   91-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   91-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   91-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   91-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   91-block  4
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   91-block  5
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   91-block  6
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   91-block  7
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   91-block  8
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   91-block  9
+call   36 returned 1
+        9:   91-block 10
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   91-block 11
+call   39 returned 8
+        1:   91-block 12
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   91-block 13
+    %%%%%:   91-block 14
+    %%%%%:   91-block 15
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   91-block 16
+call   51 never executed
+    %%%%%:   91-block 17
+    %%%%%:   91-block 18
+    %%%%%:   91-block 19
+call   52 never executed
+    %%%%%:   91-block 20
+    %%%%%:   91-block 21
+call   53 never executed
+    %%%%%:   91-block 22
+    %%%%%:   91-block 23
+call   54 never executed
+    %%%%%:   91-block 24
+    %%%%%:   91-block 25
+call   55 never executed
+    %%%%%:   91-block 26
+    %%%%%:   91-block 27
+call   56 never executed
+    %%%%%:   91-block 28
+    %%%%%:   91-block 29
+call   57 never executed
+    %%%%%:   91-block 30
+    %%%%%:   91-block 31
+call   58 never executed
+    %%%%%:   91-block 32
+    %%%%%:   91-block 33
+call   59 never executed
+    %%%%%:   91-block 34
+    %%%%%:   91-block 35
+    %%%%%:   91-block 36
+call   60 never executed
+        2:   92:    posicion p = make_pair(t, NEGRO);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   92-block  0
+    %%%%%:   92-block  1
+call    4 never executed
+    %%%%%:   92-block  2
+call    5 never executed
+        -:   93:
+        1:   94:    int j = NEGRO;
+        -:   95:
+        -:   96:    vector<coordenada> esperado = {
+        -:   97:            make_pair(2,2), make_pair(4,2), make_pair(4,4), make_pair(2,4), make_pair(0,1),make_pair(1,0),make_pair(1,1)
+        2:   98:    };
+        1:   98-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   98-block  1
+call    4 returned 1
+call    5 returned 1
+    %%%%%:   98-block  2
+    %%%%%:   98-block  3
+call    6 never executed
+    %%%%%:   98-block  4
+call    7 never executed
+        -:   99:
+        2:  100:    vector<coordenada> atacadas = casillasAtacadas(p, j);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:  100-block  0
+call    4 never executed
+        1:  101:    EXPECT_EQ(ordenarVectorPares(esperado), ordenarVectorPares(atacadas));
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  101-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  101-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:  101-block  4
+call   14 never executed
+branch 15 never executed
+branch 16 never executed
+    $$$$$:  101-block  5
+call   17 never executed
+branch 18 never executed
+branch 19 never executed
+    $$$$$:  101-block  6
+call   20 never executed
+branch 21 never executed
+branch 22 never executed
+    $$$$$:  101-block  7
+call   23 never executed
+branch 24 never executed
+branch 25 never executed
+    $$$$$:  101-block  8
+call   26 never executed
+call   27 never executed
+        1:  101-block  9
+call   28 returned 1
+    %%%%%:  101-block 10
+    %%%%%:  101-block 11
+call   29 never executed
+    %%%%%:  101-block 12
+    %%%%%:  101-block 13
+call   30 never executed
+    %%%%%:  101-block 14
+    %%%%%:  101-block 15
+call   31 never executed
+    %%%%%:  101-block 16
+    %%%%%:  101-block 17
+call   32 never executed
+    %%%%%:  101-block 18
+function _GLOBAL__sub_I__ZN50casillasAtacadasTEST_atacadasDelJugadorActual_Test10test_info_E called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 57%
+        5:  102:}
+        1:  102-block  0
+        1:  102-block  1
+call    0 returned 1
+        1:  102-block  2
+        1:  102-block  3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:  102-block  4
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
+        1:  102-block  5
+    %%%%%:  102-block  6
+call    5 never executed
+        -:  103:
+        -:  104://en el 7 hay una torre re falopera que hace un movimiento re de tryhard y gegea al blanco re ez.
+        -:  105://linea 342. Hay que arreglar la hostilidad de la torre
+        -:  106://nerf torre pls

@@ -1,0 +1,674 @@
+        -:    0:Source:C:/Users/Usuario/Desktop/por_favor_funciona/template-alumnos/tests/ej5_ordenarTableroTEST.cpp
+        -:    0:Graph:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\tests\ej5_ordenarTableroTEST.gcno
+        -:    0:Data:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\tests\ej5_ordenarTableroTEST.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include "../definiciones.h"
+        -:    2:#include "../ejercicios.h"
+        -:    3:#include "../auxiliares.h"
+        -:    4:#include "gtest/gtest.h"
+        -:    5:# include <utility>
+        -:    6:
+        -:    7:using namespace std;
+        -:    8:
+function _ZN46ordenarTableroTEST_ordenarPosicionInicial_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN46ordenarTableroTEST_ordenarPosicionInicial_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN46ordenarTableroTEST_ordenarPosicionInicial_Test8TestBodyEv called 1 returned 100% blocks executed 45%
+function _ZN46ordenarTableroTEST_ordenarPosicionInicial_TestC1Ev called 1 returned 100% blocks executed 100%
+        8:    9:TEST(ordenarTableroTEST, ordenarPosicionInicial){
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:    9-block  0
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:    9-block  1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:    9-block  2
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    %%%%%:    9-block  3
+call   16 never executed
+    %%%%%:    9-block  4
+    %%%%%:    9-block  5
+call   17 never executed
+    %%%%%:    9-block  6
+    %%%%%:    9-block  7
+call   18 never executed
+    %%%%%:    9-block  8
+call   19 never executed
+        1:    9-block  9
+        1:    9-block 10
+call   20 returned 1
+call   21 returned 1
+        1:    9-block 11
+        1:    9-block 12
+call   22 returned 1
+        1:    9-block 13
+        1:    9-block 14
+        1:    9-block 15
+call   23 returned 1
+        -:   10:    tablero t = {
+        -:   11:    {cTORRE_N,  cVACIA,     cALFIL_N,   cVACIA,     cREY_N,     cALFIL_N,   cVACIA,     cTORRE_N},
+        -:   12:    {cPEON_N,   cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N},
+        -:   13:    {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   14:    {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   15:    {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   16:    {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   17:    {cPEON_B,   cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B},
+        -:   18:    {cTORRE_B,  cVACIA,     cALFIL_B,   cVACIA,     cREY_B,     cALFIL_B,   cVACIA,     cTORRE_B},
+       10:   19:    };
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   19-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   19-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   19-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   19-block  4
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   19-block  5
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   19-block  6
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   19-block  7
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   19-block  8
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   19-block  9
+call   36 returned 1
+        9:   19-block 10
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   19-block 11
+call   39 returned 8
+        1:   19-block 12
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   19-block 13
+    %%%%%:   19-block 14
+    %%%%%:   19-block 15
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   19-block 16
+call   51 never executed
+    %%%%%:   19-block 17
+    %%%%%:   19-block 18
+    %%%%%:   19-block 19
+call   52 never executed
+    %%%%%:   19-block 20
+    %%%%%:   19-block 21
+call   53 never executed
+    %%%%%:   19-block 22
+    %%%%%:   19-block 23
+call   54 never executed
+    %%%%%:   19-block 24
+    %%%%%:   19-block 25
+call   55 never executed
+    %%%%%:   19-block 26
+    %%%%%:   19-block 27
+call   56 never executed
+    %%%%%:   19-block 28
+    %%%%%:   19-block 29
+call   57 never executed
+    %%%%%:   19-block 30
+    %%%%%:   19-block 31
+call   58 never executed
+    %%%%%:   19-block 32
+    %%%%%:   19-block 33
+call   59 never executed
+    %%%%%:   19-block 34
+    %%%%%:   19-block 35
+call   60 never executed
+    %%%%%:   19-block 36
+call   61 never executed
+        -:   20:    tablero t_ord = {
+        -:   21:            {cALFIL_N,  cVACIA,     cALFIL_N,   cVACIA,     cTORRE_N,   cTORRE_N,   cVACIA,     cREY_N},
+        -:   22:            {cPEON_N,   cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N,    cPEON_N},
+        -:   23:            {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   24:            {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   25:            {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   26:            {cVACIA,    cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA,     cVACIA},
+        -:   27:            {cPEON_B,   cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B,    cPEON_B},
+        -:   28:            {cALFIL_B,  cVACIA,     cALFIL_B,   cVACIA,     cTORRE_B,   cTORRE_B,   cVACIA,     cREY_B},
+       10:   29:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   29-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   29-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   29-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   29-block  3
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   29-block  4
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   29-block  5
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   29-block  6
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   29-block  7
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   29-block  8
+call   36 returned 1
+        9:   29-block  9
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   29-block 10
+call   39 returned 8
+        1:   29-block 11
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   29-block 12
+    %%%%%:   29-block 13
+    %%%%%:   29-block 14
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   29-block 15
+call   51 never executed
+    %%%%%:   29-block 16
+    %%%%%:   29-block 17
+    %%%%%:   29-block 18
+call   52 never executed
+    %%%%%:   29-block 19
+    %%%%%:   29-block 20
+call   53 never executed
+    %%%%%:   29-block 21
+    %%%%%:   29-block 22
+call   54 never executed
+    %%%%%:   29-block 23
+    %%%%%:   29-block 24
+call   55 never executed
+    %%%%%:   29-block 25
+    %%%%%:   29-block 26
+call   56 never executed
+    %%%%%:   29-block 27
+    %%%%%:   29-block 28
+call   57 never executed
+    %%%%%:   29-block 29
+    %%%%%:   29-block 30
+call   58 never executed
+    %%%%%:   29-block 31
+    %%%%%:   29-block 32
+call   59 never executed
+    %%%%%:   29-block 33
+    %%%%%:   29-block 34
+    %%%%%:   29-block 35
+call   60 never executed
+        2:   30:    posicion p = make_pair(t,BLANCO);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   30-block  0
+    %%%%%:   30-block  1
+call    4 never executed
+    %%%%%:   30-block  2
+call    5 never executed
+        1:   31:    ordenarTablero(p);
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32:    EXPECT_EQ(tableroActual(p), t_ord);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   32-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    $$$$$:   32-block  3
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    $$$$$:   32-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   32-block  5
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    $$$$$:   32-block  6
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    $$$$$:   32-block  7
+call   22 never executed
+call   23 never executed
+        1:   32-block  8
+call   24 returned 1
+    %%%%%:   32-block  9
+    %%%%%:   32-block 10
+call   25 never executed
+    %%%%%:   32-block 11
+    %%%%%:   32-block 12
+call   26 never executed
+    %%%%%:   32-block 13
+    %%%%%:   32-block 14
+call   27 never executed
+    %%%%%:   32-block 15
+        1:   33:}
+    %%%%%:   33-block  0
+call    0 never executed
+function _ZN40ordenarTableroTEST_yaEstabaOrdenado_TestD0Ev called 1 returned 100% blocks executed 100%
+function _ZN40ordenarTableroTEST_yaEstabaOrdenado_TestD1Ev called 1 returned 100% blocks executed 100%
+function _ZN40ordenarTableroTEST_yaEstabaOrdenado_Test8TestBodyEv called 1 returned 100% blocks executed 45%
+function _ZN40ordenarTableroTEST_yaEstabaOrdenado_TestC1Ev called 1 returned 100% blocks executed 100%
+        8:   34:TEST(ordenarTableroTEST, yaEstabaOrdenado){
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   34-block  0
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   34-block  1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:   34-block  2
+call   13 returned 1
+call   14 returned 1
+call   15 returned 1
+    %%%%%:   34-block  3
+call   16 never executed
+    %%%%%:   34-block  4
+    %%%%%:   34-block  5
+call   17 never executed
+    %%%%%:   34-block  6
+    %%%%%:   34-block  7
+call   18 never executed
+        1:   34-block  8
+        1:   34-block  9
+call   19 returned 1
+call   20 returned 1
+        1:   34-block 10
+        1:   34-block 11
+call   21 returned 1
+        1:   34-block 12
+        1:   34-block 13
+        1:   34-block 14
+call   22 returned 1
+        -:   35:    tablero t = {
+        -:   36:            {cTORRE_N, cVACIA, cVACIA, cVACIA, cREY_N, cVACIA, cVACIA, cVACIA},
+        -:   37:            {cVACIA, cTORRE_N, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   38:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   39:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   40:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   41:            {cPEON_N, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   42:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cPEON_N, cVACIA, cVACIA},
+        -:   43:            {cREY_B, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+       10:   44:    };
+        1:   44-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   44-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   44-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   44-block  3
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   44-block  4
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   44-block  5
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   44-block  6
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   44-block  7
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   44-block  8
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   44-block  9
+call   36 returned 1
+        9:   44-block 10
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   44-block 11
+call   39 returned 8
+        1:   44-block 12
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   44-block 13
+    %%%%%:   44-block 14
+    %%%%%:   44-block 15
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   44-block 16
+call   51 never executed
+    %%%%%:   44-block 17
+    %%%%%:   44-block 18
+    %%%%%:   44-block 19
+call   52 never executed
+    %%%%%:   44-block 20
+    %%%%%:   44-block 21
+call   53 never executed
+    %%%%%:   44-block 22
+    %%%%%:   44-block 23
+call   54 never executed
+    %%%%%:   44-block 24
+    %%%%%:   44-block 25
+call   55 never executed
+    %%%%%:   44-block 26
+    %%%%%:   44-block 27
+call   56 never executed
+    %%%%%:   44-block 28
+    %%%%%:   44-block 29
+call   57 never executed
+    %%%%%:   44-block 30
+    %%%%%:   44-block 31
+call   58 never executed
+    %%%%%:   44-block 32
+    %%%%%:   44-block 33
+call   59 never executed
+    %%%%%:   44-block 34
+    %%%%%:   44-block 35
+call   60 never executed
+    %%%%%:   44-block 36
+call   61 never executed
+        -:   45:    tablero t_ord = {
+        -:   46:            {cTORRE_N, cVACIA, cVACIA, cVACIA, cREY_N, cVACIA, cVACIA, cVACIA},
+        -:   47:            {cVACIA, cTORRE_N, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   48:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   49:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   50:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   51:            {cPEON_N, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+        -:   52:            {cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cPEON_N, cVACIA, cVACIA},
+        -:   53:            {cREY_B, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA, cVACIA},
+       10:   54:    };
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   54-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   54-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   54-block  2
+call   12 returned 1
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:   54-block  3
+call   16 returned 1
+call   17 returned 1
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0 (throw)
+        1:   54-block  4
+call   20 returned 1
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:   54-block  5
+call   24 returned 1
+call   25 returned 1
+branch 26 taken 1 (fallthrough)
+branch 27 taken 0 (throw)
+        1:   54-block  6
+call   28 returned 1
+call   29 returned 1
+branch 30 taken 1 (fallthrough)
+branch 31 taken 0 (throw)
+        1:   54-block  7
+call   32 returned 1
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:   54-block  8
+call   36 returned 1
+        9:   54-block  9
+branch 37 taken 8 (fallthrough)
+branch 38 taken 1
+        8:   54-block 10
+call   39 returned 8
+        1:   54-block 11
+call   40 returned 1
+call   41 returned 1
+call   42 returned 1
+call   43 returned 1
+call   44 returned 1
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    %%%%%:   54-block 12
+    %%%%%:   54-block 13
+    %%%%%:   54-block 14
+branch 49 never executed
+branch 50 never executed
+    %%%%%:   54-block 15
+call   51 never executed
+    %%%%%:   54-block 16
+    %%%%%:   54-block 17
+    %%%%%:   54-block 18
+call   52 never executed
+    %%%%%:   54-block 19
+    %%%%%:   54-block 20
+call   53 never executed
+    %%%%%:   54-block 21
+    %%%%%:   54-block 22
+call   54 never executed
+    %%%%%:   54-block 23
+    %%%%%:   54-block 24
+call   55 never executed
+    %%%%%:   54-block 25
+    %%%%%:   54-block 26
+call   56 never executed
+    %%%%%:   54-block 27
+    %%%%%:   54-block 28
+call   57 never executed
+    %%%%%:   54-block 29
+    %%%%%:   54-block 30
+call   58 never executed
+    %%%%%:   54-block 31
+    %%%%%:   54-block 32
+call   59 never executed
+    %%%%%:   54-block 33
+    %%%%%:   54-block 34
+    %%%%%:   54-block 35
+call   60 never executed
+        2:   55:    posicion p = make_pair(t,BLANCO);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+call    3 returned 1
+    %%%%%:   55-block  0
+    %%%%%:   55-block  1
+call    4 never executed
+    %%%%%:   55-block  2
+call    5 never executed
+        1:   56:    ordenarTablero(p);
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57:    EXPECT_EQ(tableroActual(p), t_ord);
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   57-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   57-block  2
+call    6 returned 1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    $$$$$:   57-block  3
+call   10 never executed
+branch 11 never executed
+branch 12 never executed
+    $$$$$:   57-block  4
+call   13 never executed
+branch 14 never executed
+branch 15 never executed
+    $$$$$:   57-block  5
+call   16 never executed
+branch 17 never executed
+branch 18 never executed
+    $$$$$:   57-block  6
+call   19 never executed
+branch 20 never executed
+branch 21 never executed
+    $$$$$:   57-block  7
+call   22 never executed
+call   23 never executed
+        1:   57-block  8
+call   24 returned 1
+    %%%%%:   57-block  9
+    %%%%%:   57-block 10
+call   25 never executed
+    %%%%%:   57-block 11
+    %%%%%:   57-block 12
+call   26 never executed
+    %%%%%:   57-block 13
+    %%%%%:   57-block 14
+call   27 never executed
+    %%%%%:   57-block 15
+function _GLOBAL__sub_I__ZN46ordenarTableroTEST_ordenarPosicionInicial_Test10test_info_E called 1 returned 100% blocks executed 100%
+function _Z41__static_initialization_and_destruction_0ii called 1 returned 100% blocks executed 61%
+        5:   58:}
+        1:   58-block  0
+        1:   58-block  1
+call    0 returned 1
+        1:   58-block  2
+        1:   58-block  3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0
+        1:   58-block  4
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0
+        1:   58-block  5
+    %%%%%:   58-block  6
+call    5 never executed
+        -:   59:
+        -:   60:

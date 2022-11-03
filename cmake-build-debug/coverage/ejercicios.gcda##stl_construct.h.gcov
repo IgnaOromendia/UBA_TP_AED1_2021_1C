@@ -1,0 +1,434 @@
+        -:    0:Source:C:/Users/Usuario/8.6.5/mingw/include/c++/7.2.0/bits/stl_construct.h
+        -:    0:Graph:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\ejercicios.gcno
+        -:    0:Data:C:\Users\Usuario\Desktop\por_favor_funciona\template-alumnos\cmake-build-debug\CMakeFiles\ajedrezLite.dir\ejercicios.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:// nonstandard construct and destroy functions -*- C++ -*-
+        -:    2:
+        -:    3:// Copyright (C) 2001-2017 Free Software Foundation, Inc.
+        -:    4://
+        -:    5:// This file is part of the GNU ISO C++ Library.  This library is free
+        -:    6:// software; you can redistribute it and/or modify it under the
+        -:    7:// terms of the GNU General Public License as published by the
+        -:    8:// Free Software Foundation; either version 3, or (at your option)
+        -:    9:// any later version.
+        -:   10:
+        -:   11:// This library is distributed in the hope that it will be useful,
+        -:   12:// but WITHOUT ANY WARRANTY; without even the implied warranty of
+        -:   13:// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        -:   14:// GNU General Public License for more details.
+        -:   15:
+        -:   16:// Under Section 7 of GPL version 3, you are granted additional
+        -:   17:// permissions described in the GCC Runtime Library Exception, version
+        -:   18:// 3.1, as published by the Free Software Foundation.
+        -:   19:
+        -:   20:// You should have received a copy of the GNU General Public License and
+        -:   21:// a copy of the GCC Runtime Library Exception along with this program;
+        -:   22:// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+        -:   23:// <http://www.gnu.org/licenses/>.
+        -:   24:
+        -:   25:/*
+        -:   26: *
+        -:   27: * Copyright (c) 1994
+        -:   28: * Hewlett-Packard Company
+        -:   29: *
+        -:   30: * Permission to use, copy, modify, distribute and sell this software
+        -:   31: * and its documentation for any purpose is hereby granted without fee,
+        -:   32: * provided that the above copyright notice appear in all copies and
+        -:   33: * that both that copyright notice and this permission notice appear
+        -:   34: * in supporting documentation.  Hewlett-Packard Company makes no
+        -:   35: * representations about the suitability of this software for any
+        -:   36: * purpose.  It is provided "as is" without express or implied warranty.
+        -:   37: *
+        -:   38: *
+        -:   39: * Copyright (c) 1996,1997
+        -:   40: * Silicon Graphics Computer Systems, Inc.
+        -:   41: *
+        -:   42: * Permission to use, copy, modify, distribute and sell this software
+        -:   43: * and its documentation for any purpose is hereby granted without fee,
+        -:   44: * provided that the above copyright notice appear in all copies and
+        -:   45: * that both that copyright notice and this permission notice appear
+        -:   46: * in supporting documentation.  Silicon Graphics makes no
+        -:   47: * representations about the suitability of this software for any
+        -:   48: * purpose.  It is provided "as is" without express or implied warranty.
+        -:   49: */
+        -:   50:
+        -:   51:/** @file bits/stl_construct.h
+        -:   52: *  This is an internal header file, included by other library headers.
+        -:   53: *  Do not attempt to use it directly. @headername{memory}
+        -:   54: */
+        -:   55:
+        -:   56:#ifndef _STL_CONSTRUCT_H
+        -:   57:#define _STL_CONSTRUCT_H 1
+        -:   58:
+        -:   59:#include <new>
+        -:   60:#include <bits/move.h>
+        -:   61:#include <ext/alloc_traits.h>
+        -:   62:
+        -:   63:namespace std _GLIBCXX_VISIBILITY(default)
+        -:   64:{
+        -:   65:_GLIBCXX_BEGIN_NAMESPACE_VERSION
+        -:   66:
+        -:   67:  /**
+        -:   68:   * Constructs an object in existing memory by invoking an allocated
+        -:   69:   * object's constructor with an initializer.
+        -:   70:   */
+        -:   71:#if __cplusplus >= 201103L
+        -:   72:  template<typename _T1, typename... _Args>
+        -:   73:    inline void
+function _ZSt10_ConstructISt4pairIiiEJRS1_EEvPT_DpOT0_ called 0 returned 0% blocks executed 0%
+function _ZSt10_ConstructISt6vectorISt4pairIS1_IiiES2_ESaIS3_EEJS5_EEvPT_DpOT0_ called 0 returned 0% blocks executed 0%
+function _ZSt10_ConstructISt6vectorISt4pairIiiESaIS2_EEJS4_EEvPT_DpOT0_ called 14 returned 100% blocks executed 86%
+function _ZSt10_ConstructISt4pairIiiEJS1_EEvPT_DpOT0_ called 51 returned 100% blocks executed 83%
+function _ZSt10_ConstructISt6vectorISt4pairIS1_IiiES2_ESaIS3_EEJRKS5_EEvPT_DpOT0_ called 3 returned 100% blocks executed 78%
+function _ZSt10_ConstructISt4pairIS0_IiiES1_EJRKS2_EEvPT_DpOT0_ called 162 returned 100% blocks executed 83%
+function _ZSt10_ConstructISt6vectorISt4pairIiiESaIS2_EEJRS4_EEvPT_DpOT0_ called 0 returned 0% blocks executed 0%
+function _ZSt10_ConstructISt4pairIiiEJRKS1_EEvPT_DpOT0_ called 73784199 returned 100% blocks executed 83%
+function _ZSt10_ConstructISt6vectorISt4pairIiiESaIS2_EEJRKS4_EEvPT_DpOT0_ called 9203202 returned 100% blocks executed 78%
+ 82987631:   74:    _Construct(_T1* __p, _Args&&... __args)
+    $$$$$:   74-block  0
+    $$$$$:   74-block  1
+       14:   74-block  2
+       51:   74-block  3
+        3:   74-block  4
+      162:   74-block  5
+    $$$$$:   74-block  6
+ 73784199:   74-block  7
+  9203202:   74-block  8
+ 82987631:   75:    { ::new(static_cast<void*>(__p)) _T1(std::forward<_Args>(__args)...); }
+    $$$$$:   75-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    $$$$$:   75-block  1
+    $$$$$:   75-block  2
+    $$$$$:   75-block  3
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+    $$$$$:   75-block  4
+call    8 never executed
+    $$$$$:   75-block  5
+       14:   75-block  6
+call    9 returned 14
+call   10 returned 14
+branch 11 taken 14 (fallthrough)
+branch 12 taken 0
+       14:   75-block  7
+call   13 returned 14
+    $$$$$:   75-block  8
+       51:   75-block  9
+call   14 returned 51
+call   15 returned 51
+branch 16 taken 51 (fallthrough)
+branch 17 taken 0
+       51:   75-block 10
+    $$$$$:   75-block 11
+        3:   75-block 12
+call   18 returned 3
+call   19 returned 3
+branch 20 taken 3 (fallthrough)
+branch 21 taken 0
+        3:   75-block 13
+call   22 returned 3
+branch 23 taken 3 (fallthrough)
+branch 24 taken 0 (throw)
+        3:   75-block 14
+    $$$$$:   75-block 15
+        3:   75-block 16
+    %%%%%:   75-block 17
+call   25 never executed
+      162:   75-block 18
+call   26 returned 162
+call   27 returned 162
+branch 28 taken 162 (fallthrough)
+branch 29 taken 0
+      162:   75-block 19
+    $$$$$:   75-block 20
+    $$$$$:   75-block 21
+call   30 never executed
+call   31 never executed
+branch 32 never executed
+branch 33 never executed
+    $$$$$:   75-block 22
+call   34 never executed
+branch 35 never executed
+branch 36 never executed
+    $$$$$:   75-block 23
+    $$$$$:   75-block 24
+    $$$$$:   75-block 25
+    %%%%%:   75-block 26
+call   37 never executed
+ 73784199:   75-block 27
+call   38 returned 73784199
+call   39 returned 73784199
+branch 40 taken 73784199 (fallthrough)
+branch 41 taken 0
+ 73784199:   75-block 28
+    $$$$$:   75-block 29
+  9203202:   75-block 30
+call   42 returned 9203202
+call   43 returned 9203202
+branch 44 taken 9203202 (fallthrough)
+branch 45 taken 0
+  9203202:   75-block 31
+call   46 returned 9203202
+branch 47 taken 9203202 (fallthrough)
+branch 48 taken 0 (throw)
+  9203202:   75-block 32
+    $$$$$:   75-block 33
+  9203202:   75-block 34
+    %%%%%:   75-block 35
+call   49 never executed
+        -:   76:#else
+        -:   77:  template<typename _T1, typename _T2>
+        -:   78:    inline void
+        -:   79:    _Construct(_T1* __p, const _T2& __value)
+        -:   80:    {
+        -:   81:      // _GLIBCXX_RESOLVE_LIB_DEFECTS
+        -:   82:      // 402. wrong new expression in [some_]allocator::construct
+        -:   83:      ::new(static_cast<void*>(__p)) _T1(__value);
+        -:   84:    }
+        -:   85:#endif
+        -:   86:
+        -:   87:  template<typename _T1>
+        -:   88:    inline void
+        -:   89:    _Construct_novalue(_T1* __p)
+        -:   90:    { ::new(static_cast<void*>(__p)) _T1; }
+        -:   91:
+        -:   92:  /**
+        -:   93:   * Destroy the object pointed to by a pointer type.
+        -:   94:   */
+        -:   95:  template<typename _Tp>
+        -:   96:    inline void
+function _ZSt8_DestroyISt6vectorISt4pairIS1_IiiES2_ESaIS3_EEEvPT_ called 6 returned 100% blocks executed 100%
+function _ZSt8_DestroyISt6vectorISt4pairIiiESaIS2_EEEvPT_ called 9203232 returned 100% blocks executed 100%
+  9203238:   97:    _Destroy(_Tp* __pointer)
+        6:   97-block  0
+  9203232:   97-block  1
+  9203238:   98:    { __pointer->~_Tp(); }
+        6:   98-block  0
+call    0 returned 6
+  9203232:   98-block  1
+call    1 returned 9203232
+        -:   99:
+        -:  100:  template<bool>
+        -:  101:    struct _Destroy_aux
+        -:  102:    {
+        -:  103:      template<typename _ForwardIterator>
+        -:  104:        static void
+function _ZNSt12_Destroy_auxILb0EE9__destroyIPSt6vectorISt4pairIS3_IiiES4_ESaIS5_EEEEvT_S9_ called 163 returned 100% blocks executed 100%
+function _ZNSt12_Destroy_auxILb0EE9__destroyIN9__gnu_cxx17__normal_iteratorIPSt6vectorISt4pairIiiESaIS6_EES4_IS8_SaIS8_EEEEEEvT_SD_ called 3 returned 100% blocks executed 43%
+function _ZNSt12_Destroy_auxILb0EE9__destroyIPSt6vectorISt4pairIiiESaIS4_EEEEvT_S8_ called 1151392 returned 100% blocks executed 100%
+  1151558:  105:        __destroy(_ForwardIterator __first, _ForwardIterator __last)
+      163:  105-block  0
+        3:  105-block  1
+  1151392:  105-block  2
+        -:  106:	{
+ 10354796:  107:	  for (; __first != __last; ++__first)
+      169:  107-block  0
+branch  0 taken 6 (fallthrough)
+branch  1 taken 163
+        3:  107-block  1
+call    2 returned 3
+branch  3 taken 0 (fallthrough)
+branch  4 taken 3
+call    5 never executed
+ 10354624:  107-block  2
+branch  6 taken 9203232 (fallthrough)
+branch  7 taken 1151392
+  9203238:  108:	    std::_Destroy(std::__addressof(*__first));
+        6:  108-block  0
+call    0 returned 6
+call    1 returned 6
+    $$$$$:  108-block  1
+call    2 never executed
+call    3 never executed
+call    4 never executed
+  9203232:  108-block  2
+call    5 returned 9203232
+call    6 returned 9203232
+  1151558:  109:	}
+        -:  110:    };
+        -:  111:
+        -:  112:  template<>
+        -:  113:    struct _Destroy_aux<true>
+        -:  114:    {
+        -:  115:      template<typename _ForwardIterator>
+        -:  116:        static void
+function _ZNSt12_Destroy_auxILb1EE9__destroyIN9__gnu_cxx17__normal_iteratorIPSt4pairIiiESt6vectorIS5_SaIS5_EEEEEEvT_SB_ called 24 returned 100% blocks executed 100%
+function _ZNSt12_Destroy_auxILb1EE9__destroyIPSt4pairIS2_IiiES3_EEEvT_S6_ called 144 returned 100% blocks executed 100%
+function _ZNSt12_Destroy_auxILb1EE9__destroyIPSt4pairIiiEEEvT_S5_ called 9276294 returned 100% blocks executed 100%
+  9276462:  117:        __destroy(_ForwardIterator, _ForwardIterator) { }
+       24:  117-block  0
+      144:  117-block  1
+  9276294:  117-block  2
+        -:  118:    };
+        -:  119:
+        -:  120:  /**
+        -:  121:   * Destroy a range of objects.  If the value_type of the object has
+        -:  122:   * a trivial destructor, the compiler should optimize all of this
+        -:  123:   * away, otherwise the objects' destructors must be invoked.
+        -:  124:   */
+        -:  125:  template<typename _ForwardIterator>
+        -:  126:    inline void
+function _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIPSt4pairIiiESt6vectorIS3_SaIS3_EEEEEvT_S9_ called 24 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt6vectorISt4pairIS1_IiiES2_ESaIS3_EEEvT_S7_ called 163 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt4pairIS0_IiiES1_EEvT_S4_ called 144 returned 100% blocks executed 100%
+function _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIPSt6vectorISt4pairIiiESaIS4_EES2_IS6_SaIS6_EEEEEvT_SB_ called 3 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt4pairIiiEEvT_S3_ called 9276294 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt6vectorISt4pairIiiESaIS2_EEEvT_S6_ called 1151392 returned 100% blocks executed 100%
+ 10428020:  127:    _Destroy(_ForwardIterator __first, _ForwardIterator __last)
+       24:  127-block  0
+      163:  127-block  1
+      144:  127-block  2
+        3:  127-block  3
+  9276294:  127-block  4
+  1151392:  127-block  5
+        -:  128:    {
+        -:  129:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  130:                       _Value_type;
+        -:  131:#if __cplusplus >= 201103L
+        -:  132:      // A deleted destructor is trivial, this ensures we reject such types:
+        -:  133:      static_assert(is_destructible<_Value_type>::value,
+        -:  134:		    "value type is destructible");
+        -:  135:#endif
+        -:  136:      std::_Destroy_aux<__has_trivial_destructor(_Value_type)>::
+ 10428020:  137:	__destroy(__first, __last);
+       24:  137-block  0
+call    0 returned 24
+      163:  137-block  1
+call    1 returned 163
+      144:  137-block  2
+call    2 returned 144
+        3:  137-block  3
+call    3 returned 3
+  9276294:  137-block  4
+call    4 returned 9276294
+  1151392:  137-block  5
+call    5 returned 1151392
+ 10428020:  138:    }
+        -:  139:
+        -:  140:  template<bool>
+        -:  141:    struct _Destroy_n_aux
+        -:  142:    {
+        -:  143:      template<typename _ForwardIterator, typename _Size>
+        -:  144:        static _ForwardIterator
+        -:  145:        __destroy_n(_ForwardIterator __first, _Size __count)
+        -:  146:	{
+        -:  147:	  for (; __count > 0; (void)++__first, --__count)
+        -:  148:	    std::_Destroy(std::__addressof(*__first));
+        -:  149:	  return __first;
+        -:  150:	}
+        -:  151:    };
+        -:  152:
+        -:  153:  template<>
+        -:  154:    struct _Destroy_n_aux<true>
+        -:  155:    {
+        -:  156:      template<typename _ForwardIterator, typename _Size>
+        -:  157:        static _ForwardIterator
+        -:  158:        __destroy_n(_ForwardIterator __first, _Size __count)
+        -:  159:	{
+        -:  160:	  std::advance(__first, __count);
+        -:  161:	  return __first;
+        -:  162:	}
+        -:  163:    };
+        -:  164:
+        -:  165:  /**
+        -:  166:   * Destroy a range of objects.  If the value_type of the object has
+        -:  167:   * a trivial destructor, the compiler should optimize all of this
+        -:  168:   * away, otherwise the objects' destructors must be invoked.
+        -:  169:   */
+        -:  170:  template<typename _ForwardIterator, typename _Size>
+        -:  171:    inline _ForwardIterator
+        -:  172:    _Destroy_n(_ForwardIterator __first, _Size __count)
+        -:  173:    {
+        -:  174:      typedef typename iterator_traits<_ForwardIterator>::value_type
+        -:  175:                       _Value_type;
+        -:  176:#if __cplusplus >= 201103L
+        -:  177:      // A deleted destructor is trivial, this ensures we reject such types:
+        -:  178:      static_assert(is_destructible<_Value_type>::value,
+        -:  179:		    "value type is destructible");
+        -:  180:#endif
+        -:  181:      return std::_Destroy_n_aux<__has_trivial_destructor(_Value_type)>::
+        -:  182:	__destroy_n(__first, __count);
+        -:  183:    }
+        -:  184:
+        -:  185:  /**
+        -:  186:   * Destroy a range of objects using the supplied allocator.  For
+        -:  187:   * nondefault allocators we do not optimize away invocation of 
+        -:  188:   * destroy() even if _Tp has a trivial destructor.
+        -:  189:   */
+        -:  190:
+        -:  191:  template<typename _ForwardIterator, typename _Allocator>
+        -:  192:    void
+        -:  193:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+        -:  194:	     _Allocator& __alloc)
+        -:  195:    {
+        -:  196:      typedef __gnu_cxx::__alloc_traits<_Allocator> __traits;
+        -:  197:      for (; __first != __last; ++__first)
+        -:  198:	__traits::destroy(__alloc, std::__addressof(*__first));
+        -:  199:    }
+        -:  200:
+        -:  201:  template<typename _ForwardIterator, typename _Tp>
+        -:  202:    inline void
+function _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIPSt4pairIiiESt6vectorIS3_SaIS3_EEEES3_EvT_S9_RSaIT0_E called 24 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt6vectorISt4pairIS1_IiiES2_ESaIS3_EES5_EvT_S7_RSaIT0_E called 163 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt4pairIS0_IiiES1_ES2_EvT_S4_RSaIT0_E called 144 returned 100% blocks executed 100%
+function _ZSt8_DestroyIN9__gnu_cxx17__normal_iteratorIPSt6vectorISt4pairIiiESaIS4_EES2_IS6_SaIS6_EEEES6_EvT_SB_RSaIT0_E called 3 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt4pairIiiES1_EvT_S3_RSaIT0_E called 9276294 returned 100% blocks executed 100%
+function _ZSt8_DestroyIPSt6vectorISt4pairIiiESaIS2_EES4_EvT_S6_RSaIT0_E called 1151392 returned 100% blocks executed 100%
+ 10428020:  203:    _Destroy(_ForwardIterator __first, _ForwardIterator __last,
+       24:  203-block  0
+      163:  203-block  1
+      144:  203-block  2
+        3:  203-block  3
+  9276294:  203-block  4
+  1151392:  203-block  5
+        -:  204:	     allocator<_Tp>&)
+        -:  205:    {
+ 10428020:  206:      _Destroy(__first, __last);
+       24:  206-block  0
+call    0 returned 24
+      163:  206-block  1
+call    1 returned 163
+      144:  206-block  2
+call    2 returned 144
+        3:  206-block  3
+call    3 returned 3
+  9276294:  206-block  4
+call    4 returned 9276294
+  1151392:  206-block  5
+call    5 returned 1151392
+ 10428020:  207:    }
+        -:  208:
+        -:  209:#if __cplusplus > 201402L
+        -:  210:  template <typename _Tp>
+        -:  211:    inline void
+        -:  212:    destroy_at(_Tp* __location)
+        -:  213:    {
+        -:  214:      std::_Destroy(__location);
+        -:  215:    }
+        -:  216:
+        -:  217:  template <typename _ForwardIterator>
+        -:  218:    inline void
+        -:  219:    destroy(_ForwardIterator __first, _ForwardIterator __last)
+        -:  220:    {
+        -:  221:      std::_Destroy(__first, __last);
+        -:  222:    }
+        -:  223:
+        -:  224:  template <typename _ForwardIterator, typename _Size>
+        -:  225:    inline _ForwardIterator
+        -:  226:    destroy_n(_ForwardIterator __first, _Size __count)
+        -:  227:    {
+        -:  228:      return std::_Destroy_n(__first, __count);
+        -:  229:    }
+        -:  230:#endif
+        -:  231:
+        -:  232:_GLIBCXX_END_NAMESPACE_VERSION
+        -:  233:} // namespace std
+        -:  234:
+        -:  235:#endif /* _STL_CONSTRUCT_H */
+        -:  236:

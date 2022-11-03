@@ -1,0 +1,3 @@
+"D:\CLion 2021.1\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\ajedrezLite.dir/objects.a
+C:\Users\Usuario\8.6.5\mingw\bin\ar.exe cr CMakeFiles\ajedrezLite.dir/objects.a @CMakeFiles\ajedrezLite.dir\objects1.rsp
+C:\Users\Usuario\8.6.5\mingw\bin\g++.exe -g --coverage -g -Wl,--whole-archive CMakeFiles\ajedrezLite.dir/objects.a -Wl,--no-whole-archive -o ..\ajedrezLite.exe -Wl,--out-implib,..\libajedrezLite.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ajedrezLite.dir\linklibs.rsp
